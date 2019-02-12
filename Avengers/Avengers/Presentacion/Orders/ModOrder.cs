@@ -20,6 +20,7 @@ namespace Avengers.Presentacion.Orders
         private String idcustomer;
         private String refuser;
         private String refpaymentmethod;
+        private String fecha;
         private String total;
         private String prepaid;
 
@@ -92,7 +93,7 @@ namespace Avengers.Presentacion.Orders
 
             if (this.idioma == "ESPAÑOL")
             {
-                dgvModOrder.Columns.Add("IDORDERPRODUCT", "ID");
+                dgvModOrder.Columns.Add("IDORDERPRODUCT", "IDORDERPRODUCT");
                 dgvModOrder.Columns.Add("REFORDER", "REFORDER");
                 dgvModOrder.Columns.Add("REFPRODUCT", "IDPRODUCTO");
                 dgvModOrder.Columns.Add("NAME", "PRODUCTO");
@@ -161,7 +162,7 @@ namespace Avengers.Presentacion.Orders
 
         private void btnFindProd_Click(object sender, EventArgs e)
         {
-            ViewProduct vp = new ViewProduct(this, idioma);
+            ViewProduct vp = new ViewProduct(this, this.idioma);
             vp.ShowDialog(this);
             
         }
@@ -174,10 +175,10 @@ namespace Avengers.Presentacion.Orders
 
         public void updateProduct(DtoProduct product)
         {
-            // Console.WriteLine(product.Name);
+            //Console.WriteLine(product.Name);
             this.dtoProduct = product;
-            txtProduct.Text = product.Name;
-            txtPrice.Text = product.Price;
+            this.txtProduct.Text = product.Name;
+            this.txtPrice.Text = product.Price;
 
         }
         public void updateCustomer(DtoCustomer customer)
@@ -208,10 +209,100 @@ namespace Avengers.Presentacion.Orders
 
         private void btnModify_Click(object sender, EventArgs e)
         {
+            this.t = 0;
+            Order o = new Order();
+            String idorderproduct = "";
+            String idorder = "";
+            String idproduct = "";
+            String sql1 = "";
+            String sql2 = "";
 
+            if (!String.IsNullOrEmpty(txtProduct.Text.Replace("'", "")))
+            {
+                idorder = this.idOrder;
+                sql1 = "Select idorderproduct from ordersproducts where reforder = '" + idorder + "'";
+                sql2 = "Select idproduct from products where upper(name) = upper('" + this.txtProduct.Text.Replace("'", "") + "')";
+                //Console.WriteLine(sql1);
+                //Console.WriteLine(sql2);
+                idorderproduct = o.getGestor().getUnString(sql1);
+                
+                idproduct = o.getGestor().getUnString(sql2);
+                //Console.WriteLine("IDORDERPRODUCT >>>>>" + idorderproduct);
+                //Console.WriteLine("IDORDER >>>>>>" + idorder);
+                //Console.WriteLine("IDPRODUCT >>>>>>>>>" + idproduct);
+                dgvModOrder.Rows.Add(idorderproduct,idorder,idproduct,txtProduct.Text.Replace("'", ""), nudAmount.Value.ToString().Replace("'", ""), txtPrice.Text.Replace("'", ""));
+                //if (!String.IsNullOrEmpty(txtDiscount.Text))
+                //{
+                //    // -1 esta puesto por la fila en blanco
+                //    for (int i = 0; i < dataGridView1.RowCount ; i++)
+                //    {
+                //        this.t = this.t + (float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) * float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));                        
+                //    }
+                //    this.t = this.t - (this.t * ((float.Parse(txtDiscount.Text)) / 100));
+                //    tbxTotal.Text = Convert.ToString(t);
+
+                //}
+                //else {
+                //if (dataGridView1.RowCount > 1)
+                //{
+
+                for (int i = 0; i < dgvModOrder.RowCount; i++)
+                {
+                    this.t = this.t + (float.Parse(dgvModOrder.Rows[i].Cells[4].Value.ToString()) * float.Parse(dgvModOrder.Rows[i].Cells[5].Value.ToString()));
+                }
+                this.txtTotal.Text = Convert.ToString(t);
+                //}                      
+                //}
+            }
+            else
+            {
+                if (this.idioma == "ESPAÑOL")
+                {
+                    MessageBox.Show("Debes seleccionar un producto");
+                }
+                else
+                {
+                    MessageBox.Show("You must select one Product");
+                }
+
+            }
         }
 
-        
-        
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            Order o = new Order();
+            //Update Orders
+            String idcustomer = o.getGestor().getUnString("Select idcustomer from customers where upper(name) = upper('"+this.txtCustomer.Text+"')");
+            String refpayment = this.cmbPay.SelectedValue.ToString().Replace("'", "");
+            String total = this.txtTotal.Text;
+            String fecha = this.date.Value.ToString("dd/MM/yyyy").Replace("'", "");
+            String update = "Update orders set refcustomer ='" + idcustomer + "',datetime ='" + fecha + "',refpaymentmethod = '" + refpayment + "', total = '" + total + "' where idorder = '" + this.idOrder + "'";
+            o.getGestor().setData(update);
+
+
+            //Por implementar
+
+            //Update OrdersProducts
+            //String idorderproduct = dgvModOrder.Rows[dgvModOrder.CurrentRow.Index].Cells[0].Value.ToString();
+            //String idOrder = this.idOrder;
+            //String idProduct = "";
+            //String amount = "";
+            //String pricesale = "";
+            //String sql = "";
+            //for (int i = 0; i < dgvModOrder.RowCount; i++)
+            //{
+            //    idProduct = dgvModOrder.Rows[i].Cells[2].Value.ToString();
+            //    amount = dgvModOrder.Rows[i].Cells[4].Value.ToString();
+            //    pricesale = dgvModOrder.Rows[i].Cells[5].Value.ToString();
+            //    sql = "Update ordersproducts set ";
+            //    o.getGestor().setData(sql);
+            //}
+           
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

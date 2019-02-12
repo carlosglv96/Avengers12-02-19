@@ -113,6 +113,7 @@ namespace Avengers.Presentacion.Orders
         {
             ViewProduct vp = new ViewProduct(this,this.idioma);
             vp.ShowDialog(this);
+            this.nudAmount.Value = 1;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -204,6 +205,8 @@ namespace Avengers.Presentacion.Orders
                 //Console.WriteLine(sql);
                 sql = "SELECT MAX(IDORDER) FROM ORDERS";
                 String ido = o.getGestor().getUnString(sql);
+                sql = "SELECT MAX(IDORDERPRODUCT) FROM ORDERSPRODUCTS";
+                String idorderp = o.getGestor().getUnString(sql);
                 //Console.WriteLine("Traza-- ID ORDER  " + ido);
                 for (int i = 0; i < dataGridView1.RowCount; i++)
                 {
@@ -213,7 +216,7 @@ namespace Avengers.Presentacion.Orders
                     //Console.WriteLine("Traza-- ID PRODURC " + idp);
 
                     //Console.WriteLine(sql);
-                    sql = "Insert into ordersproducts values (null, '" + ido + "', '" + idp + "', '" + float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) + "', '" + float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString())+"')";
+                    sql = "Insert into ordersproducts values ('"+idorderp+"', '" + ido + "', '" + idp + "', '" + float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) + "', '" + float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString())+"')";
                     //Console.WriteLine(sql);
                     o.getGestor().setData(sql);
                 }

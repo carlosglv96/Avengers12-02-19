@@ -18,14 +18,16 @@ namespace Avengers.Presentacion.Orders
         private String idioma;
         String condicion = "SELECT ORDERS.IDORDER,CUSTOMERS.NAME,CUSTOMERS.SURNAME,USUARIO.NAME,ORDERS.DATETIME,PAYMENTMETHODS.PAYMENTMETHOD, ORDERS.TOTAL, ORDERS.PREPAID FROM ORDERS INNER JOIN CUSTOMERS ON REFCUSTOMER = IDCUSTOMER INNER JOIN USUARIO ON REFUSER = IDUSER INNER JOIN PAYMENTMETHODS ON REFPAYMENTMETHOD = IDPAYMENTMETHOD ";
         String whereCondition = " Where Orders.Deleted=";
+        int iValue;
+        String orderby = "ORDERD BY ORDERS.DATETIME DESC";
         public ViewOrders(User u,String idioma)
         {
             this.idioma = idioma;
             this.u = u;
             InitializeComponent();
             bool checkValue = chkDeleted.Checked;
-            int iValue = (checkValue) ? 1 : 0;
-            initTable(condicion + whereCondition + iValue);
+            iValue = (checkValue) ? 1 : 0;
+            initTable(condicion + whereCondition + iValue + orderby );
             initComboPayment("Where Deleted = 0");          
             if (this.idioma == "ESPAÑOL")
             {
@@ -72,6 +74,10 @@ namespace Avengers.Presentacion.Orders
         {
             NewOrder o = new NewOrder(u,this.idioma);
             o.Show();
+            if (o.IsDisposed) {
+                initTable(condicion + whereCondition + iValue + orderby);
+                initComboPayment("Where Deleted = 0");
+            }
         }
 
         private void initTable(String cond)
@@ -160,7 +166,7 @@ namespace Avengers.Presentacion.Orders
 
             bool checkValue = chkDeleted.Checked;
             int ivalue = (checkValue) ? 1 : 0;
-            initTable(this.condicion + whereCondition + ivalue + sql);
+            initTable(this.condicion + whereCondition + ivalue + sql + orderby);
 
         }
 
@@ -224,7 +230,7 @@ namespace Avengers.Presentacion.Orders
                 if(MessageBox.Show("¿Quieres eliminar a este pedido?", "Eliminar Pedido", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     GestorOrders.deleteOrder(sql);
-                    initTable(condicion + whereCondition + 0);
+                    initTable(condicion + whereCondition + 0 + orderby);
                 }
             }
             else
@@ -232,13 +238,14 @@ namespace Avengers.Presentacion.Orders
                 if(MessageBox.Show("Do you want Delete this Order?", "Delete Order", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     GestorOrders.deleteOrder(sql);
-                    initTable(condicion + whereCondition + 0);
+                    initTable(condicion + whereCondition + 0 + orderby);
                 }
             }
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
+            ModOrder mo;
             try
             {
                 String idOrder = dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[0].Value.ToString();
@@ -252,12 +259,22 @@ namespace Avengers.Presentacion.Orders
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[6].Value.ToString(),
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[7].Value.ToString()
                     );
-                ModOrder mo = new ModOrder(u, idioma, dto);
+               mo = new ModOrder(u, idioma, dto);
                 mo.Show();
-            }catch (Exception ex)
-            {
-                Console.WriteLine("Error, you Must Select a Order");
+                if (mo.IsDisposed)
+                {
+                    initTable(condicion + whereCondition + iValue + orderby);
+                    initComboPayment("Where Deleted = 0");
+                }
             }
+            catch (Exception ex)
+            {
+                if(this.idioma == "INGLES") { Console.WriteLine("Error, you Must Select a Order"); }
+                else { Console.WriteLine("Error, debes seleccionar un pedido"); }
+                
+            }
+
+           
             
         }
 
