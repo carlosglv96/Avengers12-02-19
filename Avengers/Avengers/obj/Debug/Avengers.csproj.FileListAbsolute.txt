@@ -1,0 +1,789 @@
+c:\users\b14-16m\documents\visual studio 2015\Projects\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.resources
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.resources
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.resources
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\santi\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\b14-16m\Documents\Visual Studio 2015\Projects\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\littlerp\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe.config
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\bin\Debug\Avengers.pdb
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.exe
+F:\Proyectos VisualStudio\littlerp\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\b14-16m\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\b14-16m\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+G:\Avengers\Avengers\bin\Debug\Avengers.exe.config
+G:\Avengers\Avengers\obj\Debug\Avengers.exe
+G:\Avengers\Avengers\obj\Debug\Avengers.pdb
+G:\Avengers\Avengers\bin\Debug\Avengers.exe
+G:\Avengers\Avengers\bin\Debug\Avengers.pdb
+G:\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+G:\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+G:\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\santi\Source\Repos\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\G0VA\littlerp\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\miguelgonza95\Desktop\littlerp-master\littlerp-master\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\b14-12m\Source\Repos\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-12m\Source\Repos\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-12m\Source\Repos\Avengers\Avengers\obj\Debug\Avengers.pdb
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\bin\Debug\Avengers.exe.config
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.exe
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.pdb
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\bin\Debug\Avengers.exe
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\bin\Debug\Avengers.pdb
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\bin\Debug\Oracle.DataAccess.dll
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Login.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+D:\Visual Studio 2015\Projects\LittleERP-v2\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\bin\Debug\Avengers.pdb
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\carlos\Source\Repos\LittlERP-v2-\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.pdb
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+C:\Users\santi\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\bin\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Prueba\LittlERP-v2-\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Avengers.pdb
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\bin\Debug\Avengers.pdb
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\bin\Debug\Oracle.DataAccess.dll
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Login.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+F:\Proyectos VisualStudio\LittlERP-v2-\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+G:\Proyecto Luis\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+G:\Proyecto Luis\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+G:\Proyecto Luis\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\bin\Debug\Avengers.exe
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\bin\Debug\Avengers.pdb
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\b14-12m\Desktop\LittlERP-v2-\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.exe
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.pdb
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\bin\Debug\Avengers.exe
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\bin\Debug\Avengers.pdb
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+C:\Users\carlos\Source\Repos\carlosglv96\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\bin\Debug\Avengers.exe
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\bin\Debug\Avengers.pdb
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\b14-12m\Source\Repos\LittlERP-v2\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\bin\Debug\Avengers.exe
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\bin\Debug\Avengers.pdb
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\b14-12m\Desktop\Version Final 2.0\LittlERP-v2\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\b14-12m\Desktop\LittlERP-v2\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-12m\Desktop\LittlERP-v2\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-12m\Desktop\LittlERP-v2\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-12m\Source\Repos\Avengers-v2.0\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-12m\Source\Repos\Avengers-v2.0\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-12m\Source\Repos\Avengers-v2.0\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\bin\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\bin\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers-v2.0\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.exe
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.pdb
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\bin\Debug\Avengers.exe
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\bin\Debug\Avengers.pdb
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers-v2.0\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.exe.config
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.exe
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.pdb
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.exe
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.pdb
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\bin\Debug\Oracle.DataAccess.dll
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Login.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+D:\Downloads\Avengers-v2.0-master\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.exe
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.pdb
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.exe
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.pdb
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.exe
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\bin\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.exe
+C:\Users\Fj Margotón\Desktop\Avengers-v2.0-master\Avengers\obj\Debug\Avengers.pdb
