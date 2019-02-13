@@ -172,6 +172,7 @@
             this.dgvModOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModOrder.Location = new System.Drawing.Point(12, 121);
             this.dgvModOrder.Name = "dgvModOrder";
+            this.dgvModOrder.ReadOnly = true;
             this.dgvModOrder.RowHeadersVisible = false;
             this.dgvModOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvModOrder.Size = new System.Drawing.Size(730, 276);

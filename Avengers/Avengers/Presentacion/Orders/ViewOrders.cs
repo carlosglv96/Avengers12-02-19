@@ -16,10 +16,10 @@ namespace Avengers.Presentacion.Orders
     {
         private User u;
         private String idioma;
-        String condicion = "SELECT ORDERS.IDORDER,CUSTOMERS.NAME,CUSTOMERS.SURNAME,USUARIO.NAME,ORDERS.DATETIME,PAYMENTMETHODS.PAYMENTMETHOD, ORDERS.TOTAL, ORDERS.PREPAID FROM ORDERS INNER JOIN CUSTOMERS ON REFCUSTOMER = IDCUSTOMER INNER JOIN USUARIO ON REFUSER = IDUSER INNER JOIN PAYMENTMETHODS ON REFPAYMENTMETHOD = IDPAYMENTMETHOD ";
+        String condicion = "SELECT ORDERS.IDORDER,CUSTOMERS.NAME,CUSTOMERS.SURNAME,USUARIO.NAME,ORDERS.DATETIME,PAYMENTMETHODS.PAYMENTMETHOD, ORDERS.TOTAL, ORDERS.CONFIRMED, ORDERS.LABELED, ORDERS.SENT, ORDERS.INVOICED, ORDERS.PREPAID FROM ORDERS INNER JOIN CUSTOMERS ON REFCUSTOMER = IDCUSTOMER INNER JOIN USUARIO ON REFUSER = IDUSER INNER JOIN PAYMENTMETHODS ON REFPAYMENTMETHOD = IDPAYMENTMETHOD ";
         String whereCondition = " Where Orders.Deleted=";
         int iValue;
-        String orderby = "ORDERD BY ORDERS.DATETIME DESC";
+        String orderby = " ORDER BY ORDERS.DATETIME DESC";
         public ViewOrders(User u,String idioma)
         {
             this.idioma = idioma;
@@ -102,6 +102,10 @@ namespace Avengers.Presentacion.Orders
                 dgvOrders.Columns.Add("REFPAYMENTMETHOD", "FORMA DE PAGO");
                 dgvOrders.Columns.Add("TOTAL", "TOTAL");
                 dgvOrders.Columns.Add("PREPAID", "PAGADO");
+                dgvOrders.Columns.Add("CONFIRMED", "CONFIRMADO");
+                dgvOrders.Columns.Add("LABELED", "ETIQUETADO");
+                dgvOrders.Columns.Add("SENT", "ENVIADO");
+                dgvOrders.Columns.Add("INVOICED", "FACTURADO");
             }
             else
             {
@@ -113,6 +117,10 @@ namespace Avengers.Presentacion.Orders
                 dgvOrders.Columns.Add("REFPAYMENTMETHOD", "PAYMENTMETHOD");
                 dgvOrders.Columns.Add("TOTAL", "TOTAL");
                 dgvOrders.Columns.Add("PREPAID", "PREPAID");
+                dgvOrders.Columns.Add("CONFIRMED", "CONFIRMED");
+                dgvOrders.Columns.Add("LABELED", "LABELED");
+                dgvOrders.Columns.Add("SENT", "SENT");
+                dgvOrders.Columns.Add("INVOICED", "INVOICED");
             }
 
             
@@ -120,12 +128,83 @@ namespace Avengers.Presentacion.Orders
 
             foreach (DataRow row in torders.Rows)
             {
+                dgvOrders.Rows.Add(row["IDORDER"], row["NAME"], row["SURNAME"],row.ItemArray[3], row["DATETIME"], row["PAYMENTMETHOD"], row["TOTAL"], row["PREPAID"],row["CONFIRMED"],row["LABELED"],row["SENT"],row["INVOICED"]);
+
                 
-                dgvOrders.Rows.Add(row["IDORDER"], row["NAME"], row["SURNAME"],row.ItemArray[3], row["DATETIME"], row["PAYMENTMETHOD"], row["TOTAL"], row["PREPAID"]);
             }
+
+            //foreach (DataRow row in dgvOrders.Rows)
+            //{
+            //    if (int.Parse(row["CONFIRMED"].ToString()) == 0) { dgvOrders.Rows..Cells[8].Style.BackColor = Color.Red; }
+            //    if (int.Parse(row["CONFIRMED"].ToString()) == 1) { dgvOrders.Rows[8].DefaultCellStyle.BackColor = Color.Green; }
+
+            //    if (int.Parse(row["LABELED"].ToString()) == 0) { dgvOrders.Rows[9].DefaultCellStyle.BackColor = Color.Red; }
+            //    if (int.Parse(row["LABELED"].ToString()) == 1) { dgvOrders.Rows[9].DefaultCellStyle.BackColor = Color.Green; }
+
+            //    if (int.Parse(row["SENT"].ToString()) == 0) { dgvOrders.Rows[10].DefaultCellStyle.BackColor = Color.Red; }
+            //    if (int.Parse(row["SENT"].ToString()) == 1) { dgvOrders.Rows[10].DefaultCellStyle.BackColor = Color.Green; }
+
+            //    if (int.Parse(row["INVOICED"].ToString()) == 0) { dgvOrders.Rows[11].DefaultCellStyle.BackColor = Color.Red; }
+            //    if (int.Parse(row["INVOICED"].ToString()) == 1) { dgvOrders.Rows[11].DefaultCellStyle.BackColor = Color.Green; }
+            //}
             dgvOrders.Columns["IDORDER"].Visible = false;
+            
             dgvOrders.ClearSelection();
+
+            dataGridView1_CellFormatting();
+            
         }
+
+        private void dataGridView1_CellFormatting()
+        {
+            foreach (DataGridViewRow Myrow in dgvOrders.Rows)
+            {   //Here 2 cell is target value and 1 cell is Volume 
+                if (Convert.ToInt32(Myrow.Cells[8].Value) == 0)// Or your condition 
+                {
+                    Myrow.Cells[8].Style.BackColor = Color.Red;
+                    Myrow.Cells[8].Value = "";
+                }
+                else
+                {
+                    Myrow.Cells[8].Style.BackColor = Color.Green;
+                    Myrow.Cells[8].Value = "";
+                }
+
+                if (Convert.ToInt32(Myrow.Cells[9].Value) == 0)// Or your condition 
+                {
+                    Myrow.Cells[9].Style.BackColor = Color.Red;
+                    Myrow.Cells[9].Value = "";
+                }
+                else
+                {
+                    Myrow.Cells[9].Style.BackColor = Color.Green;
+                    Myrow.Cells[9].Value = "";
+                }
+
+                if (Convert.ToInt32(Myrow.Cells[10].Value) == 0)// Or your condition 
+                {
+                    Myrow.Cells[10].Style.BackColor = Color.Red;
+                    Myrow.Cells[10].Value = "";
+                }
+                else
+                {
+                    Myrow.Cells[10].Style.BackColor = Color.Green;
+                    Myrow.Cells[10].Value = "";
+                }
+                if (Convert.ToInt32(Myrow.Cells[11].Value) == 0)// Or your condition 
+                {
+                    Myrow.Cells[11].Style.BackColor = Color.Red;
+                    Myrow.Cells[11].Value = "";
+                }
+                else
+                {
+                    Myrow.Cells[11].Style.BackColor = Color.Green;
+                    Myrow.Cells[11].Value = "";
+                }
+            }
+        }
+
+
         private void initComboPayment(String cond)
         {
             Order o = new Order();
@@ -259,7 +338,7 @@ namespace Avengers.Presentacion.Orders
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[6].Value.ToString(),
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[7].Value.ToString()
                     );
-               mo = new ModOrder(u, idioma, dto);
+                mo = new ModOrder(u, idioma, dto);
                 mo.Show();
                 if (mo.IsDisposed)
                 {
@@ -281,6 +360,11 @@ namespace Avengers.Presentacion.Orders
         private void Orders_Shown(object sender, EventArgs e)
         {
             dgvOrders.ClearSelection();
+        }
+
+        private void dgvViewOrders_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
         }
     }
 }

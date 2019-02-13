@@ -43,7 +43,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnLog = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ckAct = new System.Windows.Forms.CheckBox();
             this.txtPrepaid = new System.Windows.Forms.TextBox();
             this.lblPrepago = new System.Windows.Forms.Label();
@@ -156,10 +155,12 @@
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrders.Location = new System.Drawing.Point(12, 143);
             this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.ReadOnly = true;
             this.dgvOrders.RowHeadersVisible = false;
             this.dgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrders.Size = new System.Drawing.Size(982, 332);
             this.dgvOrders.TabIndex = 11;
+            this.dgvOrders.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvViewOrders_CellMouseDoubleClick);
             // 
             // btnNew
             // 
@@ -282,7 +283,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnLog;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.CheckBox ckAct;
         private System.Windows.Forms.TextBox txtPrepaid;
         private System.Windows.Forms.Label lblPrepago;

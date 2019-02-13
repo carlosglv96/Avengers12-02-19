@@ -822,3 +822,4 @@ C:\Users\carlos\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\
 C:\Users\carlos\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
 C:\Users\carlos\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
 C:\Users\carlos\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\carlos\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.viewInvoice.resources
