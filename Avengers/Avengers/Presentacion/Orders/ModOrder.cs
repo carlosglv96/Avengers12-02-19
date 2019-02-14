@@ -289,7 +289,7 @@ namespace Avengers.Presentacion.Orders
 
             //Por implementar
 
-            //Update OrdersProducts
+            //Insert OrdersProducts
             String idorderproduct = dgvModOrder.Rows[dgvModOrder.CurrentRow.Index].Cells[0].Value.ToString();
             String idOrder = this.idOrder;
             String idProduct = "";

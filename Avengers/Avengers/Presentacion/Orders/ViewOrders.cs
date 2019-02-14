@@ -73,7 +73,7 @@ namespace Avengers.Presentacion.Orders
         private void btnNew_Click(object sender, EventArgs e)
         {
             NewOrder o = new NewOrder(u,this.idioma);
-            o.Show();
+            o.ShowDialog();
             if (o.IsDisposed) {
                 initTable(condicion + whereCondition + iValue + orderby);
                 initComboPayment("Where Deleted = 0");
@@ -136,20 +136,7 @@ namespace Avengers.Presentacion.Orders
             dgvOrders.Columns[11].DefaultCellStyle.SelectionBackColor = Color.Transparent;
 
 
-            //foreach (DataRow row in dgvOrders.Rows)
-            //{
-            //    if (int.Parse(row["CONFIRMED"].ToString()) == 0) { dgvOrders.Rows..Cells[8].Style.BackColor = Color.Red; }
-            //    if (int.Parse(row["CONFIRMED"].ToString()) == 1) { dgvOrders.Rows[8].DefaultCellStyle.BackColor = Color.Green; }
-
-            //    if (int.Parse(row["LABELED"].ToString()) == 0) { dgvOrders.Rows[9].DefaultCellStyle.BackColor = Color.Red; }
-            //    if (int.Parse(row["LABELED"].ToString()) == 1) { dgvOrders.Rows[9].DefaultCellStyle.BackColor = Color.Green; }
-
-            //    if (int.Parse(row["SENT"].ToString()) == 0) { dgvOrders.Rows[10].DefaultCellStyle.BackColor = Color.Red; }
-            //    if (int.Parse(row["SENT"].ToString()) == 1) { dgvOrders.Rows[10].DefaultCellStyle.BackColor = Color.Green; }
-
-            //    if (int.Parse(row["INVOICED"].ToString()) == 0) { dgvOrders.Rows[11].DefaultCellStyle.BackColor = Color.Red; }
-            //    if (int.Parse(row["INVOICED"].ToString()) == 1) { dgvOrders.Rows[11].DefaultCellStyle.BackColor = Color.Green; }
-            //}
+            
             dgvOrders.Columns["IDORDER"].Visible = false;
             
             dgvOrders.ClearSelection();
@@ -342,7 +329,7 @@ namespace Avengers.Presentacion.Orders
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[7].Value.ToString()
                     );
                 mo = new ModOrder(u, idioma, dto);
-                mo.Show();
+                mo.ShowDialog();
                 if (mo.IsDisposed)
                 {
                     initTable(condicion + whereCondition + iValue + orderby);
@@ -366,13 +353,40 @@ namespace Avengers.Presentacion.Orders
         }
 
         private void dgvViewOrders_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+            
         {
+            Order o = new Dominio.Order();
             DataGridView dgvOrders = sender as DataGridView;
 
             if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Red)
             {
-                dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
-                dgvOrders.ClearSelection();
+                int index = dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].ColumnIndex;
+                int id = int.Parse(dgvOrders.Rows[e.RowIndex].Cells[0].Value.ToString());
+                int res;
+                switch (index)
+                {
+                    case 8:
+                       res = int.Parse( o.getGestor().getUnString("select confirmed from orders where idorder = '" + id + "'"));
+                        if (res == 0)
+                        {
+
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update set confirmed = 1 where idorder = '" + id + "'");
+                        }
+                        else {
+
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update set confirmed = 0 where idorder = '" + id + "'");
+                        }
+                        break;
+                       
+
+                }
+                
+
+
             }
             else if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Green)
             {
