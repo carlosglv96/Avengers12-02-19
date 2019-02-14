@@ -123,15 +123,18 @@ namespace Avengers.Presentacion.Orders
                 dgvOrders.Columns.Add("INVOICED", "INVOICED");
             }
 
-            
-
-
+           
             foreach (DataRow row in torders.Rows)
             {
                 dgvOrders.Rows.Add(row["IDORDER"], row["NAME"], row["SURNAME"],row.ItemArray[3], row["DATETIME"], row["PAYMENTMETHOD"], row["TOTAL"], row["PREPAID"],row["CONFIRMED"],row["LABELED"],row["SENT"],row["INVOICED"]);
-
                 
             }
+
+            dgvOrders.Columns[8].DefaultCellStyle.SelectionBackColor = Color.Transparent;
+            dgvOrders.Columns[9].DefaultCellStyle.SelectionBackColor = Color.Transparent;
+            dgvOrders.Columns[10].DefaultCellStyle.SelectionBackColor = Color.Transparent;
+            dgvOrders.Columns[11].DefaultCellStyle.SelectionBackColor = Color.Transparent;
+
 
             //foreach (DataRow row in dgvOrders.Rows)
             //{
@@ -364,7 +367,18 @@ namespace Avengers.Presentacion.Orders
 
         private void dgvViewOrders_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            DataGridView dgvOrders = sender as DataGridView;
 
+            if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Red)
+            {
+                dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                dgvOrders.ClearSelection();
+            }
+            else if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Green)
+            {
+                dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                dgvOrders.ClearSelection();
+            }
         }
     }
 }
