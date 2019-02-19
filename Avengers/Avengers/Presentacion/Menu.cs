@@ -15,6 +15,7 @@ using Avengers.Presentacion.Cashbook;
 using Avengers.Presentacion.Cashbook.PPayment;
 using Avengers.Presentacion.Cashbook.Validation;
 using Avengers.Presentacion.Cashbook.Debts;
+using Avengers.Presentacion.Invoices;
 
 namespace Avengers.Presentacion
 {
@@ -26,6 +27,7 @@ namespace Avengers.Presentacion
         private ViewProduct p1;
         public ViewIncomes i1;
         public ViewIncomes i2;
+        public viewInvoice in1;
 
         // Serian los forms de incomes y demas...
         //private ViewIncomes i1;
@@ -183,6 +185,7 @@ namespace Avengers.Presentacion
 
             btnOrders.Location = new Point(0, 180);
             btnCash.Location = new Point(0, 205);
+            btnInvoices.Location = new Point(0, 230);
         }
 
         private void ocultarBtnSys()
@@ -209,6 +212,7 @@ namespace Avengers.Presentacion
 
             btnOrders.Location = new Point(0, 80);
             btnCash.Location = new Point(0, 105);
+            btnInvoices.Location = new Point(0, 130);
         }
         private void mostrarBtnCas()
         {
@@ -234,6 +238,7 @@ namespace Avengers.Presentacion
 
             btnOrders.Location = new Point(0, 80);
             btnCash.Location = new Point(0, 105);
+            btnInvoices.Location = new Point(0, 260);
         }
 
 
@@ -402,6 +407,30 @@ namespace Avengers.Presentacion
                 if (tabControl.SelectedTab.Name.Equals("p1"))
                 {
                     p1.Dispose();
+                }
+                if (tabControl.SelectedTab.Name.Equals("i2"))
+                {
+                    i2.Dispose();
+                }
+                if (tabControl.SelectedTab.Name.Equals("i1"))
+                {
+                    i1.Dispose();
+                }
+                if (tabControl.SelectedTab.Name.Equals("v1"))
+                {
+                    v1.Dispose();
+                }
+                if (tabControl.SelectedTab.Name.Equals("pa1"))
+                {
+                    pa1.Dispose();
+                }
+                if (tabControl.SelectedTab.Name.Equals("d1"))
+                {
+                    d1.Dispose();
+                }
+                if (tabControl.SelectedTab.Name.Equals("in1"))
+                {
+                    in1.Dispose();
                 }
 
                 tabControl.TabPages.Remove(tabControl.SelectedTab);
@@ -584,31 +613,31 @@ namespace Avengers.Presentacion
         }
 
 
-        private void debts_Click(object sender, EventArgs e)
-        {
-            if (!tabControl.TabPages.ContainsKey("d1"))
-            {
-                d1 = new ViewDebts(this.idioma, this.u, this);
-                tabControl.Visible = true;
-                d1.MdiParent = this;
-                d1.WindowState = FormWindowState.Normal;
-                d1.FormBorderStyle = FormBorderStyle.None;
-                d1.TopLevel = false;
-                d1.Dock = DockStyle.Fill;
-                d1.Show();
-                TabPage tp = new TabPage(debts.Text);
-                tp.Tag = d1;
-                tp.Name = "d1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                d1.Tag = tp;
-            }
-            else
-            {
-                int n = tabControl.TabPages.IndexOfKey("d1");
-                tabControl.SelectTab(n);
-            }
-        }
+        //private void debts_Click(object sender, EventArgs e)
+        //{
+        //    if (!tabControl.TabPages.ContainsKey("d1"))
+        //    {
+        //        d1 = new ViewDebts(this.idioma, this.u, this);
+        //        tabControl.Visible = true;
+        //        d1.MdiParent = this;
+        //        d1.WindowState = FormWindowState.Normal;
+        //        d1.FormBorderStyle = FormBorderStyle.None;
+        //        d1.TopLevel = false;
+        //        d1.Dock = DockStyle.Fill;
+        //        d1.Show();
+        //        TabPage tp = new TabPage(debts.Text);
+        //        tp.Tag = d1;
+        //        tp.Name = "d1";
+        //        tp.Parent = tabControl;
+        //        tabControl.SelectedTab = tp;
+        //        d1.Tag = tp;
+        //    }
+        //    else
+        //    {
+        //        int n = tabControl.TabPages.IndexOfKey("d1");
+        //        tabControl.SelectTab(n);
+        //    }
+        //}
 
         public double getTotalCash()
         {
@@ -662,6 +691,32 @@ namespace Avengers.Presentacion
             else
             {
                 int n = tabControl.TabPages.IndexOfKey("d1");
+                tabControl.SelectTab(n);
+            }
+        }
+
+        private void btnInvoices_Click(object sender, EventArgs e)
+        {
+            if (!tabControl.TabPages.ContainsKey("in1"))
+            {
+                in1 = new viewInvoice();
+                tabControl.Visible = true;
+                in1.MdiParent = this;
+                in1.WindowState = FormWindowState.Normal;
+                in1.FormBorderStyle = FormBorderStyle.None;
+                in1.TopLevel = false;
+                in1.Dock = DockStyle.Fill;
+                in1.Show();
+                TabPage tp = new TabPage(debts.Text);
+                tp.Tag = in1;
+                tp.Name = "in1";
+                tp.Parent = tabControl;
+                tabControl.SelectedTab = tp;
+                in1.Tag = tp;
+            }
+            else
+            {
+                int n = tabControl.TabPages.IndexOfKey("in1");
                 tabControl.SelectTab(n);
             }
         }

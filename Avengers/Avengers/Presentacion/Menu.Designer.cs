@@ -61,6 +61,7 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
+            this.btnInvoices = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.cash_panel.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.btnInvoices);
             this.bunifuGradientPanel1.Controls.Add(this.inco);
             this.bunifuGradientPanel1.Controls.Add(this.users);
             this.bunifuGradientPanel1.Controls.Add(this.expen);
@@ -704,6 +706,42 @@
             // 
             this.backgroundWorker4.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker4_DoWork);
             // 
+            // btnInvoices
+            // 
+            this.btnInvoices.Activecolor = System.Drawing.Color.Transparent;
+            this.btnInvoices.BackColor = System.Drawing.Color.Transparent;
+            this.btnInvoices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInvoices.BorderRadius = 0;
+            this.btnInvoices.ButtonText = "Invoices";
+            this.btnInvoices.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInvoices.DisabledColor = System.Drawing.Color.Gray;
+            this.btnInvoices.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnInvoices.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnInvoices.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnInvoices.Iconimage")));
+            this.btnInvoices.Iconimage_right = null;
+            this.btnInvoices.Iconimage_right_Selected = null;
+            this.btnInvoices.Iconimage_Selected = null;
+            this.btnInvoices.IconMarginLeft = 0;
+            this.btnInvoices.IconMarginRight = 0;
+            this.btnInvoices.IconRightVisible = true;
+            this.btnInvoices.IconRightZoom = 0D;
+            this.btnInvoices.IconVisible = false;
+            this.btnInvoices.IconZoom = 90D;
+            this.btnInvoices.IsTab = false;
+            this.btnInvoices.Location = new System.Drawing.Point(0, 130);
+            this.btnInvoices.Name = "btnInvoices";
+            this.btnInvoices.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnInvoices.OnHovercolor = System.Drawing.Color.DodgerBlue;
+            this.btnInvoices.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnInvoices.selected = false;
+            this.btnInvoices.Size = new System.Drawing.Size(206, 30);
+            this.btnInvoices.TabIndex = 11;
+            this.btnInvoices.Text = "Invoices";
+            this.btnInvoices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvoices.Textcolor = System.Drawing.Color.White;
+            this.btnInvoices.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvoices.Click += new System.EventHandler(this.btnInvoices_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -757,5 +795,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
         private System.ComponentModel.BackgroundWorker backgroundWorker4;
+        private Bunifu.Framework.UI.BunifuFlatButton btnInvoices;
     }
 }
