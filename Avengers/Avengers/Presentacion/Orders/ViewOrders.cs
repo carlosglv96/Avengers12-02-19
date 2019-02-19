@@ -362,26 +362,21 @@ namespace Avengers.Presentacion.Orders
             {
                 int index = dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].ColumnIndex;
                 int id = int.Parse(dgvOrders.Rows[e.RowIndex].Cells[0].Value.ToString());
-                int res;
                 switch (index)
                 {
                     case 8:
-                       res = int.Parse( o.getGestor().getUnString("select confirmed from orders where idorder = '" + id + "'"));
-                        if (res == 0)
-                        {
-
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
-                            o.getGestor().setData("Update set confirmed = 1 where idorder = '" + id + "'");
-                        }
-                        else {
+                            o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
 
-                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
-                            dgvOrders.ClearSelection();
-                            o.getGestor().setData("Update set confirmed = 0 where idorder = '" + id + "'");
-                        }
+
                         break;
-                       
+
+                    case 9:
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update orders set labeled = 1 where idorder = '" + id + "'");
+                        break;
 
                 }
                 
@@ -390,8 +385,23 @@ namespace Avengers.Presentacion.Orders
             }
             else if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Green)
             {
-                dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
-                dgvOrders.ClearSelection();
+                int index = dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].ColumnIndex;
+                int id = int.Parse(dgvOrders.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+                switch (index)
+                {
+                    case 8:
+                        dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                        dgvOrders.ClearSelection();
+                        o.getGestor().setData("Update orders set confirmed = 0 where idorder = '" + id + "'");
+                        break;
+
+                    case 9:
+                        dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                        dgvOrders.ClearSelection();
+                        o.getGestor().setData("Update orders set labeled = 0 where idorder = '" + id + "'");
+                        break;                      
+                }
             }
         }
     }
