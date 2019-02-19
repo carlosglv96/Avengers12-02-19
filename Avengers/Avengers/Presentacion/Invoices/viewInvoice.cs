@@ -41,7 +41,7 @@ namespace Avengers.Presentacion.Invoices
                 dgvInvoice.Rows.Add(row["IDINVOICE"], row["DATE_INVOICE"], row["REFCUSTOMER"], row["CUSTOMER"], row["NET_AMOUNT"], row["AMOUNT"]);
             }
             dgvInvoice.Columns["IDINVOICE"].Visible = false;
-            dgvInvoice.Columns["P.REFCUSTOMER"].Visible = false;
+            dgvInvoice.Columns["REFCUSTOMER"].Visible = false;
 
             dgvInvoice.ClearSelection();
 
@@ -79,6 +79,12 @@ namespace Avengers.Presentacion.Invoices
         private void nudAmount_ValueChanged(object sender, EventArgs e)
         {
             filtrar();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            NewInvoices ni = new NewInvoices();
+            ni.ShowDialog();
         }
     }
 }

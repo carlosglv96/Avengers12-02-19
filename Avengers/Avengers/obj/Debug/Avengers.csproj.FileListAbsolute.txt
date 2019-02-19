@@ -895,3 +895,40 @@ C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj
 C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
 C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
 C:\Users\b14-12m\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\bin\Debug\Avengers.exe.config
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\bin\Debug\Avengers.exe
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\bin\Debug\Avengers.pdb
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.NewInvoices.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.viewInvoice.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
