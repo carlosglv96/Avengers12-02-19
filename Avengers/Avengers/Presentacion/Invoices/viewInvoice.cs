@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avengers.Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,18 @@ namespace Avengers.Presentacion.Invoices
 {
     public partial class viewInvoice : Form
     {
-        public viewInvoice()
+        private String idioma;
+        private User u;
+        public viewInvoice(String idioma,User u)
         {
+            this.idioma = idioma;
+            this.u = u;
             InitializeComponent();
             InitDGV("");
+
+           
+            
+
         }
 
         public void InitDGV(string cond)
@@ -25,6 +34,7 @@ namespace Avengers.Presentacion.Invoices
             String order = " order by idinvoice desc";
             dgvInvoice.Columns.Clear();
             Dominio.Invoices i = new Dominio.Invoices();
+            //Console.WriteLine(sql+cond+order);
             i.getGestor().readInDB(sql + cond +order);
 
             DataTable tInvoice = i.getGestor().getInvoices();
@@ -49,7 +59,8 @@ namespace Avengers.Presentacion.Invoices
         private void filtrar()
         {
             String query = " where 1=1 ";
-            if (dtpDate.Enabled)
+
+            if (dtpDate.Enabled=true)
             {
                 query += " And date_invoice = to_date('" + dtpDate.Text + "','dd/MM/yyyy') ";
             }
@@ -62,6 +73,7 @@ namespace Avengers.Presentacion.Invoices
             {
                 query += " and Amount like '%" + nudAmount.Value + "%'";
             }
+            
             InitDGV(query);
         }
         private void chkDate_CheckedChanged(object sender, EventArgs e)
@@ -83,7 +95,7 @@ namespace Avengers.Presentacion.Invoices
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            NewInvoices ni = new NewInvoices();
+            NewInvoices ni = new NewInvoices(this.idioma,this.u);
             ni.ShowDialog();
         }
     }

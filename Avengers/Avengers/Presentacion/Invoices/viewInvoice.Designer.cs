@@ -47,9 +47,15 @@
             // 
             // dgvInvoice
             // 
+            this.dgvInvoice.AllowUserToAddRows = false;
+            this.dgvInvoice.AllowUserToDeleteRows = false;
+            this.dgvInvoice.AllowUserToResizeColumns = false;
+            this.dgvInvoice.AllowUserToResizeRows = false;
+            this.dgvInvoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInvoice.Location = new System.Drawing.Point(26, 96);
             this.dgvInvoice.Name = "dgvInvoice";
+            this.dgvInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInvoice.Size = new System.Drawing.Size(788, 375);
             this.dgvInvoice.TabIndex = 0;
             // 
@@ -106,6 +112,7 @@
             // 
             // dtpDate
             // 
+            this.dtpDate.Enabled = false;
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(484, 34);
             this.dtpDate.Name = "dtpDate";

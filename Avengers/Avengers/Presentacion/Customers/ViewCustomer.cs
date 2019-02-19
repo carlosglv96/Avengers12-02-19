@@ -1,6 +1,7 @@
 ﻿using Avengers.Dominio;
 using Avengers.Dominio.Gestores;
 using Avengers.Presentacion.Customers;
+using Avengers.Presentacion.Invoices;
 using Avengers.Presentacion.Orders;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace Avengers.Presentacion
 
         private NewOrder observer = null;
         private ModOrder observerMod = null;
+        private NewInvoices observerInvoice = null;
+        //private ModInvoices observerModInvoice = null;
         private String idioma;
 
         public ViewCustomer(String idioma)
@@ -75,7 +78,42 @@ namespace Avengers.Presentacion
                 this.Text = "Customers";
             }
         }
-
+        public ViewCustomer(NewInvoices invoice, String idioma)
+        {
+            this.idioma = idioma;
+            observerInvoice = invoice;
+            InitializeComponent();
+            initTable(" Where Deleted =0");
+            initCombos();
+            if (this.idioma == "ESPAÑOL")
+            {
+                idioma_es();
+                this.Text = "Clientes";
+            }
+            else
+            {
+                idioma_en();
+                this.Text = "Customers";
+            }
+        }
+        //public ViewCustomer(ModInvoices Invoices, String idioma)
+        //{
+        //    this.idioma = idioma;
+        //    observerModInvoices = invoices;
+        //    InitializeComponent();
+        //    initTable(" Where Deleted =0");
+        //    initCombos();
+        //    if (this.idioma == "ESPAÑOL")
+        //    {
+        //        idioma_es();
+        //        this.Text = "Clientes";
+        //    }
+        //    else
+        //    {
+        //        idioma_en();
+        //        this.Text = "Customers";
+        //    }
+        //}
         public void idioma_es()
         {
             lblName.Text = Avengers.Recursos.Espanol.lblName;
@@ -470,6 +508,16 @@ namespace Avengers.Presentacion
                 observerMod.updateCustomer(dtoC);
                 Dispose();
             }
+            if (observerInvoice != null)
+            {
+                observerInvoice.updateCustomer(dtoC);
+                Dispose();
+            }
+            //if (observerModInvoice != null)
+            //{
+            //    observerModInvoice.updateCustomer(dtoC);
+            //    Dispode();
+            //}
 
         }
 

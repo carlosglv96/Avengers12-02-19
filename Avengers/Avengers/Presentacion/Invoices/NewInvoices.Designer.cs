@@ -42,7 +42,7 @@
             this.lblAddProduct = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddLine = new System.Windows.Forms.Button();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtPriceLine = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -55,6 +55,8 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtPriceProduct = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,7 +67,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.txtPriceProduct);
             this.panel1.Controls.Add(this.btnAddProd);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.nudAmount);
             this.panel1.Controls.Add(this.btnFindProd);
             this.panel1.Controls.Add(this.lblAmount);
@@ -111,6 +115,7 @@
             this.btnFindProd.Size = new System.Drawing.Size(54, 43);
             this.btnFindProd.TabIndex = 28;
             this.btnFindProd.UseVisualStyleBackColor = true;
+            this.btnFindProd.Click += new System.EventHandler(this.btnFindProd_Click);
             // 
             // lblAmount
             // 
@@ -148,6 +153,7 @@
             this.btnFindCust.Size = new System.Drawing.Size(54, 45);
             this.btnFindCust.TabIndex = 23;
             this.btnFindCust.UseVisualStyleBackColor = true;
+            this.btnFindCust.Click += new System.EventHandler(this.btnFindCust_Click_1);
             // 
             // txtCustomer
             // 
@@ -180,7 +186,7 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.btnAddLine);
-            this.panel2.Controls.Add(this.txtPrice);
+            this.panel2.Controls.Add(this.txtPriceLine);
             this.panel2.Controls.Add(this.lblPrice);
             this.panel2.Controls.Add(this.numericUpDown1);
             this.panel2.Controls.Add(this.textBox1);
@@ -201,12 +207,12 @@
             this.btnAddLine.Text = "Add";
             this.btnAddLine.UseVisualStyleBackColor = true;
             // 
-            // txtPrice
+            // txtPriceLine
             // 
-            this.txtPrice.Location = new System.Drawing.Point(208, 93);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(102, 20);
-            this.txtPrice.TabIndex = 33;
+            this.txtPriceLine.Location = new System.Drawing.Point(208, 93);
+            this.txtPriceLine.Name = "txtPriceLine";
+            this.txtPriceLine.Size = new System.Drawing.Size(102, 20);
+            this.txtPriceLine.TabIndex = 33;
             // 
             // lblPrice
             // 
@@ -328,6 +334,24 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
+            // txtPriceProduct
+            // 
+            this.txtPriceProduct.Enabled = false;
+            this.txtPriceProduct.Location = new System.Drawing.Point(239, 93);
+            this.txtPriceProduct.Name = "txtPriceProduct";
+            this.txtPriceProduct.Size = new System.Drawing.Size(102, 20);
+            this.txtPriceProduct.TabIndex = 35;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(180, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Price:";
+            // 
             // NewInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,7 +404,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtPriceLine;
         private System.Windows.Forms.Button btnAddLine;
         private System.Windows.Forms.Button btnAddProd;
         private System.Windows.Forms.DataGridView dgvInv;
@@ -389,5 +413,7 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtPriceProduct;
+        private System.Windows.Forms.Label label2;
     }
 }

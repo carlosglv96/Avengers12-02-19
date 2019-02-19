@@ -699,7 +699,7 @@ namespace Avengers.Presentacion
         {
             if (!tabControl.TabPages.ContainsKey("in1"))
             {
-                in1 = new viewInvoice();
+                in1 = new viewInvoice(this.idioma,this.u);
                 tabControl.Visible = true;
                 in1.MdiParent = this;
                 in1.WindowState = FormWindowState.Normal;

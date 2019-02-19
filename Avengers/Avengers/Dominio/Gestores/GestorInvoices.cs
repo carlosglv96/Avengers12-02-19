@@ -37,7 +37,7 @@ namespace Avengers.Dominio.Gestores
 
         }
 
-        public String getUnString(String sql)
+        public static String getUnString(String sql)
         {
             ConnectOracle select = new ConnectOracle();
             return select.getData(sql);
