@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewInvoices));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPriceProduct = new System.Windows.Forms.TextBox();
             this.btnAddProd = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.nudAmount = new System.Windows.Forms.NumericUpDown();
             this.btnFindProd = new System.Windows.Forms.Button();
             this.lblAmount = new System.Windows.Forms.Label();
@@ -44,23 +46,21 @@
             this.btnAddLine = new System.Windows.Forms.Button();
             this.txtPriceLine = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nudAmountLine = new System.Windows.Forms.NumericUpDown();
+            this.txtDesc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblAddLine = new System.Windows.Forms.Label();
             this.dgvInv = new System.Windows.Forms.DataGridView();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.tbxTotal = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtPriceProduct = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAmountLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +80,14 @@
             this.panel1.Size = new System.Drawing.Size(366, 153);
             this.panel1.TabIndex = 0;
             // 
+            // txtPriceProduct
+            // 
+            this.txtPriceProduct.Enabled = false;
+            this.txtPriceProduct.Location = new System.Drawing.Point(239, 93);
+            this.txtPriceProduct.Name = "txtPriceProduct";
+            this.txtPriceProduct.Size = new System.Drawing.Size(102, 20);
+            this.txtPriceProduct.TabIndex = 35;
+            // 
             // btnAddProd
             // 
             this.btnAddProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,6 +97,17 @@
             this.btnAddProd.TabIndex = 34;
             this.btnAddProd.Text = "Add";
             this.btnAddProd.UseVisualStyleBackColor = true;
+            this.btnAddProd.Click += new System.EventHandler(this.btnAddProd_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(180, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Price:";
             // 
             // nudAmount
             // 
@@ -188,8 +207,8 @@
             this.panel2.Controls.Add(this.btnAddLine);
             this.panel2.Controls.Add(this.txtPriceLine);
             this.panel2.Controls.Add(this.lblPrice);
-            this.panel2.Controls.Add(this.numericUpDown1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.nudAmountLine);
+            this.panel2.Controls.Add(this.txtDesc);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblDescription);
             this.panel2.Location = new System.Drawing.Point(397, 90);
@@ -206,6 +225,7 @@
             this.btnAddLine.TabIndex = 30;
             this.btnAddLine.Text = "Add";
             this.btnAddLine.UseVisualStyleBackColor = true;
+            this.btnAddLine.Click += new System.EventHandler(this.btnAddLine_Click);
             // 
             // txtPriceLine
             // 
@@ -224,30 +244,30 @@
             this.lblPrice.TabIndex = 32;
             this.lblPrice.Text = "Price:";
             // 
-            // numericUpDown1
+            // nudAmountLine
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(84, 94);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.nudAmountLine.Location = new System.Drawing.Point(84, 94);
+            this.nudAmountLine.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(47, 20);
-            this.numericUpDown1.TabIndex = 31;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nudAmountLine.Name = "nudAmountLine";
+            this.nudAmountLine.Size = new System.Drawing.Size(47, 20);
+            this.nudAmountLine.TabIndex = 31;
+            this.nudAmountLine.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // textBox1
+            // txtDesc
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 31);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 56);
-            this.textBox1.TabIndex = 27;
+            this.txtDesc.Location = new System.Drawing.Point(112, 31);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(196, 56);
+            this.txtDesc.TabIndex = 27;
             // 
             // label1
             // 
@@ -280,9 +300,16 @@
             // 
             // dgvInv
             // 
+            this.dgvInv.AllowUserToAddRows = false;
+            this.dgvInv.AllowUserToDeleteRows = false;
+            this.dgvInv.AllowUserToResizeColumns = false;
+            this.dgvInv.AllowUserToResizeRows = false;
+            this.dgvInv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInv.Location = new System.Drawing.Point(15, 262);
             this.dgvInv.Name = "dgvInv";
+            this.dgvInv.RowHeadersVisible = false;
+            this.dgvInv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInv.Size = new System.Drawing.Size(712, 245);
             this.dgvInv.TabIndex = 26;
             // 
@@ -296,13 +323,13 @@
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             // 
-            // tbxTotal
+            // txtTotal
             // 
-            this.tbxTotal.Enabled = false;
-            this.tbxTotal.Location = new System.Drawing.Point(735, 537);
-            this.tbxTotal.Name = "tbxTotal";
-            this.tbxTotal.Size = new System.Drawing.Size(81, 20);
-            this.tbxTotal.TabIndex = 31;
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(735, 537);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(81, 20);
+            this.txtTotal.TabIndex = 31;
             // 
             // lblTotal
             // 
@@ -333,31 +360,14 @@
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // txtPriceProduct
-            // 
-            this.txtPriceProduct.Enabled = false;
-            this.txtPriceProduct.Location = new System.Drawing.Point(239, 93);
-            this.txtPriceProduct.Name = "txtPriceProduct";
-            this.txtPriceProduct.Size = new System.Drawing.Size(102, 20);
-            this.txtPriceProduct.TabIndex = 35;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(180, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Price:";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // NewInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 631);
-            this.Controls.Add(this.tbxTotal);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
@@ -377,7 +387,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAmountLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -399,9 +409,9 @@
         private System.Windows.Forms.TextBox txtProduct;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblAddLine;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudAmountLine;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPriceLine;
@@ -409,7 +419,7 @@
         private System.Windows.Forms.Button btnAddProd;
         private System.Windows.Forms.DataGridView dgvInv;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.TextBox tbxTotal;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
