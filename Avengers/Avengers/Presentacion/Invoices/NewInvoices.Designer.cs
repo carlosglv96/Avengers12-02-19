@@ -57,11 +57,15 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.nudRemove = new System.Windows.Forms.NumericUpDown();
+            this.txtTotalNeto = new System.Windows.Forms.TextBox();
+            this.lblNeto = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmountLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRemove)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -316,17 +320,18 @@
             // btnRemove
             // 
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(742, 291);
+            this.btnRemove.Location = new System.Drawing.Point(735, 320);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(75, 23);
             this.btnRemove.TabIndex = 27;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(735, 537);
+            this.txtTotal.Location = new System.Drawing.Point(735, 550);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(81, 20);
             this.txtTotal.TabIndex = 31;
@@ -335,7 +340,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(670, 538);
+            this.lblTotal.Location = new System.Drawing.Point(670, 550);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(48, 16);
             this.lblTotal.TabIndex = 30;
@@ -350,6 +355,7 @@
             this.btnOk.TabIndex = 29;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -362,11 +368,49 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // nudRemove
+            // 
+            this.nudRemove.Location = new System.Drawing.Point(735, 294);
+            this.nudRemove.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudRemove.Name = "nudRemove";
+            this.nudRemove.Size = new System.Drawing.Size(47, 20);
+            this.nudRemove.TabIndex = 36;
+            this.nudRemove.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // txtTotalNeto
+            // 
+            this.txtTotalNeto.Enabled = false;
+            this.txtTotalNeto.Location = new System.Drawing.Point(574, 550);
+            this.txtTotalNeto.Name = "txtTotalNeto";
+            this.txtTotalNeto.Size = new System.Drawing.Size(81, 20);
+            this.txtTotalNeto.TabIndex = 37;
+            // 
+            // lblNeto
+            // 
+            this.lblNeto.AutoSize = true;
+            this.lblNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNeto.Location = new System.Drawing.Point(471, 554);
+            this.lblNeto.Name = "lblNeto";
+            this.lblNeto.Size = new System.Drawing.Size(85, 16);
+            this.lblNeto.TabIndex = 38;
+            this.lblNeto.Text = "Total Neto:";
+            // 
             // NewInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 631);
+            this.ClientSize = new System.Drawing.Size(834, 631);
+            this.Controls.Add(this.lblNeto);
+            this.Controls.Add(this.txtTotalNeto);
+            this.Controls.Add(this.nudRemove);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnOk);
@@ -389,6 +433,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmountLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRemove)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,5 +470,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtPriceProduct;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nudRemove;
+        private System.Windows.Forms.TextBox txtTotalNeto;
+        private System.Windows.Forms.Label lblNeto;
     }
 }
