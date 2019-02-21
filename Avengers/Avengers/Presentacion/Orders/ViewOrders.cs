@@ -365,17 +365,86 @@ namespace Avengers.Presentacion.Orders
                 switch (index)
                 {
                     case 8:
+                        // AQUI SE CONTROLA QUE EL ROL SEA EL DE ADMIN PARA PODER HACER EFECTO AL DOBLE CLICK
+                        //if ()
+                        //{
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
                             o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
-
+                        //}
+                        //else
+                        //    {
+                        //    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                        //    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                        //}
 
                         break;
-
                     case 9:
+                        //Falta añadir un && al if con lo del rol
+                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green)
+                        {
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
                             o.getGestor().setData("Update orders set labeled = 1 where idorder = '" + id + "'");
+                        }
+                        else
+                        {
+                            if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Red)
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is not confirmed"); }
+                                else { MessageBox.Show("Error, el pedido no esta confirmado"); }                                
+                            }
+                            else
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                            }
+                        }    
+                        break;
+                    case 10:
+                        //Falta añadir un && al if con lo del rol
+                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green)
+                        {
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update orders set sent = 1 where idorder = '" + id + "'");
+                        }
+                        else
+                        {
+                            if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Red)
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is not labeled"); }
+                                else { MessageBox.Show("Error, el pedido no esta etiquetado"); }
+                            }
+                            else
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                            }
+                        }
+                        break;
+                    case 11:
+                        //Dejo comentado los if hasta que no este al menos lo de rol o lo de 100% pagado
+                        //Falta saber si pedido esta 100% pagado y añadir un && al if con lo del rol
+                        //if ()
+                        //{
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update orders set invoiced = 1 where idorder = '" + id + "'");
+                        //}
+                        //else
+                        //{
+                        //    if ()
+                        //    {
+                        //        if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is 100% pay"); }
+                        //        else { MessageBox.Show("Error, el pedido no esta 100% pagado"); }
+                        //    }
+                        //    else
+                        //    {
+                        //        if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                        //        else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                        //    }
+                        //}
                         break;
 
                 }
@@ -391,16 +460,68 @@ namespace Avengers.Presentacion.Orders
                 switch (index)
                 {
                     case 8:
-                        dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
-                        dgvOrders.ClearSelection();
-                        o.getGestor().setData("Update orders set confirmed = 0 where idorder = '" + id + "'");
+                        //Falta añadir un && al if con lo del rol
+                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
+                        {
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update orders set confirmed = 0 where idorder = '" + id + "'");                            
+                        }
+                        else
+                        {
+                            if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Green)
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is labeled"); }
+                                else { MessageBox.Show("Error, el pedido esta etiquetado"); }
+                            }
+                            else
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                            }
+                        }
                         break;
-
                     case 9:
-                        dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
-                        dgvOrders.ClearSelection();
-                        o.getGestor().setData("Update orders set labeled = 0 where idorder = '" + id + "'");
-                        break;                      
+                        //Falta añadir un && al if con lo del rol
+                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
+                        {
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update orders set labeled = 0 where idorder = '" + id + "'");
+                        }
+                        else
+                        {
+                            if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Green)
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is sent"); }
+                                else { MessageBox.Show("Error, el pedido esta enviado"); }
+                            }
+                            else
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                            }
+                        }
+                        break;
+                    case 10:
+                        // AQUI SE CONTROLA QUE EL ROL SEA EL DE ADMIN PARA PODER HACER EFECTO AL DOBLE CLICK
+                        //if ()
+                        //{
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update orders set sent = 0 where idorder = '" + id + "'");
+                        //}
+                        //else
+                        //    {
+                        //    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                        //    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                        //}
+                        break;
+                    case 11:
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update orders set invoiced = 0 where idorder = '" + id + "'");
+                        break;
                 }
             }
         }
