@@ -707,17 +707,19 @@ namespace Avengers.Presentacion
                 in1.TopLevel = false;
                 in1.Dock = DockStyle.Fill;
                 in1.Show();
-                TabPage tp = new TabPage(debts.Text);
+                TabPage tp = new TabPage(btnInvoices.Text);
                 tp.Tag = in1;
                 tp.Name = "in1";
                 tp.Parent = tabControl;
                 tabControl.SelectedTab = tp;
                 in1.Tag = tp;
+                ocultarBtnSys();
             }
             else
             {
                 int n = tabControl.TabPages.IndexOfKey("in1");
                 tabControl.SelectTab(n);
+                ocultarBtnSys();
             }
         }
 
