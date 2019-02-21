@@ -97,6 +97,10 @@ namespace Avengers.Presentacion.Invoices
         {
             NewInvoices ni = new NewInvoices(this.idioma,this.u);
             ni.ShowDialog();
+            if (ni.IsDisposed)
+            {
+                InitDGV("");
+            }
         }
     }
 }

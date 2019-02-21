@@ -8,25 +8,13 @@ namespace Avengers.Dominio
 {
     class DtoLine
     {
-        private String IidLine;
+        private String idLine;
         private String refInvoice;
         private String description;
         private String quantity;
         private String price;
 
-        public string IidLine1
-        {
-            get
-            {
-                return IidLine;
-            }
-
-            set
-            {
-                IidLine = value;
-            }
-        }
-
+ 
         public string RefInvoice
         {
             get
@@ -79,12 +67,37 @@ namespace Avengers.Dominio
             }
         }
 
+        public string IdLine
+        {
+            get
+            {
+                return idLine;
+            }
+
+            set
+            {
+                idLine = value;
+            }
+        }
+
         public DtoLine(String description,String quantity,String price)
         {
             this.Description = description;
             this.Quantity = quantity;
             this.Price = price;
 
+        }
+
+        public  bool Equals(object obj)
+        {
+            
+            DtoLine line = obj as DtoLine;
+            if (line == null)
+            {
+                return false;
+            }
+            return (this.idLine.Equals(line.idLine) && this.description.Equals(line.description));
+          
         }
 
 

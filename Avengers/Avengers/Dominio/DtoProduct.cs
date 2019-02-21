@@ -116,5 +116,7 @@ namespace Avengers.Dominio
                 stock = value;
             }
         }
+
+        
     }
 }
