@@ -357,7 +357,7 @@ namespace Avengers.Presentacion.Orders
         {
             Order o = new Dominio.Order();
             Incomes inc = new Incomes();
-            PPayments pa = new PPayments();
+            PPayments pa = new PPayments();          
             DataGridView dgvOrders = sender as DataGridView;
             int id = int.Parse(dgvOrders.Rows[e.RowIndex].Cells[0].Value.ToString());
             String aux = o.getGestor().getUnString("select total from orders where idorder = " + id);
@@ -366,6 +366,8 @@ namespace Avengers.Presentacion.Orders
             int prepaid = Int32.Parse(aux);
             aux = o.getGestor().getUnString("select REFPAYMENTMETHOD from orders where idorder = " + id);
             int tipoPay = Int32.Parse(aux);
+            o.getGestor().getUnString("select REFCUSTOMER from orders where idorder = " + id);
+            int refCusto = Int32.Parse(aux);
 
             if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Red)
             {
@@ -491,10 +493,15 @@ namespace Avengers.Presentacion.Orders
                         //Falta añadir un && al if con lo del rol
                         if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && (total-prepaid == 0))
                         {
+                            int idFactura = Dominio.Invoices.getIdInvoice();
+                            float totalIva = (total * (float) 1.21);
+                            totalIva = (float)Math.Round(totalIva, 2);
+                            string insertInvoice = "Insert into Invoices values ('" + idFactura + "',SYSDATE,'" + refCusto + "','" + total + "','" + totalIva + "')";
+                            GestorInvoices.insertInvoice(insertInvoice);
+                            string insertOrderInvo = "Insert into ORDERS_INVOICES values ('0','" + id + "','" + idFactura + "')";
+                            GestorInvoicesProducts.insertInvoicesProduct(insertOrderInvo);
 
-
-
-
+                            //FALTA MOSTRAR LA FACTURA
 
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
