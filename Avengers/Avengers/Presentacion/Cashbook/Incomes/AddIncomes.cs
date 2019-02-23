@@ -230,7 +230,7 @@ namespace Avengers.Presentacion.Cashbook
                         user.getId() + "','" + source + "','" + type +
                         "','" + concept + "','" + cant + "','" + this.refaction + "')");
 
-                    //UPDATE ORDERS SET PREPAID = '0' WHERE
+                    //UPDATE ORDERS PREPAID 
 
                     Order o = new Order();
                     String aux = o.getGestor().getUnString("select count(*) from orders where idorder = "+concept);
