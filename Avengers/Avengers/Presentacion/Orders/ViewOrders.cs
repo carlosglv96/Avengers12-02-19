@@ -366,7 +366,7 @@ namespace Avengers.Presentacion.Orders
             int prepaid = Int32.Parse(aux);
             aux = o.getGestor().getUnString("select REFPAYMENTMETHOD from orders where idorder = " + id);
             int tipoPay = Int32.Parse(aux);
-            o.getGestor().getUnString("select REFCUSTOMER from orders where idorder = " + id);
+            aux = o.getGestor().getUnString("select REFCUSTOMER from orders where idorder = " + id);
             int refCusto = Int32.Parse(aux);
 
             if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Red)
@@ -586,23 +586,88 @@ namespace Avengers.Presentacion.Orders
                         }
                         break;
                     case 10:
-                        // AQUI SE CONTROLA QUE EL ROL SEA EL DE ADMIN PARA PODER HACER EFECTO AL DOBLE CLICK
-                        //if ()
-                        //{
+                        //añadir rol
+                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
+                        {
+                            DataTable ta = o.getGestor().readInDB3("select REFPRODUCT, AMOUNT from ORDERSPRODUCTS where REFORDER = " + id);
+                            DataGridView dgvAux = new DataGridView();
+                            dgvAux.Columns.Clear();
+                            dgvAux.Columns.Add("REFPRODUCT", "1");
+                            dgvAux.Columns.Add("AMOUNT", "2");
+                            foreach (DataRow row in ta.Rows)
+                            {
+                                dgvAux.Rows.Add(row["REFPRODUCT"], row["AMOUNT"]);
+                            }
+
+                            int nproducts = ta.Rows.Count;
+                            int[] proCant = new int[nproducts];
+                            for (int i = 0; i < nproducts; i++)
+                            {
+                                proCant[i] = Int32.Parse(o.getGestor().getUnString("select stock from PRODUCTS where IDPRODUCT = " + dgvAux.Rows[i].Cells[0].Value.ToString()));
+                            }
+                       
+                            for (int i = 0; i < nproducts; i++)
+                            {
+                                inc.getGestor().insertIncome("update PRODUCTS set stock = '" + (proCant[i] + Int32.Parse(dgvAux.Rows[i].Cells[1].Value.ToString())) + "' where IDPRODUCT = " + dgvAux.Rows[i].Cells[0].Value.ToString());
+                            }
+
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
                             dgvOrders.ClearSelection();
                             o.getGestor().setData("Update orders set sent = 0 where idorder = '" + id + "'");
-                        //}
-                        //else
-                        //    {
-                        //    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
-                        //    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
-                        //}
+                        }
+                        else
+                        {
+                            if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Green)
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is invoiced"); }
+                                else { MessageBox.Show("Error, el pedido esta facturado"); }
+                            }
+                            else
+                            {
+                                //if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                //else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                            }
+                        }
                         break;
                     case 11:
-                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
-                            dgvOrders.ClearSelection();
-                            o.getGestor().setData("Update orders set invoiced = 0 where idorder = '" + id + "'");
+                        //añadir rol
+                        //if ()
+                        //{
+                            String sms = null;
+                            if (this.idioma == "INGLES") { sms = ("Print invoice?"); }
+                            else { sms = ("¿Imprimir factura?"); }
+                            if (MessageBox.Show(sms, "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                //Generar e imprimir factura   
+                            }
+                            else
+                            {
+                                int idmax = Int32.Parse(GestorInvoices.getUnString("select max(idinvoice) from invoices"));
+                                int idfactura = Int32.Parse(GestorInvoices.getUnString("select refinvoice from ORDERS_INVOICES where reforder = " + id));
+                                if (idmax == idfactura)
+                                {
+
+                                    GestorInvoices.deleteInvoice("delete from ORDERS_INVOICES where reforder = " + id);
+                                    GestorInvoices.deleteInvoice("delete from invoices where idinvoice = " + idfactura);
+
+                                    dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                                    dgvOrders.ClearSelection();
+                                    o.getGestor().setData("Update orders set invoiced = 0 where idorder = '" + id + "'");
+                                }
+                                else
+                                {
+                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, only can delete the last invoice"); }
+                                    else { MessageBox.Show("Error, solo se puede eliminar la ultima factura"); }
+                                }
+
+                            }
+                        //}
+                        //else
+                        //{
+                            //if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                            //else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                        //}
+
                         break;
                 }
             }
