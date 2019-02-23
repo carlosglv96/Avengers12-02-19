@@ -356,21 +356,49 @@ namespace Avengers.Presentacion.Orders
             
         {
             Order o = new Dominio.Order();
+            Incomes inc = new Incomes();
+            PPayments pa = new PPayments();
             DataGridView dgvOrders = sender as DataGridView;
+            int id = int.Parse(dgvOrders.Rows[e.RowIndex].Cells[0].Value.ToString());
+            String aux = o.getGestor().getUnString("select total from orders where idorder = " + id);
+            int total = Int32.Parse(aux);
+            aux = o.getGestor().getUnString("select prepaid from orders where idorder = " + id);
+            int prepaid = Int32.Parse(aux);
+            aux = o.getGestor().getUnString("select REFPAYMENTMETHOD from orders where idorder = " + id);
+            int tipoPay = Int32.Parse(aux);
 
             if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Red)
             {
                 int index = dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].ColumnIndex;
-                int id = int.Parse(dgvOrders.Rows[e.RowIndex].Cells[0].Value.ToString());
+                
                 switch (index)
                 {
                     case 8:
                         // AQUI SE CONTROLA QUE EL ROL SEA EL DE ADMIN PARA PODER HACER EFECTO AL DOBLE CLICK
                         //if ()
                         //{
-                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
-                            dgvOrders.ClearSelection();
-                            o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
+                        dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                        dgvOrders.ClearSelection();
+                        o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
+                        if(total == prepaid)
+                        {
+                        String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', SYSDATE, '" + this.u.getId() + "', '2', '1', '"+"Pagado el total del pedido con n: "+id+"', '"+total+"', '0')");
+                        inc.getGestor().insertIncome(sql);
+                        }
+                        else
+                        {
+                            if(tipoPay == 3)
+                            {
+                                String sql = "Insert into ppayment values (0,SYSDATE," + this.u.getId() + ",'1','" + "Pendiente mas pagos del pedido con n: " + id + "','" + (total - prepaid) + "',0)";
+                                GestorPPayment.insertPPayment(sql);
+                            }
+                            else
+                            {
+                                String sql = "Insert into ppayment values (0,SYSDATE," + this.u.getId() + ",'2','" + "Pendiente mas pagos del pedido con n: " + id + "','" + (total - prepaid) + "',0)";
+                                GestorPPayment.insertPPayment(sql);
+                            }                           
+                        }
+                            
                         //}
                         //else
                         //    {
@@ -455,7 +483,6 @@ namespace Avengers.Presentacion.Orders
             else if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Green)
             {
                 int index = dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].ColumnIndex;
-                int id = int.Parse(dgvOrders.Rows[e.RowIndex].Cells[0].Value.ToString());
 
                 switch (index)
                 {
