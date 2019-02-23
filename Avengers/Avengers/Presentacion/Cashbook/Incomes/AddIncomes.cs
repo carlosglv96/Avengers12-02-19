@@ -229,6 +229,45 @@ namespace Avengers.Presentacion.Cashbook
                     inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
                         user.getId() + "','" + source + "','" + type +
                         "','" + concept + "','" + cant + "','" + this.refaction + "')");
+
+                    //UPDATE ORDERS SET PREPAID = '0' WHERE
+
+                    Order o = new Order();
+                    String aux = o.getGestor().getUnString("select count(*) from orders where idorder = "+concept);
+                    int n = Int32.Parse(aux);
+                    if (n > 0)
+                    {
+                        aux = o.getGestor().getUnString("select total from orders where idorder = " + concept);
+                        int total1 = Int32.Parse(aux);
+
+                        aux = o.getGestor().getUnString("select prepaid from orders where idorder = " + concept);
+                        int prepaid = Int32.Parse(aux);
+
+                        if (prepaid < total1)
+                        {    
+                            if (cant >= total1)
+                            {
+                                cant = total1;
+                                o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
+                            }
+                            else
+                            {
+                                if (prepaid + cant >= total1)
+                                {
+                                    cant = total1;
+                                    o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
+                                }
+                                else
+                                {
+                                    cant = cant + prepaid;
+                                    o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
+                                }
+                            }                                                       
+                        }                      
+                        
+                    }
+
+
                     this.Dispose();
                 }
             }
