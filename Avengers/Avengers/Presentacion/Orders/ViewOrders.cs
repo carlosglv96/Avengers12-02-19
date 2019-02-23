@@ -384,21 +384,22 @@ namespace Avengers.Presentacion.Orders
                         o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
                         if(total == prepaid)
                         {
-                        String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', SYSDATE, '" + this.u.getId() + "', '2', '1', '"+"Pagado el total del pedido con n: "+id+"', '"+total+"', '0')");
+                        String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', SYSDATE, '" + this.u.getId() + "', '2', '1', '"+id+"', '"+total+"', '0')");
                         inc.getGestor().insertIncome(sql);
                         }
                         else
                         {
-                            if(tipoPay == 3)
+                            if (tipoPay == 3)
                             {
-                                String sql = "Insert into ppayment values (0,SYSDATE," + this.u.getId() + ",'1','" + "Pendiente mas pagos del pedido con n: " + id + "','" + (total - prepaid) + "',0)";
+                                String sql = "Insert into ppayment values (0,SYSDATE," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
                                 GestorPPayment.insertPPayment(sql);
                             }
                             else
                             {
-                                String sql = "Insert into ppayment values (0,SYSDATE," + this.u.getId() + ",'2','" + "Pendiente mas pagos del pedido con n: " + id + "','" + (total - prepaid) + "',0)";
+                                String sql = "Insert into ppayment values (0,SYSDATE," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
                                 GestorPPayment.insertPPayment(sql);
-                            }                           
+                            }
+                            
                         }
                             
                         //}
@@ -451,7 +452,6 @@ namespace Avengers.Presentacion.Orders
                             for (int i = 0; i < nproducts; i++)
                             {
                                 proCant[i] = Int32.Parse(o.getGestor().getUnString("select stock from PRODUCTS where IDPRODUCT = "+ dgvAux.Rows[i].Cells[0].Value.ToString()));
-                                Console.WriteLine(proCant[i]+"--");
                                 if(proCant[i] - Int32.Parse(dgvAux.Rows[i].Cells[1].Value.ToString()) < 0){
                                     posible = false;
                                 }
@@ -521,11 +521,11 @@ namespace Avengers.Presentacion.Orders
                                     if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is 100% pay"); }
                                     else { MessageBox.Show("Error, el pedido no esta 100% pagado"); }
                                 }
-                                //else
-                                //{
-                                //    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
-                                //    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
-                                //}                               
+                                else
+                                {
+                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                                }
                             }
                         }
                         break;
@@ -545,9 +545,15 @@ namespace Avengers.Presentacion.Orders
                         //Falta añadir un && al if con lo del rol
                         if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
                         {
+                            GestorInvoices.deleteInvoice("delete from ppayment where text = " + id);
+                            String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', SYSDATE, '" + this.u.getId() + "', '2', '1', '" + id + "', '" + prepaid + "', '1')");
+                            inc.getGestor().insertIncome(sql);
+                            o.getGestor().setData("update orders set prepaid = '0' where idorder = '" + id + "'");
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
                             dgvOrders.ClearSelection();
-                            o.getGestor().setData("Update orders set confirmed = 0 where idorder = '" + id + "'");                            
+                            o.getGestor().setData("Update orders set confirmed = 0 where idorder = '" + id + "'");
+
+                            initTable(condicion + whereCondition + iValue + orderby);
                         }
                         else
                         {
@@ -624,8 +630,8 @@ namespace Avengers.Presentacion.Orders
                             }
                             else
                             {
-                                //if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
-                                //else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
                             }
                         }
                         break;
