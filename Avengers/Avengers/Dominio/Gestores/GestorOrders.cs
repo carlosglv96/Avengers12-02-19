@@ -80,6 +80,15 @@ namespace Avengers.Dominio.Gestores
             data = search.getData(query,"littlerp");
             tabla = data.Tables["littlerp"];
         }
+
+        public DataTable readInDB3(String query)
+        {
+            DataSet data = new DataSet();
+            ConnectOracle search = new ConnectOracle();
+
+            data = search.getData(query, "littlerp");
+            return data.Tables["littlerp"];
+        }
         public static bool existOrder(String id)
         {
             bool exist = false;

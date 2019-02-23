@@ -433,9 +433,45 @@ namespace Avengers.Presentacion.Orders
                         //Falta añadir un && al if con lo del rol
                         if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green)
                         {
-                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
-                            dgvOrders.ClearSelection();
-                            o.getGestor().setData("Update orders set sent = 1 where idorder = '" + id + "'");
+                            DataTable ta = o.getGestor().readInDB3("select REFPRODUCT, AMOUNT from ORDERSPRODUCTS where REFORDER = "+id);
+                            DataGridView dgvAux = new DataGridView();
+                            bool posible = true;
+                            dgvAux.Columns.Clear();
+                            dgvAux.Columns.Add("REFPRODUCT", "1");
+                            dgvAux.Columns.Add("AMOUNT", "2");
+                            foreach (DataRow row in ta.Rows)
+                            {
+                                dgvAux.Rows.Add(row["REFPRODUCT"], row["AMOUNT"]);
+                            }
+
+                            int nproducts = ta.Rows.Count;
+                            int[] proCant = new int[nproducts];
+                            for (int i = 0; i < nproducts; i++)
+                            {
+                                proCant[i] = Int32.Parse(o.getGestor().getUnString("select stock from PRODUCTS where IDPRODUCT = "+ dgvAux.Rows[i].Cells[0].Value.ToString()));
+                                Console.WriteLine(proCant[i]+"--");
+                                if(proCant[i] - Int32.Parse(dgvAux.Rows[i].Cells[1].Value.ToString()) < 0){
+                                    posible = false;
+                                }
+                            }
+
+                            if (posible)
+                            {
+                                for (int i = 0; i < nproducts; i++)
+                                {
+                                    inc.getGestor().insertIncome("update PRODUCTS set stock = '"+(proCant[i]- Int32.Parse(dgvAux.Rows[i].Cells[1].Value.ToString())) +"' where IDPRODUCT = " + dgvAux.Rows[i].Cells[0].Value.ToString());                                    
+                                }
+
+                                dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                                dgvOrders.ClearSelection();
+                                o.getGestor().setData("Update orders set sent = 1 where idorder = '" + id + "'");
+                            }
+                            else
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, there is not enough stock of the products"); }
+                                else { MessageBox.Show("Error, no hay stock suficiente de los productos"); }
+                            }
+                            
                         }
                         else
                         {
@@ -451,28 +487,40 @@ namespace Avengers.Presentacion.Orders
                             }
                         }
                         break;
-                    case 11:
-                        //Dejo comentado los if hasta que no este al menos lo de rol o lo de 100% pagado
-                        //Falta saber si pedido esta 100% pagado y añadir un && al if con lo del rol
-                        //if ()
-                        //{
+                    case 11:                        
+                        //Falta añadir un && al if con lo del rol
+                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && (total-prepaid == 0))
+                        {
+
+
+
+
+
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
                             o.getGestor().setData("Update orders set invoiced = 1 where idorder = '" + id + "'");
-                        //}
-                        //else
-                        //{
-                        //    if ()
-                        //    {
-                        //        if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is 100% pay"); }
-                        //        else { MessageBox.Show("Error, el pedido no esta 100% pagado"); }
-                        //    }
-                        //    else
-                        //    {
-                        //        if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
-                        //        else { MessageBox.Show("Error, el usuario no tiene permisos"); }
-                        //    }
-                        //}
+                        }
+                        else
+                        {
+                            if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Red)
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is not sent"); }
+                                else { MessageBox.Show("Error, el pedido no esta enviado"); }
+                            }
+                            else
+                            {
+                                if (total - prepaid > 0)
+                                {
+                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is 100% pay"); }
+                                    else { MessageBox.Show("Error, el pedido no esta 100% pagado"); }
+                                }
+                                //else
+                                //{
+                                //    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                //    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                                //}                               
+                            }
+                        }
                         break;
 
                 }

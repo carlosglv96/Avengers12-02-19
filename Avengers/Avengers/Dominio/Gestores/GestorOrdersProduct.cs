@@ -52,6 +52,14 @@ namespace Avengers.Dominio.Gestores
             data = search.getData("Select " + column + " from " + table + " " + cond, "littlerp");
             tabla = data.Tables["littlerp"];
         }
+        public void readInDB2(String query)
+        {
+            DataSet data = new DataSet();
+            ConnectOracle search = new ConnectOracle();
+
+            data = search.getData(query, "littlerp");
+            tabla = data.Tables["littlerp"];
+        }
 
         public static void insertOrderProduct(String sentencia)
         {
