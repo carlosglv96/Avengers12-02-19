@@ -19,11 +19,10 @@ namespace Avengers.Presentacion.Invoices
         {
             this.idioma = idioma;
             this.u = u;
+            //dtpDate.Enabled = chkDate.Checked;
             InitializeComponent();
             InitDGV("");
-
-           
-            
+  
 
         }
 
@@ -60,20 +59,26 @@ namespace Avengers.Presentacion.Invoices
         {
             String query = " where 1=1 ";
 
-            if (dtpDate.Enabled=true)
+            if (dtpDate.Enabled)
             {
-                query += " And date_invoice = to_date('" + dtpDate.Text + "','dd/MM/yyyy') ";
+                query += " And date_invoice = to_date('" + dtpDate.Text.Replace("'", "") + "','dd/MM/yyyy')";
+                
             }
-            if (!String.IsNullOrEmpty(txtCustomer.Text.Replace("'", "")))
+            if (!String.IsNullOrEmpty(txtCustomerName.Text.Replace("'", "")))
             {
-                query += " And refcustomer= (select idcustomer from customers where upper(name) like '%" + txtCustomer.Text.Replace("'", "").ToUpper() + "%'"
-                    + " or upper(surname)='%" + txtCustomer.Text.Replace("'", "").ToUpper() + "%'";
+                query += " And refcustomer in (select idcustomer from customers where upper(name) like '%" + txtCustomerName.Text.Replace("'", "").ToUpper() + "%')";
+
             }
-            if (nudAmount.Value != 0)
+            if (!String.IsNullOrEmpty(txtCustomerSurname.Text.Replace("'", "")))
             {
-                query += " and Amount like '%" + nudAmount.Value + "%'";
+                query += " And refcustomer in (select idcustomer from customers where upper(surname) like '%" + txtCustomerSurname.Text.Replace("'", "").ToUpper() + "%')";
             }
-            
+            if(!String.IsNullOrEmpty(txtAmount.Text.Replace("'", "")))
+            {
+                query += " and Amount like '" + txtAmount.Text.ToString().Replace("'","").Replace(".",",") + "%'";
+                
+            }
+            Console.WriteLine(query);
             InitDGV(query);
         }
         private void chkDate_CheckedChanged(object sender, EventArgs e)
@@ -87,8 +92,32 @@ namespace Avengers.Presentacion.Invoices
         {
             filtrar();
         }
+        private void txtCustomerName_Click(object sender, EventArgs e)
+        {
+            this.txtCustomerSurname.Clear();
+            filtrar();
+        }
+
+        private void txtCustomerSurname_Click(object sender, EventArgs e)
+        {
+            this.txtCustomerName.Clear();
+            filtrar();
+        }
+
+        private void txtCustomerSurname_KeyUp(object sender, KeyEventArgs e)
+        {
+            filtrar();
+        }
 
         private void nudAmount_ValueChanged(object sender, EventArgs e)
+        {
+            filtrar();
+        }
+        private void txtAmount_KeyUp(object sender, KeyEventArgs e)
+        {
+            filtrar();
+        }
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
         {
             filtrar();
         }
@@ -135,5 +164,22 @@ namespace Avengers.Presentacion.Invoices
 
             }
         }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            this.txtAmount.Clear();
+            this.txtCustomerName.Clear();
+            this.txtCustomerSurname.Clear();
+            this.dtpDate.Value = DateTime.Today;
+            this.chkDate.Checked = false;
+            filtrar();
+        }
+
+        private void Invoices_Shown (object sender, EventArgs e)
+        {
+            dgvInvoice.ClearSelection();
+        }
+
+        
     }
 }

@@ -448,5 +448,7 @@ namespace Avengers.Presentacion.Cashbook
         {
             dgvIncomes.ClearSelection();
         }
+
+      
     }
 }

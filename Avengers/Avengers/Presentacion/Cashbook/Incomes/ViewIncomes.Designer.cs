@@ -270,6 +270,10 @@
             this.txtAmount.TabIndex = 23;
             this.txtAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAmount_KeyUp);
             // 
+            // backgroundWorker2
+            // 
+        
+            // 
             // btnEject
             // 
             this.btnEject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

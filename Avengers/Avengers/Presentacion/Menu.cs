@@ -248,6 +248,7 @@ namespace Avengers.Presentacion
             if (!tabControl.TabPages.ContainsKey("u1"))
             {
                 u1 = new ViewUsers(this.idioma);
+                cash_panel.Visible = false;
                 tabControl.Visible = true;
                 u1.MdiParent = this;
                 u1.WindowState = FormWindowState.Normal;
@@ -315,6 +316,7 @@ namespace Avengers.Presentacion
             if (!tabControl.TabPages.ContainsKey("o1"))
             {
                 o1 = new ViewOrders(this.u,this.idioma);
+                cash_panel.Visible = false;
                 ocultarBtnSys();
                 tabControl.Visible = true;
                 o1.MdiParent = this;
@@ -365,6 +367,7 @@ namespace Avengers.Presentacion
             if (!tabControl.TabPages.ContainsKey("c1"))
             {
                 c1 = new ViewCustomer(this.idioma);
+                cash_panel.Visible = false;
                 tabControl.Visible = true;
                 c1.MdiParent = this;
                 c1.WindowState = FormWindowState.Normal;
@@ -457,6 +460,7 @@ namespace Avengers.Presentacion
             if (!tabControl.TabPages.ContainsKey("p1"))
             {
                 p1 = new ViewProduct(this.idioma);
+                cash_panel.Visible = false;
                 tabControl.Visible = true;
                 p1.MdiParent = this;
                 p1.WindowState = FormWindowState.Normal;
@@ -494,7 +498,8 @@ namespace Avengers.Presentacion
             {
                 i2 = new ViewIncomes(this.idioma, this.u, 1, this);
                 i2.dgvIncomes.ClearSelection();
-                       
+                cash_panel.Visible = true;
+
                 tabControl.Visible = true;
                 i2.MdiParent = this;
                 i2.WindowState = FormWindowState.Normal;
@@ -527,7 +532,8 @@ namespace Avengers.Presentacion
             if (!tabControl.TabPages.ContainsKey("i1"))
             {
                 i1 = new ViewIncomes(this.idioma, this.u,0, this);
-                             
+                cash_panel.Visible = true;
+
                 tabControl.Visible = true;
                 i1.MdiParent = this;
                 i1.WindowState = FormWindowState.Normal;
@@ -556,6 +562,7 @@ namespace Avengers.Presentacion
             if (!tabControl.TabPages.ContainsKey("pa1"))
             {
                 pa1 = new viewPPayment(this.idioma, this.u);
+                cash_panel.Visible = true;
                 tabControl.Visible = true;
                 pa1.MdiParent = this;
                 pa1.WindowState = FormWindowState.Normal;
@@ -585,6 +592,7 @@ namespace Avengers.Presentacion
             {
                 
                 v1 = new ViewValidation(this.idioma, this.u,this);
+                cash_panel.Visible = true;
                 tabControl.Visible = true;
                 v1.MdiParent = this;
                 v1.WindowState = FormWindowState.Normal;
@@ -659,21 +667,14 @@ namespace Avengers.Presentacion
             return Convert.ToDouble(txbreceip.Text);
         }
 
-        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void backgroundWorker4_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
+       
 
         private void debts_Click_1(object sender, EventArgs e)
         {
             if (!tabControl.TabPages.ContainsKey("d1"))
             {
                 d1 = new ViewDebts(this.idioma, this.u, this);
+                cash_panel.Visible = true;
                 tabControl.Visible = true;
                 d1.MdiParent = this;
                 d1.WindowState = FormWindowState.Normal;
@@ -700,6 +701,7 @@ namespace Avengers.Presentacion
             if (!tabControl.TabPages.ContainsKey("in1"))
             {
                 in1 = new viewInvoice(this.idioma,this.u);
+                cash_panel.Visible = false;
                 tabControl.Visible = true;
                 in1.MdiParent = this;
                 in1.WindowState = FormWindowState.Normal;
@@ -722,6 +724,8 @@ namespace Avengers.Presentacion
                 ocultarBtnSys();
             }
         }
+
+        
 
 
 

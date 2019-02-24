@@ -36,13 +36,15 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.chkDate = new System.Windows.Forms.CheckBox();
-            this.lblCustomer = new System.Windows.Forms.Label();
-            this.txtCustomer = new System.Windows.Forms.TextBox();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.nudAmount = new System.Windows.Forms.NumericUpDown();
             this.btnClean = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblCustomer = new System.Windows.Forms.Label();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.txtCustomerSurname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvInvoice
@@ -105,7 +107,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblDate.Location = new System.Drawing.Point(426, 34);
+            this.lblDate.Location = new System.Drawing.Point(424, 23);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(41, 16);
             this.lblDate.TabIndex = 5;
@@ -115,56 +117,31 @@
             // 
             this.dtpDate.Enabled = false;
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(484, 34);
+            this.dtpDate.Location = new System.Drawing.Point(482, 23);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(109, 20);
             this.dtpDate.TabIndex = 6;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // chkDate
             // 
             this.chkDate.AutoSize = true;
-            this.chkDate.Location = new System.Drawing.Point(405, 36);
+            this.chkDate.Location = new System.Drawing.Point(403, 25);
             this.chkDate.Name = "chkDate";
             this.chkDate.Size = new System.Drawing.Size(15, 14);
             this.chkDate.TabIndex = 7;
             this.chkDate.UseVisualStyleBackColor = true;
             this.chkDate.CheckedChanged += new System.EventHandler(this.chkDate_CheckedChanged);
             // 
-            // lblCustomer
-            // 
-            this.lblCustomer.AutoSize = true;
-            this.lblCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblCustomer.Location = new System.Drawing.Point(23, 34);
-            this.lblCustomer.Name = "lblCustomer";
-            this.lblCustomer.Size = new System.Drawing.Size(73, 16);
-            this.lblCustomer.TabIndex = 8;
-            this.lblCustomer.Text = "Customer";
-            // 
-            // txtCustomer
-            // 
-            this.txtCustomer.Location = new System.Drawing.Point(117, 34);
-            this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(260, 20);
-            this.txtCustomer.TabIndex = 9;
-            this.txtCustomer.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCustomer_KeyUp);
-            // 
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
             this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblAmount.Location = new System.Drawing.Point(616, 34);
+            this.lblAmount.Location = new System.Drawing.Point(616, 24);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(59, 16);
             this.lblAmount.TabIndex = 10;
             this.lblAmount.Text = "Amount";
-            // 
-            // nudAmount
-            // 
-            this.nudAmount.Location = new System.Drawing.Point(694, 34);
-            this.nudAmount.Name = "nudAmount";
-            this.nudAmount.Size = new System.Drawing.Size(120, 20);
-            this.nudAmount.TabIndex = 11;
-            this.nudAmount.ValueChanged += new System.EventHandler(this.nudAmount_ValueChanged);
             // 
             // btnClean
             // 
@@ -175,16 +152,65 @@
             this.btnClean.TabIndex = 12;
             this.btnClean.Text = "Clean";
             this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
+            // 
+            // lblCustomer
+            // 
+            this.lblCustomer.AutoSize = true;
+            this.lblCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCustomer.Location = new System.Drawing.Point(23, 23);
+            this.lblCustomer.Name = "lblCustomer";
+            this.lblCustomer.Size = new System.Drawing.Size(122, 16);
+            this.lblCustomer.TabIndex = 8;
+            this.lblCustomer.Text = "Customer Name:";
+            // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.Location = new System.Drawing.Point(186, 23);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(191, 20);
+            this.txtCustomerName.TabIndex = 9;
+            this.txtCustomerName.Click += new System.EventHandler(this.txtCustomerName_Click);
+            this.txtCustomerName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCustomer_KeyUp);
+            // 
+            // txtCustomerSurname
+            // 
+            this.txtCustomerSurname.Location = new System.Drawing.Point(186, 63);
+            this.txtCustomerSurname.Name = "txtCustomerSurname";
+            this.txtCustomerSurname.Size = new System.Drawing.Size(191, 20);
+            this.txtCustomerSurname.TabIndex = 14;
+            this.txtCustomerSurname.Click += new System.EventHandler(this.txtCustomerSurname_Click);
+            this.txtCustomerSurname.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCustomerSurname_KeyUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(23, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 16);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Customer Surname:";
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Location = new System.Drawing.Point(681, 22);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtAmount.TabIndex = 15;
+            this.txtAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAmount_KeyUp);
             // 
             // viewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 504);
+            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.txtCustomerSurname);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClean);
-            this.Controls.Add(this.nudAmount);
             this.Controls.Add(this.lblAmount);
-            this.Controls.Add(this.txtCustomer);
+            this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.lblCustomer);
             this.Controls.Add(this.chkDate);
             this.Controls.Add(this.dtpDate);
@@ -197,7 +223,6 @@
             this.Name = "viewInvoice";
             this.Text = "viewInvoice";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,10 +238,13 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.CheckBox chkDate;
-        private System.Windows.Forms.Label lblCustomer;
-        private System.Windows.Forms.TextBox txtCustomer;
         private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.NumericUpDown nudAmount;
         private System.Windows.Forms.Button btnClean;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lblCustomer;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.TextBox txtCustomerSurname;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAmount;
     }
 }
