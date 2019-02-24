@@ -317,8 +317,15 @@ namespace Avengers.Presentacion.Orders
             ModOrder mo;
             try
             {
-                String idOrder = dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[0].Value.ToString();
-                DtoOrder dto = new DtoOrder(
+                int id = int.Parse(dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[0].Value.ToString());
+                Order o = new Order();
+                String aux = o.getGestor().getUnString("select confirmed from orders where idorder = " + id);
+                int confirmed = Int32.Parse(aux);
+
+                if (confirmed == 0)
+                {
+                    String idOrder = dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[0].Value.ToString();
+                    DtoOrder dto = new DtoOrder(
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[0].Value.ToString(),
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[1].Value.ToString(),
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[2].Value.ToString(),
@@ -328,13 +335,20 @@ namespace Avengers.Presentacion.Orders
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[6].Value.ToString(),
                     dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[7].Value.ToString()
                     );
-                mo = new ModOrder(u, idioma, dto);
-                mo.ShowDialog();
-                if (mo.IsDisposed)
-                {
-                    initTable(condicion + whereCondition + iValue + orderby);
-                    initComboPayment("Where Deleted = 0");
+                    mo = new ModOrder(u, idioma, dto);
+                    mo.ShowDialog();
+                    if (mo.IsDisposed)
+                    {
+                        initTable(condicion + whereCondition + iValue + orderby);
+                        initComboPayment("Where Deleted = 0");
+                    }
                 }
+                else
+                {
+                    if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is confirmed"); }
+                    else { MessageBox.Show("Error, el pedido esta confirmado"); }
+                }        
+
             }
             catch (Exception ex)
             {
