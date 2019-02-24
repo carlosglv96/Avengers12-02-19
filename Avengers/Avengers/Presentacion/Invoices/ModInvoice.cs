@@ -22,6 +22,8 @@ namespace Avengers.Presentacion.Invoices
         private float totalNeto = 0;
         private float totalIva = 0;
 
+
+
         public ModInvoice(DtoInvoice invoice,String idioma,User u)
         {
             this.idioma = idioma;
@@ -29,29 +31,32 @@ namespace Avengers.Presentacion.Invoices
             this.invoice = invoice;
             InitializeComponent();
             initTable();
+            //inicializamos los totales
             txtTotal.Text = invoice.Amount;
-            this.totalIva = float.Parse(invoice.Amount);
             txtTotalNeto.Text = invoice.Net_Amount;
+            this.totalIva = float.Parse(invoice.Amount);
             this.totalNeto = float.Parse(invoice.Net_Amount);
+
+
         }
 
 
         public void initTable()
         {
-            String sql = " select p.idproduct as ID,'P' as TYPE, ip.refinvoice as REFINVOICE ,p.name as PRODUCT ,ip.amount as AMOUNT ,p.price AS UNIPRICE, ip.amount*p.price as NET_AMOUNT, ip.amount*p.price+(ip.amount*p.price*"+IVA+"/100) as PRICE" +
+            String sql = " select p.idproduct as ID,'P' as TYPE, ip.refinvoice as REFINVOICE ,p.name as PRODUCT ,ip.amount as AMOUNT ,p.price AS UNIPRICE, ROUND(ip.amount*p.price,2) as NET_AMOUNT, ROUND(ip.amount*p.price+(ip.amount*p.price*"+IVA+"/100),2) as PRICE" +
                             " from products p inner join invoices_products ip on p.idproduct=ip.refproduct " +
                             " where ip.refinvoice='" + invoice.IdInvoice + "' " +
                           " union " +
-                          " select  l.idline as ID,'l' as type, l.refinvoice as REFINVOICE,l.description as PRODUCT,l.quantity as AMOUNT, l.price  AS UNIPRICE, l.quantity*l.price as NET_AMOUNT, l.quantity*l.price+(l.quantity*l.price*" + IVA + "/100) as PRICE" +
+                          " select  l.idline as ID,'l' as type, l.refinvoice as REFINVOICE,l.description as PRODUCT,l.quantity as AMOUNT, l.price  AS UNIPRICE, ROUND(l.quantity*l.price,2) as NET_AMOUNT, ROUND(l.quantity*l.price+(l.quantity*l.price*" + IVA + "/100),2) as PRICE" +
                              " from lines l " +
                              " where l.refinvoice ='" + invoice.IdInvoice + "' " +
                           " union " +
-                          " select p.idproduct as ID ,'o' as type, oi.refinvoice as REFINVOICE, p.name as PRODUCT ,op.amount as AMOUNT,op.pricesale  AS UNIPRICE, op.amount*op.pricesale as NET_AMOUNT , op.amount*op.pricesale+(op.amount*op.pricesale*" + IVA + "/100) as PRICE " +
+                          " select p.idproduct as ID ,'o' as type, oi.refinvoice as REFINVOICE, p.name as PRODUCT ,op.amount as AMOUNT,op.pricesale  AS UNIPRICE, ROUND(op.amount*op.pricesale,2) as NET_AMOUNT , ROUND(op.amount*op.pricesale+(op.amount*op.pricesale*" + IVA + "/100),2) as PRICE " +
                              " from products p inner join ordersproducts op on p.idproduct = op.refproduct " +
                              " inner join orders_invoices oi on op.reforder = oi.reforder " +
                              " where oi.refinvoice = '" + invoice.IdInvoice+"'";
-
             Console.WriteLine(sql);
+           
 
             Dominio.Invoices i = new Dominio.Invoices();
             i.getGestor().readInDB(sql);
@@ -93,11 +98,10 @@ namespace Avengers.Presentacion.Invoices
                 dgvInv.Rows.Add(row["ID"], row["TYPE"], row["REFINVOICE"], row["PRODUCT"], row["AMOUNT"], row["UNIPRICE"], row["NET_AMOUNT"], row["PRICE"]);
             }
 
-
         }
 
 
-    }
+  }
 
    
 }

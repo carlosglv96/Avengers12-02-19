@@ -105,8 +105,8 @@ namespace Avengers.Presentacion.Invoices
 
         private void btnMod_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 Dominio.DtoInvoice invoice = new DtoInvoice(
                     dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString(),
                     dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[1].Value.ToString(),
@@ -121,19 +121,19 @@ namespace Avengers.Presentacion.Invoices
                 {
                     InitDGV("");
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    if (this.idioma == "ESPAÑOL")
-            //    {
-            //        MessageBox.Show("Debes seleccionar una Factura");
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("You must Select a Invoice");
-            //    }
+            }
+            catch (Exception ex)
+            {
+               if (this.idioma == "ESPAÑOL")
+                {
+                    MessageBox.Show("Debes seleccionar una Factura");
+                }
+                else
+                {
+                    MessageBox.Show("You must Select a Invoice");
+                }
 
-            //}
+            }
         }
     }
 }
