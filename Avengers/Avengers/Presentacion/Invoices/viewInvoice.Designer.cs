@@ -116,7 +116,7 @@
             // dtpDate
             // 
             this.dtpDate.Enabled = false;
-            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDate.Location = new System.Drawing.Point(482, 23);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(109, 20);

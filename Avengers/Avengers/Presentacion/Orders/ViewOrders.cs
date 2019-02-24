@@ -287,6 +287,8 @@ namespace Avengers.Presentacion.Orders
             ckAct.Checked = false;
             comboPay.SelectedIndex = -1;
             chkDeleted.Checked = false;
+
+            initTable(condicion + whereCondition + iValue + orderby);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
