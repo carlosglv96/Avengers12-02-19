@@ -94,7 +94,7 @@ namespace Avengers.Presentacion.Orders
 
             if (this.idioma == "ESPAÑOL")
             {
-                dgvOrders.Columns.Add("IDORDER", "ID");
+                dgvOrders.Columns.Add("IDORDER", "N PEDIDO");
                 dgvOrders.Columns.Add("REFCUSTOMER", "NOMBRE CLIENTE");
                 dgvOrders.Columns.Add("REFCUSTOMER", "APELLIDO CLIENTE");
                 dgvOrders.Columns.Add("REFUSER", "USUARIO");
@@ -109,7 +109,7 @@ namespace Avengers.Presentacion.Orders
             }
             else
             {
-                dgvOrders.Columns.Add("IDORDER", "ID");
+                dgvOrders.Columns.Add("IDORDER", "N ORDER");
                 dgvOrders.Columns.Add("REFCUSTOMER", "NAME CUSTOMER");
                 dgvOrders.Columns.Add("REFCUSTOMER", "SURNAME CUSTOMER");
                 dgvOrders.Columns.Add("REFUSER", "USER");
@@ -137,7 +137,7 @@ namespace Avengers.Presentacion.Orders
 
 
             
-            dgvOrders.Columns["IDORDER"].Visible = false;
+            //dgvOrders.Columns["IDORDER"].Visible = false;
             
             dgvOrders.ClearSelection();
 

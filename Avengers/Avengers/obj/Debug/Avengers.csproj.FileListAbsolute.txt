@@ -1007,3 +1007,4 @@ C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers
 C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
 C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
 C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
+C:\Users\santi\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.ModInvoice.resources
