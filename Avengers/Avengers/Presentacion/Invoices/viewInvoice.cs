@@ -102,5 +102,38 @@ namespace Avengers.Presentacion.Invoices
                 InitDGV("");
             }
         }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+                Dominio.DtoInvoice invoice = new DtoInvoice(
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString(),
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[1].Value.ToString(),
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[2].Value.ToString(),
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[4].Value.ToString(),
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[5].Value.ToString());
+
+                
+                ModInvoice mi = new ModInvoice(invoice, this.idioma,this.u);
+                mi.Show();
+                if (mi.IsDisposed)
+                {
+                    InitDGV("");
+                }
+            //}
+            //catch (Exception ex)
+            //{
+            //    if (this.idioma == "ESPAÑOL")
+            //    {
+            //        MessageBox.Show("Debes seleccionar una Factura");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("You must Select a Invoice");
+            //    }
+
+            //}
+        }
     }
 }

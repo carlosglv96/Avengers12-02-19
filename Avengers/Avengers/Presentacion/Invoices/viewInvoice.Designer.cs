@@ -79,6 +79,7 @@
             this.btnMod.TabIndex = 2;
             this.btnMod.Text = "Mod Invoice";
             this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // btnDelete
             // 
