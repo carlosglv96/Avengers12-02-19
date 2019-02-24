@@ -107,7 +107,7 @@ namespace Avengers.Presentacion.Cashbook.Validation
             Double cheque = double.Parse(m.txbcheck.Text);
             Double total = double.Parse(m.texbtotal.Text);
 
-            String sql = "Insert into validations values (null, SYSDATE,"+u.getId()+",'"+caja+"','"+ recibo + "','"+ cheque + "','"+ total + "')";
+            String sql = "Insert into validations values (null, trunc(SYSDATE)," + u.getId()+",'"+caja+"','"+ recibo + "','"+ cheque + "','"+ total + "')";
             Dominio.Validation v = new Dominio.Validation();
             v.getGestor().insertValidation(sql);
             initDGV();

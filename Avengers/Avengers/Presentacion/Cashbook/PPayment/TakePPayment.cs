@@ -145,7 +145,7 @@ namespace Avengers.Presentacion.Cashbook.PPayment
                 total = Math.Round(total, 2);
                 paid = 0;
             }
-            String sql = "Update  ppayment set DATE_PPAYMENT= SYSDATE , Text='"+txtConcep.Text.Replace("'","").ToUpper()+"' , amount='"+total+"' , paid="+paid
+            String sql = "Update  ppayment set DATE_PPAYMENT= trunc(SYSDATE) , Text='" + txtConcep.Text.Replace("'","").ToUpper()+"' , amount='"+total+"' , paid="+paid
                 +" where id="+dto.Id;
 
             return sql;
@@ -160,7 +160,7 @@ namespace Avengers.Presentacion.Cashbook.PPayment
                 total=  Convert.ToDouble(txtAmount.Text.Replace("'", "").Replace(".",","));
                 total = Math.Round(total, 2);
             }
-            String sql = "Insert into Incomes values (0,SYSDATE,"+dto.Refuser+","+cmbIncomes.SelectedValue.ToString()+","
+            String sql = "Insert into Incomes values (0,trunc(SYSDATE)," + dto.Refuser+","+cmbIncomes.SelectedValue.ToString()+","
                 +cmbType.SelectedValue.ToString()+",'"+txtConcep.Text.Replace("'","").ToUpper()+"','"+ total.ToString()+"',0)";
 
             return sql;

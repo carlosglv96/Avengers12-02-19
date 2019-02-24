@@ -405,7 +405,7 @@ namespace Avengers.Presentacion.Cashbook
                         type = Utils.RandomNumber.random_Number(1, 4);
                         source = Utils.RandomNumber.random_Number(1, 5);
                         amount = Utils.RandomNumber.random_Number(100, 1001) * 0.25;
-                        inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "', SYSDATE ,'" +
+                        inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "', trunc(SYSDATE) ,'" +
                         this.usuario.getId() + "','" + source + "','" + type +
                         "','" + text[0] + "','" + amount + "','" + refa + "')");
                     }
@@ -414,7 +414,7 @@ namespace Avengers.Presentacion.Cashbook
                         type = Utils.RandomNumber.random_Number(1, 4);
                         source = Utils.RandomNumber.random_Number(101, 106);
                         amount = Utils.RandomNumber.random_Number(100, 1001) * 0.25;
-                        inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "', SYSDATE ,'" +
+                        inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "', trunc(SYSDATE) ,'" +
                         this.usuario.getId() + "','" + source + "','" + type +
                         "','" + text[1] + "','" + amount + "','" + refa + "')");
                     }

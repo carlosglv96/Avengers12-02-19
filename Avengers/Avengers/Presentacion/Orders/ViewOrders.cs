@@ -400,19 +400,19 @@ namespace Avengers.Presentacion.Orders
                         o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
                         if(total == prepaid)
                         {
-                        String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', SYSDATE, '" + this.u.getId() + "', '2', '1', '"+id+"', '"+total+"', '0')");
+                        String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', '"+id+"', '"+total+"', '0')");
                         inc.getGestor().insertIncome(sql);
                         }
                         else
                         {
                             if (tipoPay == 3)
                             {
-                                String sql = "Insert into ppayment values (0,SYSDATE," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
+                                String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
                                 GestorPPayment.insertPPayment(sql);
                             }
                             else
                             {
-                                String sql = "Insert into ppayment values (0,SYSDATE," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
+                                String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
                                 GestorPPayment.insertPPayment(sql);
                             }
                             
@@ -512,7 +512,7 @@ namespace Avengers.Presentacion.Orders
                             int idFactura = Dominio.Invoices.getIdInvoice();
                             float totalIva = (total * (float) 1.21);
                             totalIva = (float)Math.Round(totalIva, 2);
-                            string insertInvoice = "Insert into Invoices values ('" + idFactura + "',SYSDATE,'" + refCusto + "','" + total + "','" + totalIva + "')";
+                            string insertInvoice = "Insert into Invoices values ('" + idFactura + "',trunc(SYSDATE),'" + refCusto + "','" + total + "','" + totalIva + "')";
                             GestorInvoices.insertInvoice(insertInvoice);
                             string insertOrderInvo = "Insert into ORDERS_INVOICES values ('0','" + id + "','" + idFactura + "')";
                             GestorInvoicesProducts.insertInvoicesProduct(insertOrderInvo);
@@ -562,7 +562,7 @@ namespace Avengers.Presentacion.Orders
                         if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
                         {
                             GestorInvoices.deleteInvoice("delete from ppayment where text = " + id);
-                            String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', SYSDATE, '" + this.u.getId() + "', '2', '1', '" + id + "', '" + prepaid + "', '1')");
+                            String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', '" + id + "', '" + prepaid + "', '1')");
                             inc.getGestor().insertIncome(sql);
                             o.getGestor().setData("update orders set prepaid = '0' where idorder = '" + id + "'");
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;

@@ -117,7 +117,7 @@ namespace Avengers.Presentacion.Cashbook.Debts
                 paid = 0;
             }
 
-            String sql = "update  DEBTS set DATE_DEBTS = SYSDATE, TEXT = '" + txtConcep.Text.Replace("'", "").ToUpper() + "', AMOUNT = '" + total + "', PAID = " + paid + " where ID = " + dto.Id;
+            String sql = "update  DEBTS set DATE_DEBTS = trunc(SYSDATE), TEXT = '" + txtConcep.Text.Replace("'", "").ToUpper() + "', AMOUNT = '" + total + "', PAID = " + paid + " where ID = " + dto.Id;
             return sql;
         }
 
@@ -132,7 +132,7 @@ namespace Avengers.Presentacion.Cashbook.Debts
                 total = Math.Round(total, 2);
             }
 
-            String sql = "insert into INCOMES values (0, SYSDATE, " + dto.Refuser + ", " + cmbIncomes.SelectedValue.ToString() + ", "
+            String sql = "insert into INCOMES values (0, trunc(SYSDATE), " + dto.Refuser + ", " + cmbIncomes.SelectedValue.ToString() + ", "
                 + cmbType.SelectedValue.ToString() + ", '" + txtConcep.Text.Replace("'", "").ToUpper() + "', '" + total.ToString() + "', 1)";
             
             return sql;

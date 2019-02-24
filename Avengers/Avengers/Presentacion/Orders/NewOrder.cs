@@ -200,7 +200,7 @@ namespace Avengers.Presentacion.Orders
             {
                 String id = dtoCustomer.Idcustomer;
                 //Sql para insertar order al hacer click en OK -- modificar el valor numero 3 que hace ref a user
-                String sql = "Insert into orders values (null,'" + id + "', "+u.getId()+", SYSDATE, '" + cmbPay.SelectedValue + "', '" + tbxTotal.Text.Replace("'", "").Replace(".", ",") + "', 0,0,0,0,0,0)";
+                String sql = "Insert into orders values (null,'" + id + "', "+u.getId()+ ", trunc(SYSDATE), '" + cmbPay.SelectedValue + "', '" + tbxTotal.Text.Replace("'", "").Replace(".", ",") + "', 0,0,0,0,0,0)";
                 o.getGestor().setData(sql);
                 //Console.WriteLine(sql);
                 sql = "SELECT MAX(IDORDER) FROM ORDERS";

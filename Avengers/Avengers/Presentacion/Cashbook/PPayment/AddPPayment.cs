@@ -91,7 +91,7 @@ namespace Avengers.Presentacion.Cashbook.PPayment
             Double amnt = Convert.ToDouble(amount);
             amnt = Math.Round(amnt, 2);
 
-            String sql = "Insert into ppayment values (0,SYSDATE,"+this.u.getId()+","+cmbSource.SelectedValue.ToString()+",'"+concep+"','"
+            String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId()+","+cmbSource.SelectedValue.ToString()+",'"+concep+"','"
                 +amnt+"',0)";
             return sql;
         }
