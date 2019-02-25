@@ -377,13 +377,14 @@ namespace Avengers.Presentacion.Orders
             DataGridView dgvOrders = sender as DataGridView;
             int id = int.Parse(dgvOrders.Rows[e.RowIndex].Cells[0].Value.ToString());
             String aux = o.getGestor().getUnString("select total from orders where idorder = " + id);
-            int total = Int32.Parse(aux);
+            float total = float.Parse(aux);
             aux = o.getGestor().getUnString("select prepaid from orders where idorder = " + id);
-            int prepaid = Int32.Parse(aux);
+            float prepaid = float.Parse(aux);
             aux = o.getGestor().getUnString("select REFPAYMENTMETHOD from orders where idorder = " + id);
             int tipoPay = Int32.Parse(aux);
             aux = o.getGestor().getUnString("select REFCUSTOMER from orders where idorder = " + id);
             int refCusto = Int32.Parse(aux);
+            String sql = null;
 
             if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Red)
             {
@@ -395,26 +396,30 @@ namespace Avengers.Presentacion.Orders
                         // AQUI SE CONTROLA QUE EL ROL SEA EL DE ADMIN PARA PODER HACER EFECTO AL DOBLE CLICK
                         //if ()
                         //{
-                        if (total == prepaid || tipoPay == 3)
+                        if ( prepaid > 0 || tipoPay == 3)
                         {
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
                             o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
                             if (total == prepaid)
                             {
-                                String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado completamente', '0', '0')");
+                                sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado completamente', '"+total+"', '0')");
                                 inc.getGestor().insertIncome(sql);
                             }
                             else
                             {
                                 if (tipoPay == 3)
                                 {
-                                    String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
+                                    sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado parcialmente', '" + prepaid + "', '0')");
+                                    inc.getGestor().insertIncome(sql);
+                                    sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
                                     GestorPPayment.insertPPayment(sql);
                                 }
                                 else
                                 {
-                                    String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
+                                    sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado parcialmente', '" + prepaid + "', '0')");
+                                    inc.getGestor().insertIncome(sql);
+                                    sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
                                     GestorPPayment.insertPPayment(sql);
                                 }
 
@@ -515,7 +520,7 @@ namespace Avengers.Presentacion.Orders
                         break;
                     case 11:                        
                         //Falta añadir un && al if con lo del rol
-                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && (total-prepaid == 0))
+                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && (prepaid > 0))
                         {
                             int idFactura = Dominio.Invoices.getIdInvoice();
                             float totalIva = (total * (float) 1.21);
@@ -542,8 +547,8 @@ namespace Avengers.Presentacion.Orders
                             {
                                 if (total - prepaid > 0)
                                 {
-                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, this Order is 100% pay"); }
-                                    else { MessageBox.Show("Error, el pedido no esta 100% pagado"); }
+                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, pending payment of the order"); }
+                                    else { MessageBox.Show("Error, pago pendiente del pedido"); }
                                 }
                                 else
                                 {
@@ -570,7 +575,7 @@ namespace Avengers.Presentacion.Orders
                         if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
                         {
                             GestorInvoices.deleteInvoice("delete from ppayment where text = " + id);
-                            String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', '" + id + "', '" + prepaid + "', '1')");
+                            sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', '" + id + "', '" + prepaid + "', '1')");
                             inc.getGestor().insertIncome(sql);
                             o.getGestor().setData("update orders set prepaid = '0' where idorder = '" + id + "'");
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;

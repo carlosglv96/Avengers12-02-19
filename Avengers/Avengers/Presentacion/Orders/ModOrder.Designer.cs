@@ -53,6 +53,8 @@
             this.lblProduct = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblNumeroOrder = new System.Windows.Forms.Label();
+            this.tbxPay = new System.Windows.Forms.TextBox();
+            this.lblPay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModOrder)).BeginInit();
             this.SuspendLayout();
@@ -287,11 +289,30 @@
             this.lblNumeroOrder.TabIndex = 47;
             this.lblNumeroOrder.Text = "Order x";
             // 
+            // tbxPay
+            // 
+            this.tbxPay.Location = new System.Drawing.Point(577, 422);
+            this.tbxPay.Name = "tbxPay";
+            this.tbxPay.Size = new System.Drawing.Size(81, 20);
+            this.tbxPay.TabIndex = 49;
+            // 
+            // lblPay
+            // 
+            this.lblPay.AutoSize = true;
+            this.lblPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPay.Location = new System.Drawing.Point(523, 423);
+            this.lblPay.Name = "lblPay";
+            this.lblPay.Size = new System.Drawing.Size(39, 16);
+            this.lblPay.TabIndex = 48;
+            this.lblPay.Text = "Pay:";
+            // 
             // ModOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 501);
+            this.Controls.Add(this.tbxPay);
+            this.Controls.Add(this.lblPay);
             this.Controls.Add(this.lblNumeroOrder);
             this.Controls.Add(this.lblPayMethod);
             this.Controls.Add(this.cmbPay);
@@ -351,5 +372,7 @@
         private System.Windows.Forms.Label lblNumeroOrder;
         public System.Windows.Forms.TextBox txtCustomer;
         public System.Windows.Forms.DataGridView dgvModOrder;
+        private System.Windows.Forms.TextBox tbxPay;
+        private System.Windows.Forms.Label lblPay;
     }
 }

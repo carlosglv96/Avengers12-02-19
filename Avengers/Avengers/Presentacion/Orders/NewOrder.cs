@@ -195,12 +195,15 @@ namespace Avengers.Presentacion.Orders
         private void btnOk_Click(object sender, EventArgs e)
         {
             Order o = new Order();
+            float f1 = float.Parse(tbxPay.Text.Replace("'", "").Replace(".", ",").ToString());
+            float f2 = float.Parse(tbxTotal.Text.Replace("'", "").Replace(".", ",").ToString());
 
-            if(check())
+            Console.Write(f1+"--"+f2);
+            if(check()&&(f1<= f2))
             {
                 String id = dtoCustomer.Idcustomer;
                 //Sql para insertar order al hacer click en OK -- modificar el valor numero 3 que hace ref a user
-                String sql = "Insert into orders values (null,'" + id + "', "+u.getId()+ ", trunc(SYSDATE), '" + cmbPay.SelectedValue + "', '" + tbxTotal.Text.Replace("'", "").Replace(".", ",") + "', 0,0,0,0,0,0)";
+                String sql = "Insert into orders values (null,'" + id + "', "+u.getId()+ ", trunc(SYSDATE), '" + cmbPay.SelectedValue + "', '" + f2 + "','"+ f1 + "',0,0,0,0,0)";
                 o.getGestor().setData(sql);
                 //Console.WriteLine(sql);
                 sql = "SELECT MAX(IDORDER) FROM ORDERS";
@@ -226,13 +229,27 @@ namespace Avengers.Presentacion.Orders
             }
             else
             {
-                if (this.idioma == "ESPAÑOL")
+                if (f1 > f2)
                 {
-                    MessageBox.Show("Debes seleccionar alguna forma de pago y Cliente");
+                    if (this.idioma == "ESPAÑOL")
+                    {
+                        MessageBox.Show("El valor pagado no puede ser mayor al total");
+                    }
+                    else
+                    {
+                        MessageBox.Show("The value paid can not be greater than the total");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Select one customer and any paymentmethod");
+                    if (this.idioma == "ESPAÑOL")
+                    {
+                        MessageBox.Show("Debes seleccionar alguna forma de pago y Cliente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Select one customer and any paymentmethod");
+                    }
                 }
                 
             }               

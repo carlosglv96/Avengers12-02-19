@@ -272,48 +272,68 @@ namespace Avengers.Presentacion.Orders
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+
             Order o = new Order();
-            //Update Orders
-            String sql = "";
-            sql = "Select refcustomer from orders where idorder ='" + this.idOrder + "'";
-            Console.WriteLine("traza  1 " + sql);
-            String idcustomer = o.getGestor().getUnString(sql);
-            String refpayment = this.cmbPay.SelectedValue.ToString().Replace("'", "");
-            String total = this.txtTotal.Text;
-            String fecha = this.date.Value.ToString("dd/MM/yyyy").Replace("'", "");
-            sql = "Update orders set refcustomer ='" + idcustomer + "',datetime ='" + fecha + "',refpaymentmethod = '" + refpayment + "', total = '" + total + "' where idorder = '" + this.idOrder + "'";
-            Console.WriteLine("traza 2 " + sql);
-            o.getGestor().setData(sql);
-            
-
-
-            //Por implementar
-
-            //Insert OrdersProducts
-            String idorderproduct = dgvModOrder.Rows[dgvModOrder.CurrentRow.Index].Cells[0].Value.ToString();
-            String idOrder = this.idOrder;
-            String idProduct = "";
-            String amount = "";
-            String pricesale = "";
-           
-            sql = "delete from ordersproducts where reforder = '" + idOrder + "'";
-            Console.WriteLine("traza 3 "+sql);
-            o.getGestor().setData(sql);
-            
-            for (int i = 0; i < dgvModOrder.RowCount; i++)
+            float f1 = 0;
+            f1 = float.Parse(tbxPay.Text.Replace("'", "").Replace(".", ",").ToString());
+            float f2 = float.Parse(txtTotal.Text.Replace("'", "").Replace(".", ",").ToString());
+            if (f1<=f2)
             {
-                idProduct = dgvModOrder.Rows[i].Cells[2].Value.ToString();
-                idProduct.Replace("'", "");
-                amount = dgvModOrder.Rows[i].Cells[4].Value.ToString();
-                amount.Replace("'", "").Replace(".", ",");
-                pricesale = dgvModOrder.Rows[i].Cells[5].Value.ToString();
-                pricesale.Replace("'", "").Replace(".", ",");
-                sql = "Insert into ordersproducts values(null,'"+idOrder+"','"+idProduct+"','"+amount+"','"+pricesale+"')";
-                Console.WriteLine("traza 4 "+sql);
+                //Update Orders
+                String sql = "";
+                sql = "Select refcustomer from orders where idorder ='" + this.idOrder + "'";
+                Console.WriteLine("traza  1 " + sql);
+                String idcustomer = o.getGestor().getUnString(sql);
+                String refpayment = this.cmbPay.SelectedValue.ToString().Replace("'", "");
+                //String total = this.txtTotal.Text;
+
+                String fecha = this.date.Value.ToString("dd/MM/yyyy").Replace("'", "");
+                sql = "Update orders set refcustomer ='" + idcustomer + "',datetime ='" + fecha + "',refpaymentmethod = '" + refpayment + "', total = '" + f2 + "', prepaid = '" + f1 + "' where idorder = '" + this.idOrder + "'";
+                Console.WriteLine("traza 2 " + sql);
                 o.getGestor().setData(sql);
-               
+
+
+
+                //Por implementar
+
+                //Insert OrdersProducts
+                String idorderproduct = dgvModOrder.Rows[dgvModOrder.CurrentRow.Index].Cells[0].Value.ToString();
+                String idOrder = this.idOrder;
+                String idProduct = "";
+                String amount = "";
+                String pricesale = "";
+
+                sql = "delete from ordersproducts where reforder = '" + idOrder + "'";
+                Console.WriteLine("traza 3 " + sql);
+                o.getGestor().setData(sql);
+
+                for (int i = 0; i < dgvModOrder.RowCount; i++)
+                {
+                    idProduct = dgvModOrder.Rows[i].Cells[2].Value.ToString();
+                    idProduct.Replace("'", "");
+                    amount = dgvModOrder.Rows[i].Cells[4].Value.ToString();
+                    amount.Replace("'", "").Replace(".", ",");
+                    pricesale = dgvModOrder.Rows[i].Cells[5].Value.ToString();
+                    pricesale.Replace("'", "").Replace(".", ",");
+                    sql = "Insert into ordersproducts values(null,'" + idOrder + "','" + idProduct + "','" + amount + "','" + pricesale + "')";
+                    Console.WriteLine("traza 4 " + sql);
+                    o.getGestor().setData(sql);
+
+                }
+                this.Dispose();
             }
-            this.Dispose();
+            else
+            {
+                if (this.idioma == "ESPAÑOL")
+                {
+                    MessageBox.Show("El valor pagado no puede ser mayor al total");
+                }
+                else
+                {
+                    MessageBox.Show("The value paid can not be greater than the total");
+                }
+            }
+                
 
         }
 

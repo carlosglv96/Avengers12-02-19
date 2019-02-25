@@ -53,6 +53,8 @@
             this.cmbPay = new System.Windows.Forms.ComboBox();
             this.lblPayMethod = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblPay = new System.Windows.Forms.Label();
+            this.tbxPay = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             this.SuspendLayout();
@@ -288,11 +290,30 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "%";
             // 
+            // lblPay
+            // 
+            this.lblPay.AutoSize = true;
+            this.lblPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPay.Location = new System.Drawing.Point(428, 415);
+            this.lblPay.Name = "lblPay";
+            this.lblPay.Size = new System.Drawing.Size(39, 16);
+            this.lblPay.TabIndex = 25;
+            this.lblPay.Text = "Pay:";
+            // 
+            // tbxPay
+            // 
+            this.tbxPay.Location = new System.Drawing.Point(513, 411);
+            this.tbxPay.Name = "tbxPay";
+            this.tbxPay.Size = new System.Drawing.Size(81, 20);
+            this.tbxPay.TabIndex = 26;
+            // 
             // NewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 494);
+            this.Controls.Add(this.tbxPay);
+            this.Controls.Add(this.lblPay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPayMethod);
             this.Controls.Add(this.cmbPay);
@@ -353,5 +374,7 @@
         private System.Windows.Forms.ComboBox cmbPay;
         private System.Windows.Forms.Label lblPayMethod;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPay;
+        private System.Windows.Forms.TextBox tbxPay;
     }
 }
