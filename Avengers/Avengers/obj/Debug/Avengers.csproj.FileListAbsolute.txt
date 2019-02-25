@@ -1048,3 +1048,41 @@ C:\Users\carlos\Source\Repos\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avenge
 C:\Users\carlos\Source\Repos\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache
 C:\Users\b14-16m\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.ModInvoice.resources
 C:\Users\b14-16m\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.NewInvoices.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\Avengers.exe.config
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.exe
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.pdb
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\Avengers.exe
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\Avengers.pdb
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\Oracle.DataAccess.dll
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.csprojResolveAssemblyReference.cache
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.AddDebt.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.PayDebt.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Debts.ViewDebts.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.AddIncomes.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.ViewIncomes.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.AddPPayment.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.TakePPayment.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.PPayment.viewPPayment.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Cashbook.Validation.ViewValidation.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Customers.ModCustomer.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.NewCustomer.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewCustomer.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.ModInvoice.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.NewInvoices.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.viewInvoice.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Login.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Menu.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ModOrder.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.NewOrder.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.ViewOrders.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ModifyProduct.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.NewProduct.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Products.ViewProduct.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.ModUser.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewRole.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Users.NewUser.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.ViewUsers.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Properties.Resources.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Espanol.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Recursos.Ingles.resources
+F:\Proyectos VisualStudio\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.csproj.GenerateResource.Cache

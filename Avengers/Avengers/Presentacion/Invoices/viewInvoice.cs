@@ -1,4 +1,5 @@
 ﻿using Avengers.Dominio;
+using Avengers.Dominio.Gestores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -136,24 +137,41 @@ namespace Avengers.Presentacion.Invoices
         {
             try
             {
-                Dominio.DtoInvoice invoice = new DtoInvoice(
+                String id = dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString();
+                if (isLastInvoice(id))
+                {
+                    Dominio.DtoInvoice invoice = new DtoInvoice(
                     dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString(),
                     dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[1].Value.ToString(),
                     dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[2].Value.ToString(),
                     dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[4].Value.ToString(),
                     dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[5].Value.ToString());
 
-                
-                ModInvoice mi = new ModInvoice(invoice, this.idioma,this.u);
-                mi.Show();
-                if (mi.IsDisposed)
-                {
-                    InitDGV("");
+
+                    ModInvoice mi = new ModInvoice(invoice, this.idioma, this.u);
+                    mi.Show();
+                    if (mi.IsDisposed)
+                    {
+                        InitDGV("");
+                    }
+
                 }
+                else
+                {
+                    if (this.idioma == "ESPAÑOL")
+                    {
+                        MessageBox.Show("Solo se puede Modificar la ultima factura");
+                    }
+                    else
+                    {
+                        MessageBox.Show("You only can modify the last Invoice");
+                    }
+                }
+
             }
             catch (Exception ex)
             {
-               if (this.idioma == "ESPAÑOL")
+                if (this.idioma == "ESPAÑOL")
                 {
                     MessageBox.Show("Debes seleccionar una Factura");
                 }
@@ -180,6 +198,70 @@ namespace Avengers.Presentacion.Invoices
             dgvInvoice.ClearSelection();
         }
 
-        
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String id = dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString();
+                if (isLastInvoice(id))
+                {
+                    if (this.idioma == "ESPAÑOL")
+                    {
+                        if (MessageBox.Show("¿Quieres eliminar a esta Factura?", "Eliminar Factura", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            DeleteInvoice(id);
+                        }
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Do you want Delete this Invoice?", "Delete Invoice", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            DeleteInvoice(id);
+                        }
+                    }
+                    InitDGV("");
+                }
+                else
+                {
+                    if (this.idioma == "ESPAÑOL")
+                    {
+                        MessageBox.Show("Solo se puede Eliminar la ultima factura");
+                    }
+                    else
+                    {
+                        MessageBox.Show("You only can delete the last Invoice");
+                    }
+                }
+
+        }
+            catch (Exception ex)
+            {
+                if (this.idioma == "ESPAÑOL")
+                {
+                    MessageBox.Show("Debes seleccionar una Factura");
+                }
+                else
+                {
+                    MessageBox.Show("You must Select a Invoice");
+                }
+
+            }
+        }
+        private bool isLastInvoice(String idInvoice)
+        {
+            String last = GestorInvoices.getUnString("Select Max(idinvoice) from invoices");
+            return last.Equals(idInvoice);
+        }
+        private void DeleteInvoice(String id)
+        {
+            //borrado en Order Invoices
+            GestorInvoices.deleteInvoice("Delete from Orders_Invoices where refinvoice = '" + id + "' ");
+            //borrador en Invoices_products
+            GestorInvoices.deleteInvoice("Delete from Invoices_Products where refinvoice='" + id + "' ");
+            //borrado en Lines
+            GestorInvoices.deleteInvoice("Delete from Lines where refinvoice='" + id + "' ");
+            //Borrado en invoices
+            GestorInvoices.deleteInvoice("Delete from Invoices where idinvoice= '" + id + "' ");
+        }
     }
 }
