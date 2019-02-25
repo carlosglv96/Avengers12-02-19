@@ -400,7 +400,7 @@ namespace Avengers.Presentacion.Orders
                         o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
                         if(total == prepaid)
                         {
-                        String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', '"+id+"', '"+total+"', '0')");
+                        String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: "+id+" pagado completamente', '0', '0')");
                         inc.getGestor().insertIncome(sql);
                         }
                         else
