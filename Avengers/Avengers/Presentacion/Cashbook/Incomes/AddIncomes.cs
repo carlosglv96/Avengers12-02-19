@@ -234,24 +234,22 @@ namespace Avengers.Presentacion.Cashbook
                         Order o = new Order();
                         String aux = o.getGestor().getUnString("select count(*) from orders where idorder = '" + concept + "'");
                         int n = Int32.Parse(aux);
-
-                        aux = o.getGestor().getUnString("select total from orders where idorder = " + concept);
-                        int total1 = Int32.Parse(aux);
-
-                        aux = o.getGestor().getUnString("select prepaid from orders where idorder = " + concept);
-                        int prepaid = Int32.Parse(aux);
-                        if (cant > total1)
-                        {
-                            cant = total1;
-                            inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
-                           user.getId() + "','" + source + "','" + type +
-                           "','" + concept + "','" + cant + "','" + this.refaction + "')");
-                        }
-                           
-
                     
                         if (n > 0)
                         {
+                            aux = o.getGestor().getUnString("select total from orders where idorder = " + concept);
+                            int total1 = Int32.Parse(aux);
+
+                            aux = o.getGestor().getUnString("select prepaid from orders where idorder = " + concept);
+                            int prepaid = Int32.Parse(aux);
+                            if (cant > total1)
+                            {
+                                cant = total1;
+                                inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
+                               user.getId() + "','" + source + "','" + type +
+                               "','" + concept + "','" + cant + "','" + this.refaction + "')");
+                            }
+
                             if (prepaid < total1)
                             {
                                 if (cant >= total1)
@@ -274,6 +272,12 @@ namespace Avengers.Presentacion.Cashbook
                                 }
                             }
 
+                        }
+                        else
+                        {
+                            inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
+                               user.getId() + "','" + source + "','" + type +
+                               "','" + concept + "','" + cant + "','" + this.refaction + "')");
                         }
                         this.Dispose();
                     }
