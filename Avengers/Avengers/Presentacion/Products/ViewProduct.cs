@@ -19,7 +19,7 @@ namespace Avengers.Presentacion.Products
         NewOrder observer = null;
         ModOrder observerMod = null;
         private NewInvoices observerInvoice = null;
-        //private ModInvoices observerModInvoice = null;
+        private ModInvoice observerModInvoice = null;
         private String idioma;
         public ViewProduct(String idioma)
         {
@@ -97,25 +97,25 @@ namespace Avengers.Presentacion.Products
                 this.Text = "Products";
             }
         }
-        //public ViewProduct(ModInvoices invoices, String idioma)
-        //{
-        //    this.idioma = idioma;
-        //    this.observerModInvoices = invoices;
-        //    InitializeComponent();
-        //    initTable("Where Deleted = 0");
-        //    initComboEditorial("Where Deleted = 0");
-        //    initComboGender("Where Deleted = 0");
-        //    if (this.idioma == "ESPAÑOL")
-        //    {
-        //        idioma_es();
-        //        this.Text = "Productos";
-        //    }
-        //    else if (this.idioma == "INGLES")
-        //    {
-        //        idioma_en();
-        //        this.Text = "Products";
-        //    }
-        //}
+        public ViewProduct(ModInvoice invoice, String idioma)
+        {
+            this.idioma = idioma;
+            this.observerModInvoice = invoice;
+            InitializeComponent();
+            initTable("Where Deleted = 0");
+            initComboEditorial("Where Deleted = 0");
+            initComboGender("Where Deleted = 0");
+            if (this.idioma == "ESPAÑOL")
+            {
+                idioma_es();
+                this.Text = "Productos";
+            }
+            else if (this.idioma == "INGLES")
+            {
+                idioma_en();
+                this.Text = "Products";
+            }
+        }
         public void idioma_es()
         {
             label1.Text = Avengers.Recursos.Espanol.lblName;
@@ -465,11 +465,11 @@ namespace Avengers.Presentacion.Products
                 observerInvoice.updateProduct(dtoProduct);
                 Dispose();
             }
-            //if(observerModInvoice != null)
-            //{
-            //    observerModInvoice.updateProduct(dtoProduct);
-            //    Dispose();
-            //}
+            if (observerModInvoice != null)
+            {
+                observerModInvoice.updateProduct(dtoProduct);
+                Dispose();
+            }
 
         }
 

@@ -147,6 +147,7 @@
             this.btnRemove.TabIndex = 47;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // dgvInv
             // 
@@ -301,6 +302,7 @@
             this.btnAddProd.TabIndex = 34;
             this.btnAddProd.Text = "Add";
             this.btnAddProd.UseVisualStyleBackColor = true;
+            this.btnAddProd.Click += new System.EventHandler(this.btnAddProd_Click);
             // 
             // label2
             // 
@@ -337,6 +339,7 @@
             this.btnFindProd.Size = new System.Drawing.Size(54, 43);
             this.btnFindProd.TabIndex = 28;
             this.btnFindProd.UseVisualStyleBackColor = true;
+            this.btnFindProd.Click += new System.EventHandler(this.btnFindProd_Click);
             // 
             // lblAmount
             // 

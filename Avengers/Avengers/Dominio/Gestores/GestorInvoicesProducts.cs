@@ -60,6 +60,12 @@ namespace Avengers.Dominio.Gestores
             update.setData(sentencia);
         }
 
+        public static void deleteInvoicesProduct(String sentencia)
+        {
+            ConnectOracle delete = new ConnectOracle();
+            delete.setData(sentencia);
+
+        }
     }
 }
 
