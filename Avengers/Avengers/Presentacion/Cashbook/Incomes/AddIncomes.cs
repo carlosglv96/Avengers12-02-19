@@ -226,68 +226,71 @@ namespace Avengers.Presentacion.Cashbook
                     String source = cmbSource.SelectedValue.ToString().Replace("'", "");
                     String type = cmbTypes.SelectedValue.ToString().Replace("'", "");
                     String concept = txtConceptIncomes.Text.ToUpper().Replace("'", "");
-                   
+                    inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
+                    user.getId() + "','" + source + "','" + type +
+                    "','" + concept + "','" + cant + "','" + this.refaction + "')");
+                    this.Dispose();
 
                     //UPDATE ORDERS PREPAID 
-                    if (concept.All(Char.IsNumber))
-                    {
-                        Order o = new Order();
-                        String aux = o.getGestor().getUnString("select count(*) from orders where idorder = '" + concept + "'");
-                        int n = Int32.Parse(aux);
+                    //if (concept.All(Char.IsNumber))
+                    //{
+                    //    Order o = new Order();
+                    //    String aux = o.getGestor().getUnString("select count(*) from orders where idorder = '" + concept + "'");
+                    //    int n = Int32.Parse(aux);
                     
-                        if (n > 0)
-                        {
-                            aux = o.getGestor().getUnString("select total from orders where idorder = " + concept);
-                            int total1 = Int32.Parse(aux);
+                    //    if (n > 0)
+                    //    {
+                    //        aux = o.getGestor().getUnString("select total from orders where idorder = " + concept);
+                    //        int total1 = Int32.Parse(aux);
 
-                            aux = o.getGestor().getUnString("select prepaid from orders where idorder = " + concept);
-                            int prepaid = Int32.Parse(aux);
-                            if (cant > total1)
-                            {
-                                cant = total1;
-                                inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
-                               user.getId() + "','" + source + "','" + type +
-                               "','" + concept + "','" + cant + "','" + this.refaction + "')");
-                            }
+                    //        aux = o.getGestor().getUnString("select prepaid from orders where idorder = " + concept);
+                    //        int prepaid = Int32.Parse(aux);
+                    //        if (cant > total1)
+                    //        {
+                    //            cant = total1;
+                    //            inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
+                    //           user.getId() + "','" + source + "','" + type +
+                    //           "','" + concept + "','" + cant + "','" + this.refaction + "')");
+                    //        }
 
-                            if (prepaid < total1)
-                            {
-                                if (cant >= total1)
-                                {
-                                    cant = total1;
-                                    o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
-                                }
-                                else
-                                {
-                                    if (prepaid + cant >= total1)
-                                    {
-                                        cant = total1;
-                                        o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
-                                    }
-                                    else
-                                    {
-                                        cant = cant + prepaid;
-                                        o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
-                                    }
-                                }
-                            }
+                    //        if (prepaid < total1)
+                    //        {
+                    //            if (cant >= total1)
+                    //            {
+                    //                cant = total1;
+                    //                o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
+                    //            }
+                    //            else
+                    //            {
+                    //                if (prepaid + cant >= total1)
+                    //                {
+                    //                    cant = total1;
+                    //                    o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
+                    //                }
+                    //                else
+                    //                {
+                    //                    cant = cant + prepaid;
+                    //                    o.getGestor().setData("update orders set prepaid = '" + cant + "' where idorder = '" + concept + "'");
+                    //                }
+                    //            }
+                    //        }
 
-                        }
-                        else
-                        {
-                            inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
-                               user.getId() + "','" + source + "','" + type +
-                               "','" + concept + "','" + cant + "','" + this.refaction + "')");
-                        }
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
-                       user.getId() + "','" + source + "','" + type +
-                       "','" + concept + "','" + cant + "','" + this.refaction + "')");
-                        this.Dispose();
-                    }                        
+                    //    }
+                    //    else
+                    //    {
+                    //        inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
+                    //           user.getId() + "','" + source + "','" + type +
+                    //           "','" + concept + "','" + cant + "','" + this.refaction + "')");
+                    //    }
+                    //    this.Dispose();
+                    //}
+                    //else
+                    //{
+                    //    inc.getGestor().insertIncome("Insert into INCOMES VALUES('" + 0 + "','" + fecha + "','" +
+                    //   user.getId() + "','" + source + "','" + type +
+                    //   "','" + concept + "','" + cant + "','" + this.refaction + "')");
+                    //    this.Dispose();
+                    //}                        
                     
                 }
             }
