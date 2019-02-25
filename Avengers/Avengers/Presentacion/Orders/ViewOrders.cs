@@ -395,27 +395,35 @@ namespace Avengers.Presentacion.Orders
                         // AQUI SE CONTROLA QUE EL ROL SEA EL DE ADMIN PARA PODER HACER EFECTO AL DOBLE CLICK
                         //if ()
                         //{
-                        dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
-                        dgvOrders.ClearSelection();
-                        o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
-                        if(total == prepaid)
+                        if (total == prepaid || tipoPay == 3)
                         {
-                        String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: "+id+" pagado completamente', '0', '0')");
-                        inc.getGestor().insertIncome(sql);
-                        }
-                        else
-                        {
-                            if (tipoPay == 3)
+                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                            dgvOrders.ClearSelection();
+                            o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
+                            if (total == prepaid)
                             {
-                                String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
-                                GestorPPayment.insertPPayment(sql);
+                                String sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado completamente', '0', '0')");
+                                inc.getGestor().insertIncome(sql);
                             }
                             else
                             {
-                                String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
-                                GestorPPayment.insertPPayment(sql);
+                                if (tipoPay == 3)
+                                {
+                                    String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
+                                    GestorPPayment.insertPPayment(sql);
+                                }
+                                else
+                                {
+                                    String sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
+                                    GestorPPayment.insertPPayment(sql);
+                                }
+
                             }
-                            
+                        }
+                        else
+                        {
+                            if (this.idioma == "INGLES") { MessageBox.Show("Error, it is not possible to confirm an unpaid order and that it is not refund"); }
+                            else { MessageBox.Show("Error, no es posible confirmar un pedido sin pagar y que no es reembolso"); }                         
                         }
                             
                         //}
