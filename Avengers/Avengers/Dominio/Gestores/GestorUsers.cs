@@ -9,6 +9,7 @@ namespace Avengers.Dominio.Gestores
 {
     public class GestorUsers
     {
+
         private DataTable tabla;
 
         public GestorUsers()
@@ -59,7 +60,7 @@ namespace Avengers.Dominio.Gestores
             data = search.getData("Select " + column + " from " + table + " " + cond, "littlerp");
             tabla = data.Tables["littlerp"];
         }
-        
+
         public void readUsers(String cond)
         {
             DataSet data = new DataSet();
@@ -92,6 +93,17 @@ namespace Avengers.Dominio.Gestores
             return false;
         }
 
+        public static bool existsRole(String user)
+        {
+            ConnectOracle search = new ConnectOracle();
+            int resp = Convert.ToInt16(search.DLookUp("count(*)", "rol", "UPPER(NAME)= '" + user.ToUpper() + "' AND DELETED=0"));
+            if (resp > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static void delUser(String sentencia)
         {
             ConnectOracle insert = new ConnectOracle();
@@ -103,6 +115,7 @@ namespace Avengers.Dominio.Gestores
             ConnectOracle update = new ConnectOracle();
             update.setData(sentencia);
         }
+
         public void setDataV2(String sentencia)
         {
             ConnectOracle update = new ConnectOracle();
@@ -119,6 +132,7 @@ namespace Avengers.Dominio.Gestores
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
         }
+
         public string GetMD5V2(string str)
         {
             MD5 md5 = MD5CryptoServiceProvider.Create();
@@ -129,6 +143,7 @@ namespace Avengers.Dominio.Gestores
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
         }
+
         public static int Validar(User u1)
         {
             ConnectOracle Search = new ConnectOracle();
@@ -137,6 +152,7 @@ namespace Avengers.Dominio.Gestores
             Object resul = Search.DLookUp("IDUSER", "USUARIO", cond);
             return Int32.Parse(resul.ToString());
         }
+
         public static int ValidarConx(User u1)
         {
             ConnectOracle Search = new ConnectOracle();
@@ -145,6 +161,7 @@ namespace Avengers.Dominio.Gestores
             Object resul = Search.DLookUp("Count(*)", "USUARIO", cond);
             return Int32.Parse(resul.ToString());
         }
+
         public static String getUnString(String sql)
         {
             ConnectOracle select = new ConnectOracle();

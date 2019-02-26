@@ -46,7 +46,7 @@ namespace Avengers.Presentacion
             this.u = u;
             lblUser.Text = "                 " +u.getNombre();
             u.setPermits();
-            //permits();
+            permits();
             this.idioma = idioma;
             if (this.idioma == "ESPAÑOL")
             {
@@ -59,43 +59,58 @@ namespace Avengers.Presentacion
             initMenu();
         }
 
+
         public void permits()
         {
             if (!GestorUsers.searchPermit("USERS", u.getPermits()))
             {
+                users.DisabledColor = Color.Transparent;
                 users.Enabled = false;
             }
             if (!GestorUsers.searchPermit("CUSTOMERS", u.getPermits()))
             {
+                customers.DisabledColor = Color.Transparent;
                 customers.Enabled = false;
             }
             if (!GestorUsers.searchPermit("PRODUCTS", u.getPermits()))
             {
+                products.DisabledColor = Color.Transparent;
                 products.Enabled = false;
             }
             if (!GestorUsers.searchPermit("ORDERS", u.getPermits()))
             {
+                btnOrders.DisabledColor = Color.Transparent;
                 btnOrders.Enabled = false;
             }
             if (!GestorUsers.searchPermit("INCOMES", u.getPermits()))
             {
+                inco.DisabledColor = Color.Transparent;
                 inco.Enabled = false;
             }
             if (!GestorUsers.searchPermit("EXPENSES", u.getPermits()))
             {
+                expen.DisabledColor = Color.Transparent;
                 expen.Enabled = false;
             }
             if (!GestorUsers.searchPermit("PPAYMENTS", u.getPermits()))
             {
+                paym.DisabledColor = Color.Transparent;
                 paym.Enabled = false;
             }
             if (!GestorUsers.searchPermit("DEBTS", u.getPermits()))
             {
+                debts.DisabledColor = Color.Transparent;
                 debts.Enabled = false;
             }
             if (!GestorUsers.searchPermit("VALIDATION", u.getPermits()))
             {
+                valid.DisabledColor = Color.Transparent;
                 valid.Enabled = false;
+            }
+            if (!GestorUsers.searchPermit("INVOICES", u.getPermits()))
+            {
+                btnInvoices.DisabledColor = Color.Transparent;
+                btnInvoices.Enabled = false;
             }
         }
 
@@ -283,7 +298,7 @@ namespace Avengers.Presentacion
         private void btnSys_Click(object sender, EventArgs e)
         {
             mostrarBtnSys();
-            //permits();
+            permits();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -487,7 +502,7 @@ namespace Avengers.Presentacion
         {
             initMenu();
             mostrarBtnCas();
-			//permits();
+			permits();
             
         }
 

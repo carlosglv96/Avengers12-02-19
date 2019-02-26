@@ -214,6 +214,7 @@ namespace Avengers.Presentacion.Users
         {
             NewRole nr = new NewRole(this.idioma);
             nr.ShowDialog();
+            initRole(" where deleted = 0");
         }
     }
 }

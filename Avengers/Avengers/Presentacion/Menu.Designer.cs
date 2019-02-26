@@ -114,7 +114,7 @@
             this.btnInvoices.BorderRadius = 0;
             this.btnInvoices.ButtonText = "Invoices";
             this.btnInvoices.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInvoices.DisabledColor = System.Drawing.Color.Gray;
+            this.btnInvoices.DisabledColor = System.Drawing.Color.Transparent;
             this.btnInvoices.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnInvoices.Iconcolor = System.Drawing.Color.Transparent;
             this.btnInvoices.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnInvoices.Iconimage")));
@@ -188,7 +188,7 @@
             this.users.BorderRadius = 0;
             this.users.ButtonText = "       Users";
             this.users.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.users.DisabledColor = System.Drawing.Color.Gray;
+            this.users.DisabledColor = System.Drawing.Color.Transparent;
             this.users.Enabled = false;
             this.users.ForeColor = System.Drawing.SystemColors.ControlText;
             this.users.Iconcolor = System.Drawing.Color.Transparent;
@@ -226,7 +226,7 @@
             this.expen.BorderRadius = 0;
             this.expen.ButtonText = "       Expenses";
             this.expen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.expen.DisabledColor = System.Drawing.Color.Gray;
+            this.expen.DisabledColor = System.Drawing.Color.Transparent;
             this.expen.Enabled = false;
             this.expen.ForeColor = System.Drawing.SystemColors.ControlText;
             this.expen.Iconcolor = System.Drawing.Color.Transparent;
@@ -340,7 +340,7 @@
             this.btnCash.BorderRadius = 0;
             this.btnCash.ButtonText = "Cashbook";
             this.btnCash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCash.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCash.DisabledColor = System.Drawing.Color.Transparent;
             this.btnCash.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCash.Iconcolor = System.Drawing.Color.Transparent;
             this.btnCash.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCash.Iconimage")));
@@ -559,7 +559,7 @@
             this.btnSys.BorderRadius = 0;
             this.btnSys.ButtonText = "System";
             this.btnSys.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSys.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSys.DisabledColor = System.Drawing.Color.Transparent;
             this.btnSys.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSys.Iconcolor = System.Drawing.Color.Transparent;
             this.btnSys.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSys.Iconimage")));
