@@ -75,6 +75,7 @@ namespace Avengers.Presentacion.Users
                     MessageBox.Show(errorDialog());
                 }
             }
+
         }
 
         public void initRole(String condition)
@@ -205,6 +206,7 @@ namespace Avengers.Presentacion.Users
         {
             NewRole nr = new NewRole(this.idioma);
             nr.ShowDialog();
+            initRole(" where deleted = 0");
         }
     }
 }
