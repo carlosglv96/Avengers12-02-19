@@ -62,52 +62,52 @@ namespace Avengers.Presentacion
 
         public void permits()
         {
-            if (!GestorUsers.searchPermit("USERS", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWUSERS", u))
             {
                 users.DisabledColor = Color.Transparent;
                 users.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("CUSTOMERS", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWCUSTOMERS", u))
             {
                 customers.DisabledColor = Color.Transparent;
                 customers.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("PRODUCTS", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWPRODUCTS", u))
             {
                 products.DisabledColor = Color.Transparent;
                 products.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("ORDERS", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWORDERS", u))
             {
                 btnOrders.DisabledColor = Color.Transparent;
                 btnOrders.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("INCOMES", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWINCOMES", u))
             {
                 inco.DisabledColor = Color.Transparent;
                 inco.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("EXPENSES", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWEXPENSES", u))
             {
                 expen.DisabledColor = Color.Transparent;
                 expen.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("PPAYMENTS", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWPPAYMENTS", u))
             {
                 paym.DisabledColor = Color.Transparent;
                 paym.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("DEBTS", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWDEBTS", u))
             {
                 debts.DisabledColor = Color.Transparent;
                 debts.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("VALIDATION", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWVALIDATION", u))
             {
                 valid.DisabledColor = Color.Transparent;
                 valid.Enabled = false;
             }
-            if (!GestorUsers.searchPermit("INVOICES", u.getPermits()))
+            if (!GestorUsers.searchPermit("VIEWINVOICED", u))
             {
                 btnInvoices.DisabledColor = Color.Transparent;
                 btnInvoices.Enabled = false;

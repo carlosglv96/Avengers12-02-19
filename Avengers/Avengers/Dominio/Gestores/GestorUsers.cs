@@ -168,9 +168,15 @@ namespace Avengers.Dominio.Gestores
             return select.getData(sql);
         }
 
-        public static bool searchPermit(string permit, List<string> permits)
+        public static bool searchPermit(string permit, User u)
         {
+            if (u.getNombre().ToUpper().Equals("ROOT"))
+            {
+                return true;
+            }
+
             bool encontrado = false;
+            List<string> permits = u.getPermits();
 
             foreach (string s in permits)
             {

@@ -394,54 +394,55 @@ namespace Avengers.Presentacion.Orders
                 {
                     case 8:
                         // AQUI SE CONTROLA QUE EL ROL SEA EL DE ADMIN PARA PODER HACER EFECTO AL DOBLE CLICK
-                        //if ()
-                        //{
-                        if ( prepaid > 0 || tipoPay == 3)
+
+                        if (GestorUsers.searchPermit("CONFIRMED", u))
                         {
-                            dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
-                            dgvOrders.ClearSelection();
-                            o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
-                            if (total == prepaid)
+                            if ( prepaid > 0 || tipoPay == 3)
                             {
-                                sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado completamente', '"+total+"', '0')");
-                                inc.getGestor().insertIncome(sql);
-                            }
-                            else
-                            {
-                                if (tipoPay == 3)
+                                dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                                dgvOrders.ClearSelection();
+                                o.getGestor().setData("Update orders set confirmed = 1 where idorder = '" + id + "'");
+                                if (total == prepaid)
                                 {
-                                    sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado parcialmente', '" + prepaid + "', '0')");
+                                    sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado completamente', '"+total+"', '0')");
                                     inc.getGestor().insertIncome(sql);
-                                    sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
-                                    GestorPPayment.insertPPayment(sql);
                                 }
                                 else
                                 {
-                                    sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado parcialmente', '" + prepaid + "', '0')");
-                                    inc.getGestor().insertIncome(sql);
-                                    sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
-                                    GestorPPayment.insertPPayment(sql);
-                                }
+                                    if (tipoPay == 3)
+                                    {
+                                        sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado parcialmente', '" + prepaid + "', '0')");
+                                        inc.getGestor().insertIncome(sql);
+                                        sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'1','" + id + "','" + (total - prepaid) + "',0)";
+                                        GestorPPayment.insertPPayment(sql);
+                                    }
+                                    else
+                                    {
+                                        sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', 'Pedido N: " + id + " pagado parcialmente', '" + prepaid + "', '0')");
+                                        inc.getGestor().insertIncome(sql);
+                                        sql = "Insert into ppayment values (0,trunc(SYSDATE)," + this.u.getId() + ",'2','" + id + "','" + (total - prepaid) + "',0)";
+                                        GestorPPayment.insertPPayment(sql);
+                                    }
 
+                                }
                             }
+                            else
+                            {
+                                if (this.idioma == "INGLES") { MessageBox.Show("Error, it is not possible to confirm an unpaid order and that it is not refund"); }
+                                else { MessageBox.Show("Error, no es posible confirmar un pedido sin pagar y que no es reembolso"); }                         
+                            }
+
                         }
                         else
                         {
-                            if (this.idioma == "INGLES") { MessageBox.Show("Error, it is not possible to confirm an unpaid order and that it is not refund"); }
-                            else { MessageBox.Show("Error, no es posible confirmar un pedido sin pagar y que no es reembolso"); }                         
+                            if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                            else { MessageBox.Show("Error, el usuario no tiene permisos"); }
                         }
-                            
-                        //}
-                        //else
-                        //    {
-                        //    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
-                        //    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
-                        //}
 
                         break;
                     case 9:
                         //Falta añadir un && al if con lo del rol
-                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green)
+                        if (GestorUsers.searchPermit("LABELED", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green)
                         {
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
@@ -463,7 +464,7 @@ namespace Avengers.Presentacion.Orders
                         break;
                     case 10:
                         //Falta añadir un && al if con lo del rol
-                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green)
+                        if (GestorUsers.searchPermit("SENT", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green)
                         {
                             DataTable ta = o.getGestor().readInDB3("select REFPRODUCT, AMOUNT from ORDERSPRODUCTS where REFORDER = "+id);
                             DataGridView dgvAux = new DataGridView();
@@ -520,7 +521,7 @@ namespace Avengers.Presentacion.Orders
                         break;
                     case 11:                        
                         //Falta añadir un && al if con lo del rol
-                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && (prepaid > 0))
+                        if (GestorUsers.searchPermit("INVOICED", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && (prepaid > 0))
                         {
                             int idFactura = Dominio.Invoices.getIdInvoice();
                             float totalIva = (total * (float) 1.21);
@@ -546,14 +547,14 @@ namespace Avengers.Presentacion.Orders
                             else
                             {
                                 if (total - prepaid > 0)
-                                {
-                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, pending payment of the order"); }
-                                    else { MessageBox.Show("Error, pago pendiente del pedido"); }
+                                {                                   
+                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                                    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
                                 }
                                 else
                                 {
-                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
-                                    else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                                    if(this.idioma == "INGLES") { MessageBox.Show("Error, pending payment of the order"); }
+                                    else { MessageBox.Show("Error, pago pendiente del pedido"); }
                                 }
                             }
                         }
@@ -572,7 +573,7 @@ namespace Avengers.Presentacion.Orders
                 {
                     case 8:
                         //Falta añadir un && al if con lo del rol
-                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
+                        if (GestorUsers.searchPermit("CONFIRMED", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
                         {
                             GestorInvoices.deleteInvoice("delete from ppayment where text = " + id);
                             sql = ("INSERT INTO INCOMES (ID, DATE_INCOMES, REFUSER, REFENTRADA, REFTIPO, TEXT, AMOUNT, REFACTION) VALUES('0', trunc(SYSDATE), '" + this.u.getId() + "', '2', '1', '" + id + "', '" + prepaid + "', '1')");
@@ -600,7 +601,7 @@ namespace Avengers.Presentacion.Orders
                         break;
                     case 9:
                         //Falta añadir un && al if con lo del rol
-                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
+                        if (GestorUsers.searchPermit("LABELED", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
                         {
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
                             dgvOrders.ClearSelection();
@@ -622,7 +623,7 @@ namespace Avengers.Presentacion.Orders
                         break;
                     case 10:
                         //añadir rol
-                        if (dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
+                        if (GestorUsers.searchPermit("SENT", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Style.BackColor == Color.Red)
                         {
                             DataTable ta = o.getGestor().readInDB3("select REFPRODUCT, AMOUNT from ORDERSPRODUCTS where REFORDER = " + id);
                             DataGridView dgvAux = new DataGridView();
@@ -665,10 +666,10 @@ namespace Avengers.Presentacion.Orders
                         }
                         break;
                     case 11:
-                        //añadir rol
-                        //if ()
-                        //{
-                            String sms = null;
+                        
+                        if (GestorUsers.searchPermit("INVOICED", u))
+                        {
+                        String sms = null;
                             if (this.idioma == "INGLES") { sms = ("Print invoice?"); }
                             else { sms = ("¿Imprimir factura?"); }
                             if (MessageBox.Show(sms, "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
@@ -696,12 +697,12 @@ namespace Avengers.Presentacion.Orders
                                 }
 
                             }
-                        //}
-                        //else
-                        //{
-                            //if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
-                            //else { MessageBox.Show("Error, el usuario no tiene permisos"); }
-                        //}
+                        }
+                        else
+                        {
+                            if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                            else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                        }
 
                         break;
                 }
