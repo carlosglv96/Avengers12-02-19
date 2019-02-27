@@ -149,7 +149,7 @@ namespace Avengers.Presentacion.Invoices
 
 
                     ModInvoice mi = new ModInvoice(invoice, this.idioma, this.u);
-                    mi.Show();
+                    mi.ShowDialog();
                     if (mi.IsDisposed)
                     {
                         InitDGV("");
@@ -158,27 +158,16 @@ namespace Avengers.Presentacion.Invoices
                 }
                 else
                 {
-                    if (this.idioma == "ESPAÑOL")
-                    {
-                        MessageBox.Show("Solo se puede Modificar la ultima factura");
-                    }
-                    else
-                    {
-                        MessageBox.Show("You only can modify the last Invoice");
-                    }
+
+                        MessageBox.Show((this.idioma == "ESPAÑOL")?"Solo se puede Modificar la ultima factura": "You only can modify the last Invoice");
                 }
 
             }
             catch (Exception ex)
             {
-                if (this.idioma == "ESPAÑOL")
-                {
-                    MessageBox.Show("Debes seleccionar una Factura");
-                }
-                else
-                {
-                    MessageBox.Show("You must Select a Invoice");
-                }
+
+                MessageBox.Show((this.idioma == "ESPAÑOL")?"Debes seleccionar una Factura": "You must Select a Invoice");
+
 
             }
         }
@@ -223,27 +212,15 @@ namespace Avengers.Presentacion.Invoices
                 }
                 else
                 {
-                    if (this.idioma == "ESPAÑOL")
-                    {
-                        MessageBox.Show("Solo se puede Eliminar la ultima factura");
-                    }
-                    else
-                    {
-                        MessageBox.Show("You only can delete the last Invoice");
-                    }
+                        MessageBox.Show((this.idioma == "ESPAÑOL")?"Solo se puede Eliminar la ultima factura": "You only can delete the last Invoice");
                 }
 
         }
             catch (Exception ex)
             {
-                if (this.idioma == "ESPAÑOL")
-                {
-                    MessageBox.Show("Debes seleccionar una Factura");
-                }
-                else
-                {
-                    MessageBox.Show("You must Select a Invoice");
-                }
+
+                    MessageBox.Show((this.idioma == "ESPAÑOL")?"Debes seleccionar una Factura": "You must Select a Invoice");
+
 
             }
         }

@@ -25,8 +25,8 @@ namespace Avengers.Presentacion.Invoices
         private List<DtoLine> listLine;
         private float netprice = 0;
         private float priceIva = 0;
-        private float totalNeto = 0;
-        private float totalIva = 0;
+        private float acumuladortotalNeto = 0;
+        private float acumuladortotalIva = 0;
         private readonly float IVA = 10;
 
 
@@ -121,14 +121,11 @@ namespace Avengers.Presentacion.Invoices
                     netprice = (float)Math.Round(netprice, 2);
                     priceIva = netprice + (netprice * (IVA / 100));
                     priceIva = (float)Math.Round(priceIva, 2);
-                    totalNeto += netprice;
-                    totalNeto = (float)Math.Round(netprice, 2);
-                    totalIva += priceIva;
-                    totalIva = (float)Math.Round(totalIva, 2);
 
                     dgvInv.Rows.Add(dtoProduct.Idproduct, "P", dtoProduct.Name, nudAmount.Value, dtoProduct.Price, netprice, priceIva);
-                    txtTotal.Text = (this.totalIva).ToString();
-                    txtTotalNeto.Text = (this.totalNeto).ToString();
+
+                    calcularTotales();
+
                     //insertamos en la tabla y borramos las casillas
                     clearproduct();
                 }
@@ -141,22 +138,23 @@ namespace Avengers.Presentacion.Invoices
                         int amount = Int32.Parse(dgvInv.Rows[i].Cells[3].Value.ToString());
                         float price = float.Parse(dgvInv.Rows[i].Cells[4].Value.ToString());
                         float net_price = float.Parse(dgvInv.Rows[i].Cells[5].Value.ToString());
-                        float priceiva = float.Parse(dgvInv.Rows[i].Cells[6].Value.ToString());
+                        float preciomasiva = float.Parse(dgvInv.Rows[i].Cells[6].Value.ToString());
 
                         //si hay alguna coincidencia en la tabla de id y nombre sumamos cantidades y precios
-                        if (dtoProduct.Idproduct.Equals(id) && dtoProduct.Name.Equals(name))
+                        
+                        if (dtoProduct!=null && dtoProduct.Idproduct.Equals(id) && dtoProduct.Name.Equals(name))
                         {
-
-                            dgvInv.Rows[i].Cells[3].Value = amount + nudAmount.Value;
+                            int newamount = amount + Int32.Parse(nudAmount.Value.ToString());
+                            dgvInv.Rows[i].Cells[3].Value = newamount;
                             net_price = net_price + (price * float.Parse(nudAmount.Value.ToString()));
+                            net_price = (float)Math.Round(net_price, 2);
                             dgvInv.Rows[i].Cells[5].Value = net_price;
-                            priceiva = net_price + (net_price * IVA / 100);
-                            dgvInv.Rows[i].Cells[6].Value = priceiva;
-                            this.totalIva = totalIva + (price + (price * IVA / 100) * float.Parse(nudAmount.Value.ToString()));
-                            totalNeto += netprice;
-                            totalNeto = (float)Math.Round(netprice, 2);
-                            txtTotal.Text = totalIva.ToString();
-                            txtTotalNeto.Text = (this.totalNeto).ToString();
+
+                            preciomasiva = net_price + (price *newamount* IVA / 100);
+                            preciomasiva = (float)Math.Round(preciomasiva, 2);
+                            dgvInv.Rows[i].Cells[6].Value = preciomasiva;
+
+                            calcularTotales();
                             clearproduct();
 
                         }
@@ -164,7 +162,26 @@ namespace Avengers.Presentacion.Invoices
                 }
             }
         }
+        private void calcularTotales()
+        {
+            float totalneto = 0;
+            float total = 0;
+            for (int i = 0; i < dgvInv.RowCount; i++)
+            {
+                float net_price = float.Parse(dgvInv.Rows[i].Cells[5].Value.ToString());
+                float price_iva = float.Parse(dgvInv.Rows[i].Cells[6].Value.ToString());
+                totalneto += net_price;
+                totalneto = (float)Math.Round(totalneto, 2);
+                
+                total += price_iva;
+                total = (float)Math.Round(total, 2);
+            }
+            txtTotal.Text = total.ToString();
+            txtTotalNeto.Text = totalneto.ToString();
+            acumuladortotalNeto = totalneto;
+            acumuladortotalIva = total;
 
+        }
         private void clearproduct()
         {
             dtoProduct = null;
@@ -191,17 +208,15 @@ namespace Avengers.Presentacion.Invoices
                 netprice = (float)Math.Round(netprice, 2);
                 priceIva = netprice + (netprice * (IVA / 100));
                 priceIva = (float)Math.Round(priceIva, 2);
-                totalIva += priceIva;
-                totalIva = (float)Math.Round(totalIva, 2);
 
                 DtoLine dtoLine = new DtoLine(txtDesc.Text.Replace("'", ""), (nudAmountLine.Value).ToString(), netprice.ToString());
                 //metemos un id temporar para luego distinguir al remover si es la linea q buscamos
                 dtoLine.IdLine = tempIdLine.ToString();
                 listLine.Add(dtoLine);
                 dgvInv.Rows.Add(dtoLine.IdLine, "L", dtoLine.Description, dtoLine.Quantity, txtPriceLine.Text.Replace(".", ",").Replace("'", ""), netprice, priceIva);
-                totalNeto += netprice;
-                txtTotal.Text = (this.totalIva).ToString();
-                txtTotalNeto.Text = (this.totalNeto).ToString();
+                //acumuladortotalNeto += netprice;
+
+                calcularTotales();
                 //borramos las casillas
                 txtDesc.Text = null;
                 nudAmountLine.Value = 1;
@@ -227,13 +242,10 @@ namespace Avengers.Presentacion.Invoices
                 //si la cantidad de elementos a quitar es mayor que la cantidad de elementos que hay
                 if (nudRemove.Value >= amount)
                 {
-                    removefromlist(tipo, id, name);
-                    this.totalIva -= totalPrice;
-                    this.totalNeto -= net_amount;
-                    txtTotalNeto.Text = this.totalNeto.ToString();
-                    txtTotal.Text = this.totalIva.ToString();
+
                     nudRemove.Value = 1;
                     dgvInv.Rows.RemoveAt(dgvInv.CurrentRow.Index);
+                    calcularTotales();
 
                 }
                 else
@@ -248,13 +260,8 @@ namespace Avengers.Presentacion.Invoices
                     totalPrice -= uniprice * float.Parse(nudRemove.Value.ToString()) + (uniprice * IVA / 100);
                     totalPrice = (float)Math.Round(totalPrice, 2);
                     dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[6].Value = totalPrice;
-                    //restamos la cantidad al total
-                    totalNeto -= uniprice * float.Parse(nudRemove.Value.ToString());
-                    totalNeto = (float)Math.Round(totalNeto, 2);
-                    txtTotalNeto.Text = totalNeto.ToString();
-                    totalIva -= uniprice * float.Parse(nudRemove.Value.ToString()) + (uniprice * IVA / 100);
-                    totalIva = (float)Math.Round(totalIva, 2);
-                    txtTotal.Text = totalIva.ToString();
+                    //calculamos totales
+                    calcularTotales();
 
                     //volvemos a poner nudRemove a 1
                     nudRemove.Value = 1;
@@ -266,14 +273,7 @@ namespace Avengers.Presentacion.Invoices
             }
             catch (Exception ex)
             {
-                if (this.idioma == "ESPAÑOL")
-                {
-                    MessageBox.Show("Debes seleccionar un Producto");
-                }
-                else
-                {
-                    MessageBox.Show("You must Select a Product");
-                }
+                    MessageBox.Show((this.idioma == "ESPAÑOL")?"Debes seleccionar un Producto": "You must Select a Product");
             }
 
 
@@ -326,7 +326,7 @@ namespace Avengers.Presentacion.Invoices
             {
                 int idFactura = Dominio.Invoices.getIdInvoice();
                 //creamos la nueva factura
-                string insertInvoice = "Insert into Invoices values ('" + idFactura + "',trunc(SYSDATE),'" + dtoCustomer.Idcustomer + "','" + totalNeto + "','" + totalIva + "')";
+                string insertInvoice = "Insert into Invoices values ('" + idFactura + "',trunc(SYSDATE),'" + dtoCustomer.Idcustomer + "','" + acumuladortotalNeto + "','" + acumuladortotalIva + "')";
                 GestorInvoices.insertInvoice(insertInvoice);
 
                 foreach (DtoProduct p in listProduct)

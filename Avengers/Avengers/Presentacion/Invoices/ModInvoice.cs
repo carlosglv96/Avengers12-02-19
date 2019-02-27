@@ -1,4 +1,5 @@
 ﻿using Avengers.Dominio;
+using Avengers.Dominio.Gestores;
 using Avengers.Presentacion.Products;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace Avengers.Presentacion.Invoices
         private float totalNeto = 0;
         private float totalIva = 0;
 
-
+        
 
         public ModInvoice(DtoInvoice invoice, String idioma, User u)
         {
@@ -93,7 +94,7 @@ namespace Avengers.Presentacion.Invoices
             dgvInv.Columns["ID"].Visible = false;
             dgvInv.Columns["TYPE"].Visible = false;
             dgvInv.Columns["REFINVOICE"].Visible = false;
-            dgvInv.Columns["UNIPRICE"].Visible = false;
+            //dgvInv.Columns["UNIPRICE"].Visible = false;
 
             foreach (DataRow row in dt.Rows)
             {
@@ -104,55 +105,61 @@ namespace Avengers.Presentacion.Invoices
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            //sacamos todos los datos de la fila
-            int id = Convert.ToInt16(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[0].Value.ToString());
-            String tipo = dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[1].Value.ToString();
-            String invoice = dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[2].Value.ToString();
-            String name = dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[3].Value.ToString();
-            int amount = Convert.ToInt16(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[4].Value.ToString());
-            float uniprice = float.Parse(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[5].Value.ToString());
-            float net_amount = float.Parse(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[6].Value.ToString());
-            float totalPrice = float.Parse(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[7].Value.ToString());
-
-            //si la cantidad de elementos a quitar es mayor que la cantidad de elementos que hay
-            if (nudRemove.Value >= amount)
+            try
             {
+                
+                //sacamos todos los datos de la fila
+                int id = Convert.ToInt16(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[0].Value.ToString());
+                String tipo = dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[1].Value.ToString();
+                String invoice = dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[2].Value.ToString();
+                String name = dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[3].Value.ToString();
+                int amount = Convert.ToInt16(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[4].Value.ToString());
+                float uniprice = float.Parse(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[5].Value.ToString());
+                float net_amount = float.Parse(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[6].Value.ToString());
+                float totalPrice = float.Parse(dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[7].Value.ToString());
 
-                this.totalIva -= totalPrice;
-                this.totalNeto -= net_amount;
-                txtTotalNeto.Text = this.totalNeto.ToString();
-                txtTotal.Text = this.totalIva.ToString();
-                nudRemove.Value = 1;
-                dgvInv.Rows.RemoveAt(dgvInv.CurrentRow.Index);
+                if (tipo.Equals("P") || tipo.Equals("L"))
+                {
+                    //si la cantidad de elementos a quitar es mayor que la cantidad de elementos que hay
+                    if (nudRemove.Value >= amount)
+                    {
 
+                        nudRemove.Value = 1;
+                        dgvInv.Rows.RemoveAt(dgvInv.CurrentRow.Index);
+                        calcularTotales();
+
+
+                    }
+                    else
+                    {
+                        //cambiamos las cantidades
+                        dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[4].Value = amount - nudRemove.Value;
+                        //cambiamos el precio neto
+                        net_amount -= uniprice * float.Parse(nudRemove.Value.ToString());
+                        net_amount = (float)Math.Round(net_amount, 2);
+                        dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[6].Value = net_amount;
+                        //cambiamos el precio + iva
+                        totalPrice -= uniprice * float.Parse(nudRemove.Value.ToString()) + (uniprice * IVA / 100);
+                        totalPrice = (float)Math.Round(totalPrice, 2);
+                        dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[7].Value = totalPrice;
+
+                        //calculamos totales
+                        calcularTotales();
+
+                        //volvemos a poner nudRemove a 1
+                        nudRemove.Value = 1;
+
+                    }
+                }else
+                    MessageBox.Show((this.idioma == "ESPAÑOL") ? "No se puede modificar Productos de Pedidos ya facturados" : "You cant modify  Product from orders");
+                 
 
             }
-            else
+            catch (Exception ex)
             {
-                //cambiamos las cantidades
-                dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[4].Value = amount - nudRemove.Value;
-                //cambiamos el precio neto
-                net_amount -= uniprice * float.Parse(nudRemove.Value.ToString());
-                net_amount = (float)Math.Round(net_amount, 2);
-                dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[6].Value = net_amount;
-                //cambiamos el precio + iva
-                totalPrice -= uniprice * float.Parse(nudRemove.Value.ToString()) + (uniprice * IVA / 100);
-                totalPrice = (float)Math.Round(totalPrice, 2);
-                dgvInv.Rows[dgvInv.CurrentRow.Index].Cells[7].Value = totalPrice;
-                //restamos la cantidad al total
-                totalNeto -= uniprice * float.Parse(nudRemove.Value.ToString());
-                totalNeto = (float)Math.Round(totalNeto, 2);
-                txtTotalNeto.Text = totalNeto.ToString();
-                totalIva -= uniprice * float.Parse(nudRemove.Value.ToString()) + (uniprice * IVA / 100);
-                totalIva = (float)Math.Round(totalIva, 2);
-                txtTotal.Text = totalIva.ToString();
-
-                //volvemos a poner nudRemove a 1
-                nudRemove.Value = 1;
-
-
-
+                    MessageBox.Show((this.idioma == "ESPAÑOL")?"Debes seleccionar un Producto": "You must Select a Product");
             }
+
         }
 
         public void removeFromBD(String tipo, String invoice, int id, String name)
@@ -191,14 +198,10 @@ namespace Avengers.Presentacion.Invoices
                 netprice = (float)Math.Round(netprice, 2);
                 priceIva = netprice + (netprice * (IVA / 100));
                 priceIva = (float)Math.Round(priceIva, 2);
-                totalNeto += netprice;
-                totalNeto = (float)Math.Round(netprice, 2);
-                totalIva += priceIva;
-                totalIva = (float)Math.Round(totalIva, 2);
 
                 dgvInv.Rows.Add(dtoProduct.Idproduct, "P",this.invoice.IdInvoice, dtoProduct.Name, nudAmount.Value, dtoProduct.Price, netprice, priceIva);
-                txtTotal.Text = (this.totalIva).ToString();
-                txtTotalNeto.Text = (this.totalNeto).ToString();
+
+                calcularTotales();
                 //insertamos en la tabla y borramos las casillas
                 clearproduct();
             }
@@ -211,27 +214,46 @@ namespace Avengers.Presentacion.Invoices
                     int amount = Int32.Parse(dgvInv.Rows[i].Cells[4].Value.ToString());
                     float price = float.Parse(dgvInv.Rows[i].Cells[5].Value.ToString());
                     float net_price = float.Parse(dgvInv.Rows[i].Cells[6].Value.ToString());
-                    float priceiva = float.Parse(dgvInv.Rows[i].Cells[7].Value.ToString());
+                    float preciomasiva = float.Parse(dgvInv.Rows[i].Cells[7].Value.ToString());
 
                     //si hay alguna coincidencia en la tabla de id y nombre sumamos cantidades y precios
-                    if (dtoProduct.Idproduct.Equals(id) && dtoProduct.Name.Equals(name))
+                    if (dtoProduct!=null && dtoProduct.Idproduct.Equals(id) && dtoProduct.Name.Equals(name))
                     {
-
-                        dgvInv.Rows[i].Cells[4].Value = amount + nudAmount.Value;
+                        int newamount = amount + Int32.Parse(nudAmount.Value.ToString());
+                        dgvInv.Rows[i].Cells[4].Value = newamount;
                         net_price = net_price + (price * float.Parse(nudAmount.Value.ToString()));
+                        net_price = (float)Math.Round(net_price, 2);
                         dgvInv.Rows[i].Cells[6].Value = net_price;
-                        priceiva = net_price + (net_price * IVA / 100);
-                        dgvInv.Rows[i].Cells[7].Value = priceiva;
-                        this.totalIva = totalIva + (price + (price * IVA / 100) * float.Parse(nudAmount.Value.ToString()));
-                        totalNeto += net_price;
-                        totalNeto = (float)Math.Round(net_price, 2);
-                        txtTotal.Text = totalIva.ToString();
-                        txtTotalNeto.Text = (this.totalNeto).ToString();
+                        preciomasiva = net_price + (price *newamount* IVA / 100);
+                        preciomasiva = (float)Math.Round(preciomasiva);
+                        dgvInv.Rows[i].Cells[7].Value = preciomasiva;
+                        calcularTotales();
+
                         clearproduct();
 
                     }
                 }
             }
+        }
+        private void calcularTotales()
+        {
+            float totalneto = 0;
+            float total = 0;
+            for (int i = 0; i < dgvInv.RowCount; i++)
+            {
+                float net_price = float.Parse(dgvInv.Rows[i].Cells[6].Value.ToString());
+                float price_iva = float.Parse(dgvInv.Rows[i].Cells[7].Value.ToString());
+                totalneto += net_price;
+                totalneto = (float)Math.Round(totalneto, 2);
+
+                total += price_iva;
+                total = (float)Math.Round(total, 2);
+            }
+            txtTotal.Text = total.ToString();
+            txtTotalNeto.Text = totalneto.ToString();
+            totalNeto = totalneto;
+            totalIva = total;
+
         }
         private void clearproduct()
         {
@@ -262,6 +284,88 @@ namespace Avengers.Presentacion.Invoices
                 }
             }
             return false;
+        }
+        private bool checkLine()
+        {
+            return !String.IsNullOrEmpty(txtDesc.Text) && !String.IsNullOrEmpty(txtPriceLine.Text) && Utils.check.checkAmountPos(txtPriceLine.Text.Replace("'", ""));
+        }
+        private void btnAddLine_Click(object sender, EventArgs e)
+        {
+            if (checkLine())
+            {
+                int idTemp = 0;
+                netprice = float.Parse(txtPriceLine.Text.Replace(".", ",").Replace("'", "")) * float.Parse(nudAmountLine.Value.ToString());
+                netprice = (float)Math.Round(netprice, 2);
+                priceIva = netprice + (netprice * (IVA / 100));
+                priceIva = (float)Math.Round(priceIva, 2);
+
+                DtoLine dtoLine = new DtoLine(txtDesc.Text.Replace("'", ""), (nudAmountLine.Value).ToString(), netprice.ToString());
+                //metemos un id temporal para luego distinguir al remover si es la linea q buscamos
+                dtoLine.IdLine = idTemp.ToString();
+                dgvInv.Rows.Add(dtoLine.IdLine, "L", this.invoice.IdInvoice, dtoLine.Description, dtoLine.Quantity, txtPriceLine.Text.Replace(".", ",").Replace("'", ""), netprice, priceIva);
+                //acumuladortotalNeto += netprice;
+
+                calcularTotales();
+                //borramos las casillas
+                txtDesc.Text = null;
+                nudAmountLine.Value = 1;
+                txtPriceLine.Text = null;
+
+            }
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            DeleteInvoice();
+            insertProducts();
+            Dispose();
+
+            
+        }
+
+        private void insertProducts()
+        {
+
+            string insertInvoice = "Insert into Invoices values ('" + invoice.IdInvoice + "',trunc(SYSDATE),'" + invoice.RefCustomer + "','" + totalNeto + "','" + totalIva + "')";
+            GestorInvoices.insertInvoice(insertInvoice);
+
+            for (int i = 0; i < dgvInv.RowCount ; i++)
+            {
+                String sql = "";
+                String id = dgvInv.Rows[i].Cells[0].Value.ToString();
+                String tipo= dgvInv.Rows[i].Cells[1].Value.ToString();
+                String name = dgvInv.Rows[i].Cells[3].Value.ToString();
+                int amount = Int32.Parse(dgvInv.Rows[i].Cells[4].Value.ToString());
+                float price = float.Parse(dgvInv.Rows[i].Cells[5].Value.ToString());
+                float net_price = float.Parse(dgvInv.Rows[i].Cells[6].Value.ToString());
+                float preciomasiva = float.Parse(dgvInv.Rows[i].Cells[7].Value.ToString());
+                if (tipo.Equals("P"))
+                {
+                    sql = "Insert into Invoices_Products values(0,'" + id + "','" + invoice.IdInvoice + "','" + amount + "','" + price + "')";
+                    GestorInvoicesProducts.insertInvoicesProduct(sql);
+                }else if (tipo.Equals("L"))
+                {
+                    sql = "Insert into Lines values (0,'" + invoice.IdInvoice + "','" + name + "','" + amount + "','" + price + "')";
+                    GestorLines.insertLine(sql);
+                }
+            }
+        }
+
+        private void DeleteInvoice()
+        {
+            //borrado en Order Invoices
+            GestorInvoices.deleteInvoice("Delete from Orders_Invoices where refinvoice = '" + invoice.IdInvoice + "' ");
+            //borrador en Invoices_products
+            GestorInvoices.deleteInvoice("Delete from Invoices_Products where refinvoice='" + invoice.IdInvoice + "' ");
+            //borrado en Lines
+            GestorInvoices.deleteInvoice("Delete from Lines where refinvoice='" + invoice.IdInvoice + "' ");
+            //Borrado en invoices
+            GestorInvoices.deleteInvoice("Delete from Invoices where idinvoice= '" + invoice.IdInvoice + "' ");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
    
