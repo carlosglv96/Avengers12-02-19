@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Avengers.Dominio;
 using Avengers.Dominio.Gestores;
+using Avengers.Presentacion.Orders.PrintInvoOrder;
 
 namespace Avengers.Presentacion.Orders
 {
@@ -521,7 +522,7 @@ namespace Avengers.Presentacion.Orders
                         break;
                     case 11:                        
                         //Falta añadir un && al if con lo del rol
-                        if (GestorUsers.searchPermit("INVOICED", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && (prepaid > 0))
+                        if (GestorUsers.searchPermit("INVOICED", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && ((prepaid > 0) || tipoPay==3))
                         {
                             int idFactura = Dominio.Invoices.getIdInvoice();
                             float totalIva = (total * (float) 1.21);
@@ -531,7 +532,9 @@ namespace Avengers.Presentacion.Orders
                             string insertOrderInvo = "Insert into ORDERS_INVOICES values ('0','" + id + "','" + idFactura + "')";
                             GestorInvoicesProducts.insertInvoicesProduct(insertOrderInvo);
 
-                            //FALTA MOSTRAR LA FACTURA
+                            aux = o.getGestor().getUnString("select refinvoice from orders_invoices where reforder = " + id);
+                            int idInvo = Int32.Parse(aux);
+                            generarFactura(refCusto, id, idInvo, tipoPay);
 
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
@@ -674,7 +677,9 @@ namespace Avengers.Presentacion.Orders
                             else { sms = ("¿Imprimir factura?"); }
                             if (MessageBox.Show(sms, "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
                             {
-                                //Generar e imprimir factura   
+                                aux = o.getGestor().getUnString("select refinvoice from orders_invoices where reforder = " + id);
+                                int idInvo = Int32.Parse(aux);
+                                generarFactura(refCusto,id,idInvo, tipoPay);  
                             }
                             else
                             {
@@ -706,6 +711,12 @@ namespace Avengers.Presentacion.Orders
                         break;
                 }
             }
+        }
+
+        public void generarFactura(int refCusto,int idOrder, int idInvoice, int refTipo)
+        {
+            InvoOrder i = new InvoOrder(refCusto, idOrder, idInvoice, refTipo);
+            i.Show();
         }
     }
 }
