@@ -275,7 +275,10 @@ namespace Avengers.Presentacion.Orders
 
             Order o = new Order();
             float f1 = 0;
-            f1 = float.Parse(tbxPay.Text.Replace("'", "").Replace(".", ",").ToString());
+            if (!tbxPay.Text.Equals("") && tbxPay.Text.ToString().All(Char.IsNumber))
+            {
+                f1 = float.Parse(tbxPay.Text.Replace("'", "").Replace(".", ",").ToString());
+            }
             float f2 = float.Parse(txtTotal.Text.Replace("'", "").Replace(".", ",").ToString());
             if (f1<=f2)
             {

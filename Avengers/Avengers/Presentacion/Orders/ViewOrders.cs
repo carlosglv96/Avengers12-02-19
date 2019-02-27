@@ -703,7 +703,6 @@ namespace Avengers.Presentacion.Orders
                             if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
                             else { MessageBox.Show("Error, el usuario no tiene permisos"); }
                         }
-
                         break;
                 }
             }

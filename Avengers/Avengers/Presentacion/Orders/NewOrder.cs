@@ -195,8 +195,16 @@ namespace Avengers.Presentacion.Orders
         private void btnOk_Click(object sender, EventArgs e)
         {
             Order o = new Order();
-            float f1 = float.Parse(tbxPay.Text.Replace("'", "").Replace(".", ",").ToString());
-            float f2 = float.Parse(tbxTotal.Text.Replace("'", "").Replace(".", ",").ToString());
+            float f1 = 0;
+            float f2 = 0;
+            if (!tbxPay.Text.Equals("")&&tbxPay.Text.ToString().All(Char.IsNumber))
+            {
+                f1 = float.Parse(tbxPay.Text.Replace("'", "").Replace(".", ",").ToString());
+            }
+            if (!tbxTotal.Text.Equals("") && tbxTotal.Text.ToString().All(Char.IsNumber))
+            {
+                f2 = float.Parse(tbxTotal.Text.Replace("'", "").Replace(".", ",").ToString());
+            } 
 
             Console.Write(f1+"--"+f2);
             if(check()&&(f1<= f2))
