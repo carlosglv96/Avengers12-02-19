@@ -1124,7 +1124,6 @@ C:\Users\santi\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\D
 C:\Users\santi\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\santi\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\santi\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\stdole.dll
-C:\Users\santi\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.PrintInvoOrder.InvoOrder.resources
 C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
@@ -1141,3 +1140,4 @@ C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers
 C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers12-02-19\Avengers\Avengers\bin\Debug\stdole.dll
 C:\Users\Fj Margotón\Documents\Visual Studio 2015\Projects\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.PrintInvoOrder.InvoOrder.resources
 C:\Users\b14-16m\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.PrintInvoOrder.PrintInvo.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.PrintInvoOrder.PrintInvo.resources

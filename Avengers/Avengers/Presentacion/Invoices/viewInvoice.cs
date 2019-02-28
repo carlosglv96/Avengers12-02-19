@@ -232,15 +232,8 @@ namespace Avengers.Presentacion.Invoices
         }
         private void DeleteInvoice(String id)
         {
-            //borrado en Order Invoices
-            GestorInvoices.deleteInvoice("Delete from Orders_Invoices where refinvoice = '" + id + "' ");
-            //borrador en Invoices_products
-            GestorInvoices.deleteInvoice("Delete from Invoices_Products where refinvoice='" + id + "' ");
-            //borrado en Lines
-            GestorInvoices.deleteInvoice("Delete from Lines where refinvoice='" + id + "' ");
-            //Borrado en invoices
-            GestorInvoices.deleteInvoice("Delete from Invoices where idinvoice= '" + id + "' ");
 
+            //Actualiza orders, la columna de la factura la pone a 0
             Order o = new Dominio.Order();
             String aux = o.getGestor().getUnString("select count(*) from orders_invoices where refinvoice = " + id);
             int n = Int32.Parse(aux);
@@ -250,6 +243,17 @@ namespace Avengers.Presentacion.Invoices
                 int idOrder = Int32.Parse(aux);
                 o.getGestor().setData("Update orders set invoiced = 0 where idorder = '" + idOrder + "'");
             }
+
+            //borrado en Order Invoices
+            GestorInvoices.deleteInvoice("Delete from Orders_Invoices where refinvoice = '" + id + "' ");
+            //borrador en Invoices_products
+            GestorInvoices.deleteInvoice("Delete from Invoices_Products where refinvoice='" + id + "' ");
+            //borrado en Lines
+            GestorInvoices.deleteInvoice("Delete from Lines where refinvoice='" + id + "' ");
+            //Borrado en invoices
+            GestorInvoices.deleteInvoice("Delete from Invoices where idinvoice= '" + id + "' ");
+
+            
 
 
         }
