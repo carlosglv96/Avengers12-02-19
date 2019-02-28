@@ -121,7 +121,8 @@ namespace Avengers.Presentacion.Orders
         {
             this.t = 0; 
             Order o = new Order();
-            int stock=Int32.Parse(o.getGestor().getUnString("Select stock from products where idproduct=" + dtoProduct.Idproduct));
+          
+            int stock=(dtoProduct!=null)?Int32.Parse(o.getGestor().getUnString("Select stock from products where idproduct=" + dtoProduct.Idproduct)):-1;
             if (nudAmount.Value <= stock && stock!=0)
             {
 
@@ -168,6 +169,7 @@ namespace Avengers.Presentacion.Orders
 
             }else
             {
+                if (stock!=-1)
                 MessageBox.Show((this.idioma=="ESPAÑOL")?"No queda stock de este producto":"This product dont have Stock ");
             }
 

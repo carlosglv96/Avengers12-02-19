@@ -218,55 +218,63 @@ namespace Avengers.Presentacion.Orders
             String idproduct = "";
             String sql1 = "";
             String sql2 = "";
-
-            if (!String.IsNullOrEmpty(txtProduct.Text.Replace("'", "")))
+            int stock = (dtoProduct != null) ? Int32.Parse(o.getGestor().getUnString("Select stock from products where idproduct=" + dtoProduct.Idproduct)) : -1;
+            if (nudAmount.Value <= stock && stock != 0)
             {
-                idorder = this.idOrder;
-                sql1 = "Select idorderproduct from ordersproducts where reforder = '" + idorder + "'";
-                sql2 = "Select idproduct from products where upper(name) = upper('" + this.txtProduct.Text.Replace("'", "") + "')";
-                //Console.WriteLine(sql1);
-                //Console.WriteLine(sql2);
-                idorderproduct = o.getGestor().getUnString(sql1);
+                if (!String.IsNullOrEmpty(txtProduct.Text.Replace("'", "")))
+                {
+                    idorder = this.idOrder;
+                    sql1 = "Select idorderproduct from ordersproducts where reforder = '" + idorder + "'";
+                    sql2 = "Select idproduct from products where upper(name) = upper('" + this.txtProduct.Text.Replace("'", "") + "')";
+                    //Console.WriteLine(sql1);
+                    //Console.WriteLine(sql2);
+                    idorderproduct = o.getGestor().getUnString(sql1);
                 
-                idproduct = o.getGestor().getUnString(sql2);
-                //Console.WriteLine("IDORDERPRODUCT >>>>>" + idorderproduct);
-                //Console.WriteLine("IDORDER >>>>>>" + idorder);
-                //Console.WriteLine("IDPRODUCT >>>>>>>>>" + idproduct);
-                dgvModOrder.Rows.Add(idorderproduct,idorder,idproduct,txtProduct.Text.Replace("'", ""), nudAmount.Value.ToString().Replace("'", ""), txtPrice.Text.Replace("'", ""));
-                //if (!String.IsNullOrEmpty(txtDiscount.Text))
-                //{
-                //    // -1 esta puesto por la fila en blanco
-                //    for (int i = 0; i < dataGridView1.RowCount ; i++)
-                //    {
-                //        this.t = this.t + (float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) * float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));                        
-                //    }
-                //    this.t = this.t - (this.t * ((float.Parse(txtDiscount.Text)) / 100));
-                //    tbxTotal.Text = Convert.ToString(t);
+                    idproduct = o.getGestor().getUnString(sql2);
+                    //Console.WriteLine("IDORDERPRODUCT >>>>>" + idorderproduct);
+                    //Console.WriteLine("IDORDER >>>>>>" + idorder);
+                    //Console.WriteLine("IDPRODUCT >>>>>>>>>" + idproduct);
+                    dgvModOrder.Rows.Add(idorderproduct,idorder,idproduct,txtProduct.Text.Replace("'", ""), nudAmount.Value.ToString().Replace("'", ""), txtPrice.Text.Replace("'", ""));
+                    //if (!String.IsNullOrEmpty(txtDiscount.Text))
+                    //{
+                    //    // -1 esta puesto por la fila en blanco
+                    //    for (int i = 0; i < dataGridView1.RowCount ; i++)
+                    //    {
+                    //        this.t = this.t + (float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) * float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));                        
+                    //    }
+                    //    this.t = this.t - (this.t * ((float.Parse(txtDiscount.Text)) / 100));
+                    //    tbxTotal.Text = Convert.ToString(t);
 
-                //}
-                //else {
-                //if (dataGridView1.RowCount > 1)
-                //{
+                    //}
+                    //else {
+                    //if (dataGridView1.RowCount > 1)
+                    //{
 
-                for (int i = 0; i < dgvModOrder.RowCount; i++)
-                {
-                    this.t = this.t + (float.Parse(dgvModOrder.Rows[i].Cells[4].Value.ToString()) * float.Parse(dgvModOrder.Rows[i].Cells[5].Value.ToString()));
-                }
-                this.txtTotal.Text = Convert.ToString(t);
-                //}                      
-                //}
-            }
-            else
-            {
-                if (this.idioma == "ESPAÑOL")
-                {
-                    MessageBox.Show("Debes seleccionar un producto");
+                    for (int i = 0; i < dgvModOrder.RowCount; i++)
+                    {
+                        this.t = this.t + (float.Parse(dgvModOrder.Rows[i].Cells[4].Value.ToString()) * float.Parse(dgvModOrder.Rows[i].Cells[5].Value.ToString()));
+                    }
+                    this.txtTotal.Text = Convert.ToString(t);
+                    //}                      
+                    //}
                 }
                 else
                 {
-                    MessageBox.Show("You must select one Product");
-                }
+                    if (this.idioma == "ESPAÑOL")
+                    {
+                        MessageBox.Show("Debes seleccionar un producto");
+                    }
+                    else
+                    {
+                        MessageBox.Show("You must select one Product");
+                    }
 
+                }
+            }
+            else
+            {
+                if (stock != -1)
+                    MessageBox.Show((this.idioma == "ESPAÑOL") ? "No queda stock de este producto" : "This product dont have Stock ");
             }
         }
 
