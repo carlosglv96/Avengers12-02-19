@@ -75,21 +75,38 @@ namespace Avengers.Presentacion.Orders.PrintInvoOrder
                 tcustomers.Rows.Add(new Object[] { row["name"], row["surname"], row["address"], row["refzipcodescities"], row["phone"], row["address"], row["phone"], row["dni"] });
             }
             //tcustomers.Rows.Add(new Object[] { "NOMBRE", "APE", "CP", "POBLA", "PROV", "DIRE", "TEL", "DNI" });
-            DataTable tempo = new DataTable();
-            tempo.Columns.Add("1", Type.GetType("System.String"));
-            tempo.Columns.Add("2", Type.GetType("System.String"));
-            tempo.Columns.Add("3", Type.GetType("System.String"));
-
-            DataSet data1 = search.getData("select refzipcode, refcity, refstate from ZIPCODESCITIES where IDZIPCODESCITIES = " + tcustomers.Rows[0][3].ToString(), "ojo");
-            tmp = data1.Tables["ojo"];
-            foreach (DataRow row in tmp.Rows)
+            if(!String.IsNullOrEmpty(tcustomers.Rows[0][3].ToString()))
             {
-                tempo.Rows.Add(new Object[] { row["refzipcode"], row["refcity"], row["refstate"] });
-            }
+                aux = search.getData("select count(*) from ZIPCODESCITIES where IDZIPCODESCITIES = " + tcustomers.Rows[0][3].ToString());
+                int count = Int32.Parse(aux);
+                if (count > 0)
+                {
+                    DataTable tempo = new DataTable();
+                    tempo.Columns.Add("1", Type.GetType("System.String"));
+                    tempo.Columns.Add("2", Type.GetType("System.String"));
+                    tempo.Columns.Add("3", Type.GetType("System.String"));
 
-            tcustomers.Rows[0][2] = search.getData("select zipcode from ZIPCODES where IDZIPCODE = " + tempo.Rows[0][0].ToString());
-            tcustomers.Rows[0][3] = search.getData("select city from CITIES where IDCITY = " + tempo.Rows[0][1].ToString());
-            tcustomers.Rows[0][4] = search.getData("select state from STATES where IDSTATE = " + tempo.Rows[0][2].ToString());
+                    DataSet data1 = search.getData("select refzipcode, refcity, refstate from ZIPCODESCITIES where IDZIPCODESCITIES = " + tcustomers.Rows[0][3].ToString(), "ojo");
+                    tmp = data1.Tables["ojo"];
+                    foreach (DataRow row in tmp.Rows)
+                    {
+                        tempo.Rows.Add(new Object[] { row["refzipcode"], row["refcity"], row["refstate"] });
+                    }
+
+                    tcustomers.Rows[0][2] = search.getData("select zipcode from ZIPCODES where IDZIPCODE = " + tempo.Rows[0][0].ToString());
+                    tcustomers.Rows[0][3] = search.getData("select city from CITIES where IDCITY = " + tempo.Rows[0][1].ToString());
+                    tcustomers.Rows[0][4] = search.getData("select state from STATES where IDSTATE = " + tempo.Rows[0][2].ToString());
+                }
+            }
+            else
+            {
+                tcustomers.Rows[0][2] = "";
+                tcustomers.Rows[0][3] = "";
+                tcustomers.Rows[0][4] = "";
+            }
+            
+            
+
 
 
             return tcustomers;
