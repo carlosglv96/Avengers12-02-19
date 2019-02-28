@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Avengers.Presentacion.Orders.PrintInvoOrder {
+namespace Avengers.Presentacion.Invoices.PrintInvoOrder {
     
     
     /// <summary>

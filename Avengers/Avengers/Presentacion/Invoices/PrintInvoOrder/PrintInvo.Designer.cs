@@ -1,6 +1,6 @@
 ﻿namespace Avengers.Presentacion.Orders.PrintInvoOrder
 {
-    partial class InvoOrder
+    partial class PrintInvo
     {
         /// <summary>
         /// Required designer variable.

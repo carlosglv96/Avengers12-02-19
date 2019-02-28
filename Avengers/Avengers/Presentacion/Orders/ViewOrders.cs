@@ -534,7 +534,7 @@ namespace Avengers.Presentacion.Orders
 
                             aux = o.getGestor().getUnString("select refinvoice from orders_invoices where reforder = " + id);
                             int idInvo = Int32.Parse(aux);
-                            generarFactura(refCusto, id, idInvo, tipoPay);
+                            generarFactura(refCusto, idInvo, tipoPay);
 
                             dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
                             dgvOrders.ClearSelection();
@@ -679,7 +679,7 @@ namespace Avengers.Presentacion.Orders
                             {
                                 aux = o.getGestor().getUnString("select refinvoice from orders_invoices where reforder = " + id);
                                 int idInvo = Int32.Parse(aux);
-                                generarFactura(refCusto,id,idInvo, tipoPay);  
+                                generarFactura(refCusto,idInvo, tipoPay);  
                             }
                             else
                             {
@@ -713,9 +713,9 @@ namespace Avengers.Presentacion.Orders
             }
         }
 
-        public void generarFactura(int refCusto,int idOrder, int idInvoice, int refTipo)
+        public void generarFactura(int refCusto, int idInvoice, int refTipo)
         {
-            InvoOrder i = new InvoOrder(refCusto, idOrder, idInvoice, refTipo);
+            PrintInvo i = new PrintInvo(refCusto, idInvoice, refTipo);
             i.Show();
         }
     }

@@ -208,28 +208,28 @@
     <Compile Include="Presentacion\Orders\NewOrder.Designer.cs">
       <DependentUpon>NewOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Orders\PrintInvoOrder\Crys1.cs">
+    <Compile Include="Presentacion\Invoices\PrintInvoOrder\Crys1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Crys.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Presentacion\Orders\PrintInvoOrder\DataSet1.cs">
+    <Compile Include="Presentacion\Invoices\PrintInvoOrder\DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Orders\PrintInvoOrder\DataSet1.designer.cs">
+    <Compile Include="Presentacion\Invoices\PrintInvoOrder\DataSet1.designer.cs">
       <DependentUpon>DataSet1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Orders\PrintInvoOrder\DataSet11.Designer.cs">
+    <Compile Include="Presentacion\Invoices\PrintInvoOrder\DataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Orders\PrintInvoOrder\InvoOrder.cs">
+    <Compile Include="Presentacion\Invoices\PrintInvoOrder\PrintInvo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Orders\PrintInvoOrder\InvoOrder.Designer.cs">
-      <DependentUpon>InvoOrder.cs</DependentUpon>
+    <Compile Include="Presentacion\Invoices\PrintInvoOrder\PrintInvo.Designer.cs">
+      <DependentUpon>PrintInvo.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Orders\ViewOrders.cs">
       <SubType>Form</SubType>
@@ -301,15 +301,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Presentacion\Orders\PrintInvoOrder\DataSet1.xsc">
+    <None Include="Presentacion\Invoices\PrintInvoOrder\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Presentacion\Orders\PrintInvoOrder\DataSet1.xsd">
+    <None Include="Presentacion\Invoices\PrintInvoOrder\DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet11.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Presentacion\Orders\PrintInvoOrder\DataSet1.xss">
+    <None Include="Presentacion\Invoices\PrintInvoOrder\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
@@ -371,12 +371,12 @@
     <EmbeddedResource Include="Presentacion\Orders\NewOrder.resx">
       <DependentUpon>NewOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Orders\PrintInvoOrder\Crys.rpt">
+    <EmbeddedResource Include="Presentacion\Invoices\PrintInvoOrder\Crys.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Crys1.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Orders\PrintInvoOrder\InvoOrder.resx">
-      <DependentUpon>InvoOrder.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Invoices\PrintInvoOrder\PrintInvo.resx">
+      <DependentUpon>PrintInvo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Orders\ViewOrders.resx">
       <DependentUpon>ViewOrders.cs</DependentUpon>

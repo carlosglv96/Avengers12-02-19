@@ -1,4 +1,4 @@
-﻿namespace Avengers.Presentacion.Orders.PrintInvoOrder
+﻿namespace Avengers.Presentacion.Invoices.PrintInvoOrder
 {
 
 

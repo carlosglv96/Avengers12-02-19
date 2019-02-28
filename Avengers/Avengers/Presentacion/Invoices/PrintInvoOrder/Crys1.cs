@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Avengers.Presentacion.Orders.PrintInvoOrder {
+namespace Avengers.Presentacion.Invoices.PrintInvoOrder {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Avengers.Presentacion.Orders.PrintInvoOrder {
         
         public override string FullResourceName {
             get {
-                return "Avengers.Presentacion.Orders.PrintInvoOrder.Crys.rpt";
+                return "Avengers.Presentacion.Invoices.PrintInvoOrder.Crys.rpt";
             }
             set {
                 // Do nothing

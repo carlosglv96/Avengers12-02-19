@@ -1,4 +1,5 @@
 ﻿using Avengers.Persistencia;
+using Avengers.Presentacion.Invoices.PrintInvoOrder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,18 +12,20 @@ using System.Windows.Forms;
 
 namespace Avengers.Presentacion.Orders.PrintInvoOrder
 {
-    public partial class InvoOrder : Form
+    public partial class PrintInvo : Form
     {
         private int idCusto;
-        private int idOrder;
+        //private int idOrder;
         private int idInvoice;
-        public InvoOrder(int refCusto, int idOrder, int idInvoice, int refTipo)
+        private int refTipo;
+        public PrintInvo(int refCusto, int idInvoice, int refTipo)
         {
             InitializeComponent();
 
             this.idCusto = refCusto;
-            this.idOrder = idOrder;
+            //this.idOrder = idOrder;
             this.idInvoice = idInvoice;
+            this.refTipo = refTipo;
         }
 
         private DataTable llenaInvo()
@@ -159,7 +162,7 @@ namespace Avengers.Presentacion.Orders.PrintInvoOrder
             //{
             //tcustomers.Rows.Add(new Object[] { row["idinvoice"], row["date_invoice"], row["net_amount"], row["amount"] });
             //}
-            String tipo = search.getData("select PAYMENTMETHOD from PAYMENTMETHODS where IDPAYMENTMETHOD = " + 3);
+            String tipo = search.getData("select PAYMENTMETHOD from PAYMENTMETHODS where IDPAYMENTMETHOD = " + refTipo);
             tcustomers.Rows.Add(new Object[] { tipo });
 
             return tcustomers;

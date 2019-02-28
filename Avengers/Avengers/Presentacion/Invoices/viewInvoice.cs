@@ -1,5 +1,6 @@
 ﻿using Avengers.Dominio;
 using Avengers.Dominio.Gestores;
+using Avengers.Presentacion.Orders.PrintInvoOrder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -239,6 +240,42 @@ namespace Avengers.Presentacion.Invoices
             GestorInvoices.deleteInvoice("Delete from Lines where refinvoice='" + id + "' ");
             //Borrado en invoices
             GestorInvoices.deleteInvoice("Delete from Invoices where idinvoice= '" + id + "' ");
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Order o = new Dominio.Order();
+                int idInvo = Int32.Parse(dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString());
+                int refCusto = Int32.Parse(dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[2].Value.ToString());
+                int idOrder;
+                int tipoPay = 21;
+                String aux = o.getGestor().getUnString("select count(*) from orders_invoices where refinvoice = "+idInvo);
+                int n = Int32.Parse(aux);
+                if (n > 0)
+                {
+                    aux = o.getGestor().getUnString("select reforder from orders_invoices where refinvoice = " + idInvo);
+                    idOrder = Int32.Parse(aux);
+                    aux = o.getGestor().getUnString("select REFPAYMENTMETHOD from orders where idorder = " + idOrder);
+                    tipoPay = Int32.Parse(aux);
+                }
+
+
+                generarFactura(refCusto, idInvo, tipoPay);
+            }
+            catch
+            {
+                if (this.idioma == "INGLES") { Console.WriteLine("Error, you Must Select a Invoice"); }
+                else { Console.WriteLine("Error, debes seleccionar una factura"); }
+            }
+            
+        }
+
+        public void generarFactura(int refCusto, int idInvoice, int refTipo)
+        {
+            PrintInvo i = new PrintInvo(refCusto, idInvoice, refTipo);
+            i.Show();
         }
     }
 }
