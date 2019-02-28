@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Avengers.Dominio;
 using Avengers.Presentacion.Products;
 using Oracle.DataAccess.Client;
+using Avengers.Dominio.Gestores;
 
 namespace Avengers.Presentacion.Orders
 {
@@ -120,46 +121,57 @@ namespace Avengers.Presentacion.Orders
         {
             this.t = 0; 
             Order o = new Order();
-
-            if (!String.IsNullOrEmpty(txtProduct.Text.Replace("'", "")) )
+            int stock=Int32.Parse(o.getGestor().getUnString("Select stock from products where idproduct=" + dtoProduct.Idproduct));
+            if (nudAmount.Value <= stock && stock!=0)
             {
-                dataGridView1.Rows.Add(txtProduct.Text.Replace("'", ""), nudAmount.Value.ToString().Replace("'", ""), txtPrice.Text.Replace("'", ""));
-                //if (!String.IsNullOrEmpty(txtDiscount.Text))
-                //{
-                //    // -1 esta puesto por la fila en blanco
-                //    for (int i = 0; i < dataGridView1.RowCount ; i++)
-                //    {
-                //        this.t = this.t + (float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) * float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));                        
-                //    }
-                //    this.t = this.t - (this.t * ((float.Parse(txtDiscount.Text)) / 100));
-                //    tbxTotal.Text = Convert.ToString(t);
 
-                //}
-                //else {
+                if (!String.IsNullOrEmpty(txtProduct.Text.Replace("'", "")))
+                {
+                    dataGridView1.Rows.Add(txtProduct.Text.Replace("'", ""), nudAmount.Value.ToString().Replace("'", ""), txtPrice.Text.Replace("'", ""));
+                    //if (!String.IsNullOrEmpty(txtDiscount.Text))
+                    //{
+                    //    // -1 esta puesto por la fila en blanco
+                    //    for (int i = 0; i < dataGridView1.RowCount ; i++)
+                    //    {
+                    //        this.t = this.t + (float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) * float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));                        
+                    //    }
+                    //    this.t = this.t - (this.t * ((float.Parse(txtDiscount.Text)) / 100));
+                    //    tbxTotal.Text = Convert.ToString(t);
+
+                    //}
+                    //else {
                     //if (dataGridView1.RowCount > 1)
                     //{
-                        
-                        for (int i = 0; i < dataGridView1.RowCount ; i++)
-                        {
-                            this.t = this.t + (float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) * float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));
-                        }
-                        tbxTotal.Text = Convert.ToString(t);
+
+                    for (int i = 0; i < dataGridView1.RowCount; i++)
+                    {
+                        this.t = this.t + (float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()) * float.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));
+                    }
+                    tbxTotal.Text = Convert.ToString(t);
                     //}                      
-                //}
-            }
-            else
-            {
-                if (this.idioma == "ESPAÑOL")
-                {
-                    MessageBox.Show("Debes seleccionar un producto");
+                    //}
                 }
                 else
                 {
-                    MessageBox.Show("You must select one Product");
+                    if (this.idioma == "ESPAÑOL")
+                    {
+                        MessageBox.Show("Debes seleccionar un producto");
+                    }
+                    else
+                    {
+                        MessageBox.Show("You must select one Product");
+                    }
+
                 }
-                    
+
+
+
+            }else
+            {
+                MessageBox.Show((this.idioma=="ESPAÑOL")?"No queda stock de este producto":"This product dont have Stock ");
             }
-    
+
+
         }
 
         private void iniTable()
@@ -208,7 +220,8 @@ namespace Avengers.Presentacion.Orders
 
             Console.Write(f1+"--"+f2);
             if(check()&&(f1<= f2))
-            {
+            { 
+
                 String id = dtoCustomer.Idcustomer;
                 //Sql para insertar order al hacer click en OK -- modificar el valor numero 3 que hace ref a user
                 String sql = "Insert into orders values (null,'" + id + "', "+u.getId()+ ", trunc(SYSDATE), '" + cmbPay.SelectedValue + "', '" + f2 + "','"+ f1 + "',0,0,0,0,0)";
