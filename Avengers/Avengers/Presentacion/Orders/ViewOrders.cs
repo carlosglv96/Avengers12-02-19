@@ -522,7 +522,7 @@ namespace Avengers.Presentacion.Orders
                         break;
                     case 11:                        
                         //Falta añadir un && al if con lo del rol
-                        if (GestorUsers.searchPermit("INVOICED", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && ((prepaid == total) || tipoPay==3))
+                        if (GestorUsers.searchPermit("INVOICED", u) && dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Style.BackColor == Color.Green && ((prepaid > 0) || tipoPay==3))
                         {
                             int idFactura = Dominio.Invoices.getIdInvoice();
                             float totalIva = (total * (float) 1.21);
@@ -549,7 +549,7 @@ namespace Avengers.Presentacion.Orders
                             }
                             else
                             {
-                                if (total - prepaid == 0)
+                                if (prepaid > 0)
                                 {                                   
                                     if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
                                     else { MessageBox.Show("Error, el usuario no tiene permisos"); }

@@ -240,6 +240,18 @@ namespace Avengers.Presentacion.Invoices
             GestorInvoices.deleteInvoice("Delete from Lines where refinvoice='" + id + "' ");
             //Borrado en invoices
             GestorInvoices.deleteInvoice("Delete from Invoices where idinvoice= '" + id + "' ");
+
+            Order o = new Dominio.Order();
+            String aux = o.getGestor().getUnString("select count(*) from orders_invoices where refinvoice = " + id);
+            int n = Int32.Parse(aux);
+            if (n > 0)
+            {
+                aux = o.getGestor().getUnString("select reforder from orders_invoices where refinvoice = " + id);
+                int idOrder = Int32.Parse(aux);
+                o.getGestor().setData("Update orders set invoiced = 0 where idorder = '" + idOrder + "'");
+            }
+
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
