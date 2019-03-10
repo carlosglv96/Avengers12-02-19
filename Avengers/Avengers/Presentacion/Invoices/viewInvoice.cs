@@ -293,5 +293,29 @@ namespace Avengers.Presentacion.Invoices
             PrintInvo i = new PrintInvo(refCusto, idInvoice, refTipo);
             i.Show();
         }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DtoInvoice inv=new DtoInvoice(
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString(),
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[1].Value.ToString(),
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[2].Value.ToString(),
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[4].Value.ToString(),
+                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[5].Value.ToString());
+
+                showContent sc = new showContent(inv, this.idioma, this.u);
+                sc.ShowDialog();
+                
+                
+
+            }
+            catch
+            {
+                if (this.idioma == "INGLES") { Console.WriteLine("Error, you Must Select a Invoice"); }
+                else { Console.WriteLine("Error, debes seleccionar una factura"); }
+            }
+        }
     }
 }

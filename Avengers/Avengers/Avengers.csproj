@@ -178,6 +178,12 @@
     <Compile Include="Presentacion\Invoices\NewInvoices.Designer.cs">
       <DependentUpon>NewInvoices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Invoices\showContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Invoices\showContent.Designer.cs">
+      <DependentUpon>showContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Invoices\viewInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Invoices\NewInvoices.resx">
       <DependentUpon>NewInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Invoices\showContent.resx">
+      <DependentUpon>showContent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Invoices\viewInvoice.resx">
       <DependentUpon>viewInvoice.cs</DependentUpon>

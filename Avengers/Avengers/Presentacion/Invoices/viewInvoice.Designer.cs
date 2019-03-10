@@ -44,6 +44,7 @@
             this.txtCustomerSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
+            this.btnShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +87,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.Location = new System.Drawing.Point(843, 281);
+            this.btnDelete.Location = new System.Drawing.Point(843, 331);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 30);
             this.btnDelete.TabIndex = 3;
@@ -97,7 +98,7 @@
             // btnPrint
             // 
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPrint.Location = new System.Drawing.Point(843, 357);
+            this.btnPrint.Location = new System.Drawing.Point(843, 396);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(105, 30);
             this.btnPrint.TabIndex = 4;
@@ -202,11 +203,23 @@
             this.txtAmount.TabIndex = 15;
             this.txtAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAmount_KeyUp);
             // 
+            // btnShow
+            // 
+            this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnShow.Location = new System.Drawing.Point(843, 269);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(105, 37);
+            this.btnShow.TabIndex = 16;
+            this.btnShow.Text = "Content";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
             // viewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 504);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.txtCustomerSurname);
             this.Controls.Add(this.label1);
@@ -248,5 +261,6 @@
         private System.Windows.Forms.TextBox txtCustomerSurname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.Button btnShow;
     }
 }

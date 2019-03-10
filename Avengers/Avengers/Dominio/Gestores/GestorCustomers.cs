@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Avengers.Dominio.Gestores
 {
-    class GestorCustomers
+    public class GestorCustomers
     {
         private DataTable tabla;
 
@@ -102,6 +102,10 @@ namespace Avengers.Dominio.Gestores
             ConnectOracle update = new ConnectOracle();
             update.setData(sentencia);
         }
-
+        public static String getUnString(String sql)
+        {
+            ConnectOracle select = new ConnectOracle();
+            return select.getData(sql);
+        }
     }
 }
