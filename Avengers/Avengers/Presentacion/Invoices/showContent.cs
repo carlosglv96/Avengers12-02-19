@@ -25,6 +25,14 @@ namespace Avengers.Presentacion.Invoices
             InitializeComponent();
             txtInvoice.Text= invoice.IdInvoice;
             txtDate.Text = invoice.DateInvoice;
+            if(this.idioma == "ESPAÑOL")
+            {
+                idioma_es();
+            }
+            else
+            {
+                idioma_en();
+            }
 
             //buscamos customer
             String select = "Select (name|| ' ' ||surname) as cus from customers where idcustomer='" + invoice.RefCustomer + "'";
@@ -32,6 +40,20 @@ namespace Avengers.Presentacion.Invoices
 
             initDGV();
 
+        }
+
+        private void idioma_en()
+        {
+            lblCustomerInvoice.Text = Recursos.Ingles.lblCustomerInvoice;
+            lblDateInvoice.Text = Recursos.Ingles.lblDateInvoice;
+            lblInvoice.Text = Recursos.Ingles.lblInvoice;
+        }
+
+        private void idioma_es()
+        {
+            lblCustomerInvoice.Text = Recursos.Espanol.lblCustomerInvoice;
+            lblDateInvoice.Text = Recursos.Espanol.lblDateInvoice;
+            lblInvoice.Text = Recursos.Espanol.lblInvoice;
         }
 
         public void initDGV()

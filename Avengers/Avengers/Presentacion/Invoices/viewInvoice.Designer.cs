@@ -42,7 +42,7 @@
             this.lblCustomer = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.txtCustomerSurname = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCustomerSurname = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.btnShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
@@ -185,15 +185,15 @@
             this.txtCustomerSurname.Click += new System.EventHandler(this.txtCustomerSurname_Click);
             this.txtCustomerSurname.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCustomerSurname_KeyUp);
             // 
-            // label1
+            // lblCustomerSurname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(23, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 16);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Customer Surname:";
+            this.lblCustomerSurname.AutoSize = true;
+            this.lblCustomerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCustomerSurname.Location = new System.Drawing.Point(23, 63);
+            this.lblCustomerSurname.Name = "lblCustomerSurname";
+            this.lblCustomerSurname.Size = new System.Drawing.Size(142, 16);
+            this.lblCustomerSurname.TabIndex = 13;
+            this.lblCustomerSurname.Text = "Customer Surname:";
             // 
             // txtAmount
             // 
@@ -222,7 +222,7 @@
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.txtCustomerSurname);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCustomerSurname);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.txtCustomerName);
@@ -259,7 +259,7 @@
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.TextBox txtCustomerSurname;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCustomerSurname;
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Button btnShow;
     }

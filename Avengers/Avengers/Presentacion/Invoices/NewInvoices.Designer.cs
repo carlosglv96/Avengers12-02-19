@@ -31,32 +31,32 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewInvoices));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtPriceProduct = new System.Windows.Forms.TextBox();
-            this.btnAddProd = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnAddProdInvoice = new System.Windows.Forms.Button();
+            this.lblPriceProduct = new System.Windows.Forms.Label();
             this.nudAmount = new System.Windows.Forms.NumericUpDown();
             this.btnFindProd = new System.Windows.Forms.Button();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.lblProduct = new System.Windows.Forms.Label();
+            this.lblAmountInvoice = new System.Windows.Forms.Label();
+            this.lblProductInvoice = new System.Windows.Forms.Label();
             this.txtProduct = new System.Windows.Forms.TextBox();
             this.btnFindCust = new System.Windows.Forms.Button();
             this.txtCustomer = new System.Windows.Forms.TextBox();
-            this.lblCustomer = new System.Windows.Forms.Label();
-            this.lblAddProduct = new System.Windows.Forms.Label();
+            this.lblCustomerNewInvoice = new System.Windows.Forms.Label();
+            this.lblAddProductInvoice = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAddLine = new System.Windows.Forms.Button();
+            this.btnAddLineInvoice = new System.Windows.Forms.Button();
             this.txtPriceLine = new System.Windows.Forms.TextBox();
-            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblPriceInvoice = new System.Windows.Forms.Label();
             this.nudAmountLine = new System.Windows.Forms.NumericUpDown();
             this.txtDesc = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.lblAddLine = new System.Windows.Forms.Label();
+            this.lblAmountLine = new System.Windows.Forms.Label();
+            this.lblDescriptionInvoice = new System.Windows.Forms.Label();
+            this.lblAddLineInvoice = new System.Windows.Forms.Label();
             this.dgvInv = new System.Windows.Forms.DataGridView();
-            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnRemoveInvoice = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnCancelInvoice = new System.Windows.Forms.Button();
             this.nudRemove = new System.Windows.Forms.NumericUpDown();
             this.txtTotalNeto = new System.Windows.Forms.TextBox();
             this.lblNeto = new System.Windows.Forms.Label();
@@ -72,12 +72,12 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtPriceProduct);
-            this.panel1.Controls.Add(this.btnAddProd);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnAddProdInvoice);
+            this.panel1.Controls.Add(this.lblPriceProduct);
             this.panel1.Controls.Add(this.nudAmount);
             this.panel1.Controls.Add(this.btnFindProd);
-            this.panel1.Controls.Add(this.lblAmount);
-            this.panel1.Controls.Add(this.lblProduct);
+            this.panel1.Controls.Add(this.lblAmountInvoice);
+            this.panel1.Controls.Add(this.lblProductInvoice);
             this.panel1.Controls.Add(this.txtProduct);
             this.panel1.Location = new System.Drawing.Point(12, 90);
             this.panel1.Name = "panel1";
@@ -92,26 +92,26 @@
             this.txtPriceProduct.Size = new System.Drawing.Size(102, 20);
             this.txtPriceProduct.TabIndex = 35;
             // 
-            // btnAddProd
+            // btnAddProdInvoice
             // 
-            this.btnAddProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProd.Location = new System.Drawing.Point(259, 118);
-            this.btnAddProd.Name = "btnAddProd";
-            this.btnAddProd.Size = new System.Drawing.Size(75, 23);
-            this.btnAddProd.TabIndex = 34;
-            this.btnAddProd.Text = "Add";
-            this.btnAddProd.UseVisualStyleBackColor = true;
-            this.btnAddProd.Click += new System.EventHandler(this.btnAddProd_Click);
+            this.btnAddProdInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProdInvoice.Location = new System.Drawing.Point(259, 118);
+            this.btnAddProdInvoice.Name = "btnAddProdInvoice";
+            this.btnAddProdInvoice.Size = new System.Drawing.Size(75, 23);
+            this.btnAddProdInvoice.TabIndex = 34;
+            this.btnAddProdInvoice.Text = "Add";
+            this.btnAddProdInvoice.UseVisualStyleBackColor = true;
+            this.btnAddProdInvoice.Click += new System.EventHandler(this.btnAddProd_Click);
             // 
-            // label2
+            // lblPriceProduct
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(180, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Price:";
+            this.lblPriceProduct.AutoSize = true;
+            this.lblPriceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceProduct.Location = new System.Drawing.Point(180, 97);
+            this.lblPriceProduct.Name = "lblPriceProduct";
+            this.lblPriceProduct.Size = new System.Drawing.Size(48, 16);
+            this.lblPriceProduct.TabIndex = 34;
+            this.lblPriceProduct.Text = "Price:";
             // 
             // nudAmount
             // 
@@ -140,25 +140,25 @@
             this.btnFindProd.UseVisualStyleBackColor = true;
             this.btnFindProd.Click += new System.EventHandler(this.btnFindProd_Click);
             // 
-            // lblAmount
+            // lblAmountInvoice
             // 
-            this.lblAmount.AutoSize = true;
-            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(24, 97);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(63, 16);
-            this.lblAmount.TabIndex = 26;
-            this.lblAmount.Text = "Amount:";
+            this.lblAmountInvoice.AutoSize = true;
+            this.lblAmountInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmountInvoice.Location = new System.Drawing.Point(24, 97);
+            this.lblAmountInvoice.Name = "lblAmountInvoice";
+            this.lblAmountInvoice.Size = new System.Drawing.Size(63, 16);
+            this.lblAmountInvoice.TabIndex = 26;
+            this.lblAmountInvoice.Text = "Amount:";
             // 
-            // lblProduct
+            // lblProductInvoice
             // 
-            this.lblProduct.AutoSize = true;
-            this.lblProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduct.Location = new System.Drawing.Point(22, 36);
-            this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(65, 16);
-            this.lblProduct.TabIndex = 24;
-            this.lblProduct.Text = "Product:";
+            this.lblProductInvoice.AutoSize = true;
+            this.lblProductInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductInvoice.Location = new System.Drawing.Point(22, 36);
+            this.lblProductInvoice.Name = "lblProductInvoice";
+            this.lblProductInvoice.Size = new System.Drawing.Size(65, 16);
+            this.lblProductInvoice.TabIndex = 24;
+            this.lblProductInvoice.Text = "Product:";
             // 
             // txtProduct
             // 
@@ -186,50 +186,50 @@
             this.txtCustomer.Size = new System.Drawing.Size(198, 20);
             this.txtCustomer.TabIndex = 22;
             // 
-            // lblCustomer
+            // lblCustomerNewInvoice
             // 
-            this.lblCustomer.AutoSize = true;
-            this.lblCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomer.Location = new System.Drawing.Point(37, 30);
-            this.lblCustomer.Name = "lblCustomer";
-            this.lblCustomer.Size = new System.Drawing.Size(77, 16);
-            this.lblCustomer.TabIndex = 21;
-            this.lblCustomer.Text = "Customer:";
+            this.lblCustomerNewInvoice.AutoSize = true;
+            this.lblCustomerNewInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerNewInvoice.Location = new System.Drawing.Point(37, 30);
+            this.lblCustomerNewInvoice.Name = "lblCustomerNewInvoice";
+            this.lblCustomerNewInvoice.Size = new System.Drawing.Size(77, 16);
+            this.lblCustomerNewInvoice.TabIndex = 21;
+            this.lblCustomerNewInvoice.Text = "Customer:";
             // 
-            // lblAddProduct
+            // lblAddProductInvoice
             // 
-            this.lblAddProduct.AutoSize = true;
-            this.lblAddProduct.Location = new System.Drawing.Point(12, 74);
-            this.lblAddProduct.Name = "lblAddProduct";
-            this.lblAddProduct.Size = new System.Drawing.Size(66, 13);
-            this.lblAddProduct.TabIndex = 0;
-            this.lblAddProduct.Text = "Add Product";
+            this.lblAddProductInvoice.AutoSize = true;
+            this.lblAddProductInvoice.Location = new System.Drawing.Point(12, 74);
+            this.lblAddProductInvoice.Name = "lblAddProductInvoice";
+            this.lblAddProductInvoice.Size = new System.Drawing.Size(66, 13);
+            this.lblAddProductInvoice.TabIndex = 0;
+            this.lblAddProductInvoice.Text = "Add Product";
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.btnAddLine);
+            this.panel2.Controls.Add(this.btnAddLineInvoice);
             this.panel2.Controls.Add(this.txtPriceLine);
-            this.panel2.Controls.Add(this.lblPrice);
+            this.panel2.Controls.Add(this.lblPriceInvoice);
             this.panel2.Controls.Add(this.nudAmountLine);
             this.panel2.Controls.Add(this.txtDesc);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.lblDescription);
+            this.panel2.Controls.Add(this.lblAmountLine);
+            this.panel2.Controls.Add(this.lblDescriptionInvoice);
             this.panel2.Location = new System.Drawing.Point(397, 90);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(330, 153);
             this.panel2.TabIndex = 24;
             // 
-            // btnAddLine
+            // btnAddLineInvoice
             // 
-            this.btnAddLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddLine.Location = new System.Drawing.Point(235, 118);
-            this.btnAddLine.Name = "btnAddLine";
-            this.btnAddLine.Size = new System.Drawing.Size(75, 23);
-            this.btnAddLine.TabIndex = 30;
-            this.btnAddLine.Text = "Add";
-            this.btnAddLine.UseVisualStyleBackColor = true;
-            this.btnAddLine.Click += new System.EventHandler(this.btnAddLine_Click);
+            this.btnAddLineInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddLineInvoice.Location = new System.Drawing.Point(235, 118);
+            this.btnAddLineInvoice.Name = "btnAddLineInvoice";
+            this.btnAddLineInvoice.Size = new System.Drawing.Size(75, 23);
+            this.btnAddLineInvoice.TabIndex = 30;
+            this.btnAddLineInvoice.Text = "Add";
+            this.btnAddLineInvoice.UseVisualStyleBackColor = true;
+            this.btnAddLineInvoice.Click += new System.EventHandler(this.btnAddLine_Click);
             // 
             // txtPriceLine
             // 
@@ -238,15 +238,15 @@
             this.txtPriceLine.Size = new System.Drawing.Size(102, 20);
             this.txtPriceLine.TabIndex = 33;
             // 
-            // lblPrice
+            // lblPriceInvoice
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(149, 97);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(48, 16);
-            this.lblPrice.TabIndex = 32;
-            this.lblPrice.Text = "Price:";
+            this.lblPriceInvoice.AutoSize = true;
+            this.lblPriceInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceInvoice.Location = new System.Drawing.Point(149, 97);
+            this.lblPriceInvoice.Name = "lblPriceInvoice";
+            this.lblPriceInvoice.Size = new System.Drawing.Size(48, 16);
+            this.lblPriceInvoice.TabIndex = 32;
+            this.lblPriceInvoice.Text = "Price:";
             // 
             // nudAmountLine
             // 
@@ -273,34 +273,34 @@
             this.txtDesc.Size = new System.Drawing.Size(196, 56);
             this.txtDesc.TabIndex = 27;
             // 
-            // label1
+            // lblAmountLine
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Amount:";
+            this.lblAmountLine.AutoSize = true;
+            this.lblAmountLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmountLine.Location = new System.Drawing.Point(15, 97);
+            this.lblAmountLine.Name = "lblAmountLine";
+            this.lblAmountLine.Size = new System.Drawing.Size(63, 16);
+            this.lblAmountLine.TabIndex = 30;
+            this.lblAmountLine.Text = "Amount:";
             // 
-            // lblDescription
+            // lblDescriptionInvoice
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(15, 31);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(91, 16);
-            this.lblDescription.TabIndex = 26;
-            this.lblDescription.Text = "Description:";
+            this.lblDescriptionInvoice.AutoSize = true;
+            this.lblDescriptionInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescriptionInvoice.Location = new System.Drawing.Point(15, 31);
+            this.lblDescriptionInvoice.Name = "lblDescriptionInvoice";
+            this.lblDescriptionInvoice.Size = new System.Drawing.Size(91, 16);
+            this.lblDescriptionInvoice.TabIndex = 26;
+            this.lblDescriptionInvoice.Text = "Description:";
             // 
-            // lblAddLine
+            // lblAddLineInvoice
             // 
-            this.lblAddLine.AutoSize = true;
-            this.lblAddLine.Location = new System.Drawing.Point(394, 74);
-            this.lblAddLine.Name = "lblAddLine";
-            this.lblAddLine.Size = new System.Drawing.Size(49, 13);
-            this.lblAddLine.TabIndex = 25;
-            this.lblAddLine.Text = "Add Line";
+            this.lblAddLineInvoice.AutoSize = true;
+            this.lblAddLineInvoice.Location = new System.Drawing.Point(394, 74);
+            this.lblAddLineInvoice.Name = "lblAddLineInvoice";
+            this.lblAddLineInvoice.Size = new System.Drawing.Size(49, 13);
+            this.lblAddLineInvoice.TabIndex = 25;
+            this.lblAddLineInvoice.Text = "Add Line";
             // 
             // dgvInv
             // 
@@ -317,16 +317,16 @@
             this.dgvInv.Size = new System.Drawing.Size(712, 245);
             this.dgvInv.TabIndex = 26;
             // 
-            // btnRemove
+            // btnRemoveInvoice
             // 
-            this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(735, 320);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
-            this.btnRemove.TabIndex = 27;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnRemoveInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveInvoice.Location = new System.Drawing.Point(735, 320);
+            this.btnRemoveInvoice.Name = "btnRemoveInvoice";
+            this.btnRemoveInvoice.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveInvoice.TabIndex = 27;
+            this.btnRemoveInvoice.Text = "Remove";
+            this.btnRemoveInvoice.UseVisualStyleBackColor = true;
+            this.btnRemoveInvoice.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // txtTotal
             // 
@@ -357,16 +357,16 @@
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // btnCancel
+            // btnCancelInvoice
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(620, 585);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(85, 23);
-            this.btnCancel.TabIndex = 28;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancelInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelInvoice.Location = new System.Drawing.Point(620, 585);
+            this.btnCancelInvoice.Name = "btnCancelInvoice";
+            this.btnCancelInvoice.Size = new System.Drawing.Size(85, 23);
+            this.btnCancelInvoice.TabIndex = 28;
+            this.btnCancelInvoice.Text = "Cancel";
+            this.btnCancelInvoice.UseVisualStyleBackColor = true;
+            this.btnCancelInvoice.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // nudRemove
             // 
@@ -414,16 +414,16 @@
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnCancelInvoice);
+            this.Controls.Add(this.btnRemoveInvoice);
             this.Controls.Add(this.dgvInv);
-            this.Controls.Add(this.lblAddLine);
+            this.Controls.Add(this.lblAddLineInvoice);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lblAddProduct);
+            this.Controls.Add(this.lblAddProductInvoice);
             this.Controls.Add(this.btnFindCust);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtCustomer);
-            this.Controls.Add(this.lblCustomer);
+            this.Controls.Add(this.lblCustomerNewInvoice);
             this.Name = "NewInvoices";
             this.Text = "NewInvoices";
             this.panel1.ResumeLayout(false);
@@ -444,32 +444,32 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnFindCust;
         private System.Windows.Forms.TextBox txtCustomer;
-        private System.Windows.Forms.Label lblCustomer;
-        private System.Windows.Forms.Label lblAddProduct;
+        private System.Windows.Forms.Label lblCustomerNewInvoice;
+        private System.Windows.Forms.Label lblAddProductInvoice;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.NumericUpDown nudAmount;
         private System.Windows.Forms.Button btnFindProd;
-        private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.Label lblProduct;
+        private System.Windows.Forms.Label lblAmountInvoice;
+        private System.Windows.Forms.Label lblProductInvoice;
         private System.Windows.Forms.TextBox txtProduct;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblAddLine;
+        private System.Windows.Forms.Label lblAddLineInvoice;
         private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Label lblDescriptionInvoice;
         private System.Windows.Forms.NumericUpDown nudAmountLine;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblAmountLine;
+        private System.Windows.Forms.Label lblPriceInvoice;
         private System.Windows.Forms.TextBox txtPriceLine;
-        private System.Windows.Forms.Button btnAddLine;
-        private System.Windows.Forms.Button btnAddProd;
+        private System.Windows.Forms.Button btnAddLineInvoice;
+        private System.Windows.Forms.Button btnAddProdInvoice;
         private System.Windows.Forms.DataGridView dgvInv;
-        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnRemoveInvoice;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnCancelInvoice;
         private System.Windows.Forms.TextBox txtPriceProduct;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPriceProduct;
         private System.Windows.Forms.NumericUpDown nudRemove;
         private System.Windows.Forms.TextBox txtTotalNeto;
         private System.Windows.Forms.Label lblNeto;

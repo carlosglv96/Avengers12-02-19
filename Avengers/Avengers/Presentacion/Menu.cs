@@ -316,6 +316,7 @@ namespace Avengers.Presentacion
             products.Text = Recursos.Espanol.products;
             btnExit.Text = Recursos.Espanol.btnExit;
             btnCash.Text = Recursos.Espanol.cashbook;
+            btnInvoices.Text = Recursos.Espanol.btnInvoice;
             inco.Text = Recursos.Espanol.incomes;
             expen.Text = Recursos.Espanol.expenses;
             paym.Text = Recursos.Espanol.pendingPayment;
@@ -367,6 +368,7 @@ namespace Avengers.Presentacion
             products.Text = Recursos.Ingles.products;
             btnExit.Text = Recursos.Ingles.btnExit;
             btnCash.Text = Recursos.Ingles.cashbook;
+            btnInvoices.Text = Recursos.Ingles.btnInvoice;
             inco.Text = Recursos.Ingles.incomes;
             expen.Text = Recursos.Ingles.expenses;
             paym.Text = Recursos.Ingles.pendingPayment;

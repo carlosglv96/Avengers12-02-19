@@ -79,11 +79,29 @@ namespace Avengers.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Añadir.
+        /// </summary>
+        internal static string btnAddLine {
+            get {
+                return ResourceManager.GetString("btnAddLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Añadir y Nuevo.
         /// </summary>
         internal static string btnAddNew {
             get {
                 return ResourceManager.GetString("btnAddNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Añadir.
+        /// </summary>
+        internal static string btnAddProd {
+            get {
+                return ResourceManager.GetString("btnAddProd", resourceCulture);
             }
         }
         
@@ -169,6 +187,24 @@ namespace Avengers.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Facturas.
+        /// </summary>
+        internal static string btnInvoice {
+            get {
+                return ResourceManager.GetString("btnInvoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Factura.
+        /// </summary>
+        internal static string btnMod {
+            get {
+                return ResourceManager.GetString("btnMod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Modificar.
         /// </summary>
         internal static string btnModify {
@@ -183,6 +219,15 @@ namespace Avengers.Recursos {
         internal static string btnModUser {
             get {
                 return ResourceManager.GetString("btnModUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nueva Factura.
+        /// </summary>
+        internal static string btnNew {
+            get {
+                return ResourceManager.GetString("btnNew", resourceCulture);
             }
         }
         
@@ -223,11 +268,29 @@ namespace Avengers.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Imprimir.
+        /// </summary>
+        internal static string btnPrint {
+            get {
+                return ResourceManager.GetString("btnPrint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Quitar.
         /// </summary>
         internal static string btnRemove {
             get {
                 return ResourceManager.GetString("btnRemove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contenido.
+        /// </summary>
+        internal static string btnShow {
+            get {
+                return ResourceManager.GetString("btnShow", resourceCulture);
             }
         }
         
@@ -385,6 +448,24 @@ namespace Avengers.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Añadir Linea.
+        /// </summary>
+        internal static string lblAddLine {
+            get {
+                return ResourceManager.GetString("lblAddLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Añadir Producto.
+        /// </summary>
+        internal static string lblAddProduct {
+            get {
+                return ResourceManager.GetString("lblAddProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Dirección:.
         /// </summary>
         internal static string lblAdrees {
@@ -448,6 +529,24 @@ namespace Avengers.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cliente:.
+        /// </summary>
+        internal static string lblCustomerInvoice {
+            get {
+                return ResourceManager.GetString("lblCustomerInvoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Apellido Cliente.
+        /// </summary>
+        internal static string lblCustomerSurname {
+            get {
+                return ResourceManager.GetString("lblCustomerSurname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Fecha:.
         /// </summary>
         internal static string lblDate {
@@ -462,6 +561,15 @@ namespace Avengers.Recursos {
         internal static string lblDateAdd {
             get {
                 return ResourceManager.GetString("lblDateAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Factura:.
+        /// </summary>
+        internal static string lblDateInvoice {
+            get {
+                return ResourceManager.GetString("lblDateInvoice", resourceCulture);
             }
         }
         
@@ -516,6 +624,15 @@ namespace Avengers.Recursos {
         internal static string lblIncomes {
             get {
                 return ResourceManager.GetString("lblIncomes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID Factura.
+        /// </summary>
+        internal static string lblInvoice {
+            get {
+                return ResourceManager.GetString("lblInvoice", resourceCulture);
             }
         }
         
@@ -615,6 +732,15 @@ namespace Avengers.Recursos {
         internal static string lblPrepago {
             get {
                 return ResourceManager.GetString("lblPrepago", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Precio:.
+        /// </summary>
+        internal static string lblPrice {
+            get {
+                return ResourceManager.GetString("lblPrice", resourceCulture);
             }
         }
         

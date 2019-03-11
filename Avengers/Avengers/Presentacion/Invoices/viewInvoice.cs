@@ -24,7 +24,43 @@ namespace Avengers.Presentacion.Invoices
             //dtpDate.Enabled = chkDate.Checked;
             InitializeComponent();
             InitDGV("");
-  
+            if(this.idioma == "ESPAÑOL")
+            {
+                idioma_es();
+            }
+            else
+            {
+                idioma_en();
+            }
+
+        }
+
+        private void idioma_es()
+        {
+            lblCustomer.Text = Recursos.Espanol.lblCustomer;
+            lblCustomerSurname.Text = Recursos.Espanol.lblCustomerSurname;
+            lblDate.Text = Recursos.Espanol.lblDate;
+            lblAmount.Text = Recursos.Espanol.lblAmount;
+            btnClean.Text = Recursos.Espanol.btnClean;
+            btnDelete.Text = Recursos.Espanol.btnDelete;
+            btnNew.Text = Recursos.Espanol.btnNew;
+            btnMod.Text = Recursos.Espanol.btnMod;
+            btnShow.Text = Recursos.Espanol.btnShow;
+            btnPrint.Text = Recursos.Espanol.btnPrint;
+        }
+
+        private void idioma_en()
+        {
+            lblCustomer.Text = Recursos.Ingles.lblCustomer;
+            lblCustomerSurname.Text = Recursos.Ingles.lblCustomerSurname;
+            lblDate.Text = Recursos.Ingles.lblDate;
+            lblAmount.Text = Recursos.Ingles.lblAmount;
+            btnClean.Text = Recursos.Ingles.btnClean;
+            btnDelete.Text = Recursos.Ingles.btnDelete;
+            btnNew.Text = Recursos.Ingles.btnNew;
+            btnMod.Text = Recursos.Ingles.btnMod;
+            btnShow.Text = Recursos.Ingles.btnShow;
+            btnPrint.Text = Recursos.Ingles.btnPrint;
 
         }
 
@@ -40,13 +76,23 @@ namespace Avengers.Presentacion.Invoices
 
             DataTable tInvoice = i.getGestor().getInvoices();
 
-            dgvInvoice.Columns.Add("idinvoice", "ID");
-            dgvInvoice.Columns.Add("date_invoice", "DATE INVOICE");
-            dgvInvoice.Columns.Add("refcustomer", "IDCUSTOMER");
-            dgvInvoice.Columns.Add("customer", "CUSTOMER");
-            dgvInvoice.Columns.Add("net_amount", "NET AMOUNT");
-            dgvInvoice.Columns.Add("amount", "AMOUNT");
-
+            if (this.idioma == "INGLES")
+            {
+                dgvInvoice.Columns.Add("idinvoice", "ID");
+                dgvInvoice.Columns.Add("date_invoice", "DATE INVOICE");
+                dgvInvoice.Columns.Add("refcustomer", "IDCUSTOMER");
+                dgvInvoice.Columns.Add("customer", "CUSTOMER");
+                dgvInvoice.Columns.Add("net_amount", "NET AMOUNT");
+                dgvInvoice.Columns.Add("amount", "AMOUNT");
+            }
+            else {
+                dgvInvoice.Columns.Add("idinvoice", "ID");
+                dgvInvoice.Columns.Add("date_invoice", "FECHA FACTURA");
+                dgvInvoice.Columns.Add("refcustomer", "IDCLIENTE");
+                dgvInvoice.Columns.Add("customer", "CLIENTE");
+                dgvInvoice.Columns.Add("net_amount", "CANTIDAD NETA");
+                dgvInvoice.Columns.Add("amount", "CANTIDAD");
+            }
             foreach (DataRow row in tInvoice.Rows)
             {
                 dgvInvoice.Rows.Add(row["IDINVOICE"], row["DATE_INVOICE"], row["REFCUSTOMER"], row["CUSTOMER"], row["NET_AMOUNT"], row["AMOUNT"]);

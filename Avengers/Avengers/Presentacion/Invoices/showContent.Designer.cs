@@ -31,10 +31,10 @@
             this.dgvInv = new System.Windows.Forms.DataGridView();
             this.btnOk = new System.Windows.Forms.Button();
             this.lblInvoice = new System.Windows.Forms.Label();
-            this.lblCustomer = new System.Windows.Forms.Label();
+            this.lblCustomerInvoice = new System.Windows.Forms.Label();
             this.txtInvoice = new System.Windows.Forms.Label();
             this.txtCustomer = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
+            this.lblDateInvoice = new System.Windows.Forms.Label();
             this.txtDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInv)).BeginInit();
             this.SuspendLayout();
@@ -73,15 +73,15 @@
             this.lblInvoice.TabIndex = 2;
             this.lblInvoice.Text = "ID Invoice:";
             // 
-            // lblCustomer
+            // lblCustomerInvoice
             // 
-            this.lblCustomer.AutoSize = true;
-            this.lblCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomer.Location = new System.Drawing.Point(22, 91);
-            this.lblCustomer.Name = "lblCustomer";
-            this.lblCustomer.Size = new System.Drawing.Size(77, 16);
-            this.lblCustomer.TabIndex = 3;
-            this.lblCustomer.Text = "Customer:";
+            this.lblCustomerInvoice.AutoSize = true;
+            this.lblCustomerInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerInvoice.Location = new System.Drawing.Point(22, 91);
+            this.lblCustomerInvoice.Name = "lblCustomerInvoice";
+            this.lblCustomerInvoice.Size = new System.Drawing.Size(77, 16);
+            this.lblCustomerInvoice.TabIndex = 3;
+            this.lblCustomerInvoice.Text = "Customer:";
             // 
             // txtInvoice
             // 
@@ -101,20 +101,20 @@
             this.txtCustomer.TabIndex = 5;
             this.txtCustomer.Text = "Customer";
             // 
-            // lblDate
+            // lblDateInvoice
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(22, 56);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(99, 16);
-            this.lblDate.TabIndex = 6;
-            this.lblDate.Text = "Date Invoice:";
+            this.lblDateInvoice.AutoSize = true;
+            this.lblDateInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateInvoice.Location = new System.Drawing.Point(22, 56);
+            this.lblDateInvoice.Name = "lblDateInvoice";
+            this.lblDateInvoice.Size = new System.Drawing.Size(99, 16);
+            this.lblDateInvoice.TabIndex = 6;
+            this.lblDateInvoice.Text = "Date Invoice:";
             // 
             // txtDate
             // 
             this.txtDate.AutoSize = true;
-            this.txtDate.Location = new System.Drawing.Point(122, 58);
+            this.txtDate.Location = new System.Drawing.Point(143, 59);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(30, 13);
             this.txtDate.TabIndex = 7;
@@ -126,10 +126,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(613, 581);
             this.Controls.Add(this.txtDate);
-            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblDateInvoice);
             this.Controls.Add(this.txtCustomer);
             this.Controls.Add(this.txtInvoice);
-            this.Controls.Add(this.lblCustomer);
+            this.Controls.Add(this.lblCustomerInvoice);
             this.Controls.Add(this.lblInvoice);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dgvInv);
@@ -146,10 +146,10 @@
         private System.Windows.Forms.DataGridView dgvInv;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label lblInvoice;
-        private System.Windows.Forms.Label lblCustomer;
+        private System.Windows.Forms.Label lblCustomerInvoice;
         private System.Windows.Forms.Label txtInvoice;
         private System.Windows.Forms.Label txtCustomer;
-        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblDateInvoice;
         private System.Windows.Forms.Label txtDate;
     }
 }

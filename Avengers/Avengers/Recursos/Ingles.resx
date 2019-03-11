@@ -393,4 +393,46 @@
   <data name="lblTarget" xml:space="preserve">
     <value>Target:</value>
   </data>
+  <data name="btnAddLine" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnAddProd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnInvoice" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="btnMod" xml:space="preserve">
+    <value>Mod Invoice</value>
+  </data>
+  <data name="btnNew" xml:space="preserve">
+    <value>New Invoice</value>
+  </data>
+  <data name="btnPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="btnShow" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="lblAddLine" xml:space="preserve">
+    <value>Add Line</value>
+  </data>
+  <data name="lblAddProduct" xml:space="preserve">
+    <value>Add Product</value>
+  </data>
+  <data name="lblCustomerInvoice" xml:space="preserve">
+    <value>Customer:</value>
+  </data>
+  <data name="lblCustomerSurname" xml:space="preserve">
+    <value>Customer Surname:</value>
+  </data>
+  <data name="lblDateInvoice" xml:space="preserve">
+    <value>Date Invoice:</value>
+  </data>
+  <data name="lblInvoice" xml:space="preserve">
+    <value>ID Invoice:</value>
+  </data>
+  <data name="lblPrice" xml:space="preserve">
+    <value>Price:</value>
+  </data>
 </root>

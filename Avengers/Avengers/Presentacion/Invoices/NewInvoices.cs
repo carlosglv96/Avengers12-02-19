@@ -36,12 +36,49 @@ namespace Avengers.Presentacion.Invoices
             this.u = u;
             listProduct = new List<DtoProduct>();
             listLine = new List<DtoLine>();
-
+          
             InitializeComponent();
             initTable();
 
 
         }
+
+        //private void idioma_en()
+        //{
+        //    lblAddLineInvoice.Text = Recursos.Ingles.lblAddLine;
+        //    lblAddProductInvoice.Text = Recursos.Ingles.lblAddProduct;
+        //    lblAmountInvoice.Text = Recursos.Ingles.lblAmount;
+        //    lblAmountLine.Text = Recursos.Ingles.lblAmount;
+        //    lblCustomerNewInvoice.Text = Recursos.Ingles.lblCustomer;
+        //    lblDescriptionInvoice.Text = Recursos.Ingles.lblDescrip;
+        //    lblPriceInvoice.Text = Recursos.Ingles.lblPrice;
+        //    lblPriceProduct.Text = Recursos.Ingles.lblPrice;
+        //    lblProductInvoice.Text = Recursos.Ingles.lblProduct;
+        //    lblNeto.Text = "Net Total";
+        //    btnAdd.Text = Recursos.Ingles.btnAdd;
+        //    btnAddLineInvoice.Text = Recursos.Ingles.btnAddLine;
+        //    btnRemoveInvoice.Text = Recursos.Ingles.btnRemove;
+        //    btnCancelInvoice.Text = Recursos.Ingles.btnCancel;
+        //}
+
+        //private void idioma_es()
+        //{
+
+        //    lblAddLineInvoice.Text = "Añadir Linea";
+        //    //lblAddProductInvoice.Text = Recursos.Espanol.lblAddProduct;
+        //    //lblAmountInvoice.Text = Recursos.Espanol.lblAmount;
+        //    //lblAmountLine.Text = Recursos.Espanol.lblAmount;
+        //    //lblCustomerNewInvoice.Text = Recursos.Espanol.lblCustomer;
+        //    //lblDescriptionInvoice.Text = Recursos.Espanol.lblDescrip;
+        //    //lblPriceInvoice.Text = Recursos.Espanol.lblPrice;
+        //    //lblPriceProduct.Text = Recursos.Espanol.lblPrice;
+        //    //lblProductInvoice.Text = Recursos.Espanol.lblProduct;
+        //    //lblNeto.Text = "Total Neto";
+        //    //btnAdd.Text = Recursos.Espanol.btnAdd;
+        //    //btnAddLineInvoice.Text = Recursos.Espanol.btnAddLine;
+        //    //btnRemoveInvoice.Text = Recursos.Espanol.btnRemove;
+        //    //btnCancelInvoice.Text = Recursos.Espanol.btnCancel;
+        //}
 
         public void initTable()
         {

@@ -40,8 +40,53 @@ namespace Avengers.Presentacion.Invoices
             txtTotalNeto.Text = invoice.Net_Amount;
             this.totalIva = float.Parse(invoice.Amount);
             this.totalNeto = float.Parse(invoice.Net_Amount);
+            if (this.idioma == "ESPAÑOL")
+            {
+                idioma_es();
+            }
+            else
+            {
+                idioma_en();
+            }
 
 
+        }
+
+        private void idioma_en()
+        {
+            lblAddLine.Text = Recursos.Ingles.lblAddLine;
+            lblAddProduct.Text = Recursos.Ingles.lblAddProduct;
+            lblAmount.Text = Recursos.Ingles.lblAmount;
+            lblAmountLine.Text = Recursos.Ingles.lblAmount;
+            lblProduct.Text = Recursos.Ingles.lblProduct;
+            lblDescription.Text = Recursos.Ingles.lblDescrip;
+            lblPrice.Text = Recursos.Ingles.lblPrice;
+            lblPriceProduct.Text = Recursos.Ingles.lblPrice;
+            lblProduct.Text = Recursos.Ingles.lblProduct;
+            lblNeto.Text = "Net Total";
+            btnAddProd.Text = Recursos.Ingles.btnAdd;
+            btnAddLine.Text = Recursos.Ingles.btnAddLine;
+            btnRemove.Text = Recursos.Ingles.btnRemove;
+            btnCancel.Text = Recursos.Ingles.btnCancel;
+        }
+
+        private void idioma_es()
+        {
+
+            lblAddLine.Text = Recursos.Espanol.lblAddLine;
+            lblAddProduct.Text = Recursos.Espanol.lblAddProduct;
+            lblAmount.Text = Recursos.Espanol.lblAmount;
+            lblAmountLine.Text = Recursos.Espanol.lblAmount;
+            lblProduct.Text = Recursos.Espanol.lblProduct;
+            lblDescription.Text = Recursos.Espanol.lblDescrip;
+            lblPrice.Text = Recursos.Espanol.lblPrice;
+            lblPriceProduct.Text = Recursos.Espanol.lblPrice;
+            lblProduct.Text = Recursos.Espanol.lblProduct;
+            lblNeto.Text = "Total Neto";
+            btnAddProd.Text = Recursos.Espanol.btnAdd;
+            btnAddLine.Text = Recursos.Espanol.btnAddLine;
+            btnRemove.Text = Recursos.Espanol.btnRemove;
+            btnCancel.Text = Recursos.Espanol.btnCancel;
         }
 
 

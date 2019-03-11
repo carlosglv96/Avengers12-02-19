@@ -45,13 +45,13 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.nudAmountLine = new System.Windows.Forms.NumericUpDown();
             this.txtDesc = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAmountLine = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblAddProduct = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtPriceProduct = new System.Windows.Forms.TextBox();
             this.btnAddProd = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPriceProduct = new System.Windows.Forms.Label();
             this.nudAmount = new System.Windows.Forms.NumericUpDown();
             this.btnFindProd = new System.Windows.Forms.Button();
             this.lblAmount = new System.Windows.Forms.Label();
@@ -183,7 +183,7 @@
             this.panel2.Controls.Add(this.lblPrice);
             this.panel2.Controls.Add(this.nudAmountLine);
             this.panel2.Controls.Add(this.txtDesc);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblAmountLine);
             this.panel2.Controls.Add(this.lblDescription);
             this.panel2.Location = new System.Drawing.Point(397, 73);
             this.panel2.Name = "panel2";
@@ -243,15 +243,15 @@
             this.txtDesc.Size = new System.Drawing.Size(196, 56);
             this.txtDesc.TabIndex = 27;
             // 
-            // label1
+            // lblAmountLine
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Amount:";
+            this.lblAmountLine.AutoSize = true;
+            this.lblAmountLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmountLine.Location = new System.Drawing.Point(15, 97);
+            this.lblAmountLine.Name = "lblAmountLine";
+            this.lblAmountLine.Size = new System.Drawing.Size(63, 16);
+            this.lblAmountLine.TabIndex = 30;
+            this.lblAmountLine.Text = "Amount:";
             // 
             // lblDescription
             // 
@@ -277,7 +277,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtPriceProduct);
             this.panel1.Controls.Add(this.btnAddProd);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblPriceProduct);
             this.panel1.Controls.Add(this.nudAmount);
             this.panel1.Controls.Add(this.btnFindProd);
             this.panel1.Controls.Add(this.lblAmount);
@@ -307,15 +307,15 @@
             this.btnAddProd.UseVisualStyleBackColor = true;
             this.btnAddProd.Click += new System.EventHandler(this.btnAddProd_Click);
             // 
-            // label2
+            // lblPriceProduct
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(180, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Price:";
+            this.lblPriceProduct.AutoSize = true;
+            this.lblPriceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceProduct.Location = new System.Drawing.Point(180, 97);
+            this.lblPriceProduct.Name = "lblPriceProduct";
+            this.lblPriceProduct.Size = new System.Drawing.Size(48, 16);
+            this.lblPriceProduct.TabIndex = 34;
+            this.lblPriceProduct.Text = "Price:";
             // 
             // nudAmount
             // 
@@ -423,13 +423,13 @@
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.NumericUpDown nudAmountLine;
         private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAmountLine;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblAddProduct;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtPriceProduct;
         private System.Windows.Forms.Button btnAddProd;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPriceProduct;
         private System.Windows.Forms.NumericUpDown nudAmount;
         private System.Windows.Forms.Button btnFindProd;
         private System.Windows.Forms.Label lblAmount;
