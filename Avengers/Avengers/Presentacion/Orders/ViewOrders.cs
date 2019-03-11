@@ -683,24 +683,33 @@ namespace Avengers.Presentacion.Orders
                             }
                             else
                             {
+                                
                                 int idmax = Int32.Parse(GestorInvoices.getUnString("select max(idinvoice) from invoices"));
                                 int idfactura = Int32.Parse(GestorInvoices.getUnString("select refinvoice from ORDERS_INVOICES where reforder = " + id));
-                                if (idmax == idfactura)
+                                int conta = Int32.Parse(GestorInvoices.getUnString("select conta from invoices where idinvoice = '"+idfactura+"'"));
+                                if (conta == 1)
                                 {
-
-                                    GestorInvoices.deleteInvoice("delete from ORDERS_INVOICES where reforder = " + id);
-                                    GestorInvoices.deleteInvoice("delete from invoices where idinvoice = " + idfactura);
-
-                                    dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
-                                    dgvOrders.ClearSelection();
-                                    o.getGestor().setData("Update orders set invoiced = 0 where idorder = '" + id + "'");
+                                    MessageBox.Show((this.idioma == "ESPAÑOL") ? "Esta factura se encuentra contabilizada" : "This invoice is posted");
                                 }
                                 else
                                 {
-                                    if (this.idioma == "INGLES") { MessageBox.Show("Error, only can delete the last invoice"); }
-                                    else { MessageBox.Show("Error, solo se puede eliminar la ultima factura"); }
-                                }
+                                    if (idmax == idfactura)
+                                    {
 
+                                        GestorInvoices.deleteInvoice("delete from ORDERS_INVOICES where reforder = " + id);
+                                        GestorInvoices.deleteInvoice("delete from invoices where idinvoice = " + idfactura);
+
+                                        dgvOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                                        dgvOrders.ClearSelection();
+                                        o.getGestor().setData("Update orders set invoiced = 0 where idorder = '" + id + "'");
+                                    }
+                                    else
+                                    {
+                                        if (this.idioma == "INGLES") { MessageBox.Show("Error, only can delete the last invoice"); }
+                                        else { MessageBox.Show("Error, solo se puede eliminar la ultima factura"); }
+                                    }
+                                }
+                                
                             }
                         }
                         else
