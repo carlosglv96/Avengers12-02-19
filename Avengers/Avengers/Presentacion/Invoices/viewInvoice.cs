@@ -24,7 +24,12 @@ namespace Avengers.Presentacion.Invoices
             //dtpDate.Enabled = chkDate.Checked;
             InitializeComponent();
             InitDGV("");
-            if(this.idioma == "ESPAÑOL")
+            txBoxPassConta.Enabled = false;
+            if (GestorUsers.searchPermit("CONTABLE", u))
+            {
+                txBoxPassConta.Enabled = true;
+            }
+            if (this.idioma == "ESPAÑOL")
             {
                 idioma_es();
             }
@@ -47,6 +52,7 @@ namespace Avengers.Presentacion.Invoices
             btnMod.Text = Recursos.Espanol.btnMod;
             btnShow.Text = Recursos.Espanol.btnShow;
             btnPrint.Text = Recursos.Espanol.btnPrint;
+            lblPassConta.Text = "Contraseña:";
         }
 
         private void idioma_en()
@@ -61,13 +67,13 @@ namespace Avengers.Presentacion.Invoices
             btnMod.Text = Recursos.Ingles.btnMod;
             btnShow.Text = Recursos.Ingles.btnShow;
             btnPrint.Text = Recursos.Ingles.btnPrint;
-
+            lblPassConta.Text = "Password:";
         }
 
         public void InitDGV(string cond)
         {
             String sql = "select idinvoice, date_invoice, refcustomer,(c.name|| ' '|| c.surname) Customer, "
-                        +"net_amount, amount from invoices inner join customers c on c.idcustomer=refcustomer ";
+                         + "net_amount, amount, conta from invoices inner join customers c on c.idcustomer=refcustomer ";
             String order = " order by idinvoice desc";
             dgvInvoice.Columns.Clear();
             Dominio.Invoices i = new Dominio.Invoices();
@@ -84,6 +90,7 @@ namespace Avengers.Presentacion.Invoices
                 dgvInvoice.Columns.Add("customer", "CUSTOMER");
                 dgvInvoice.Columns.Add("net_amount", "NET AMOUNT");
                 dgvInvoice.Columns.Add("amount", "AMOUNT");
+                dgvInvoice.Columns.Add("conta", "CONTA");
             }
             else {
                 dgvInvoice.Columns.Add("idinvoice", "ID");
@@ -92,15 +99,20 @@ namespace Avengers.Presentacion.Invoices
                 dgvInvoice.Columns.Add("customer", "CLIENTE");
                 dgvInvoice.Columns.Add("net_amount", "CANTIDAD NETA");
                 dgvInvoice.Columns.Add("amount", "CANTIDAD");
+                dgvInvoice.Columns.Add("conta", "CONTA");
             }
             foreach (DataRow row in tInvoice.Rows)
             {
-                dgvInvoice.Rows.Add(row["IDINVOICE"], row["DATE_INVOICE"], row["REFCUSTOMER"], row["CUSTOMER"], row["NET_AMOUNT"], row["AMOUNT"]);
+                dgvInvoice.Rows.Add(row["IDINVOICE"], row["DATE_INVOICE"], row["REFCUSTOMER"], row["CUSTOMER"], row["NET_AMOUNT"], row["AMOUNT"], row["CONTA"]);
             }
-            dgvInvoice.Columns["IDINVOICE"].Visible = false;
+            //dgvInvoice.Columns["IDINVOICE"].Visible = false;
             dgvInvoice.Columns["REFCUSTOMER"].Visible = false;
+            dgvInvoice.Columns["CONTA"].Visible = false;
+
+           
 
             dgvInvoice.ClearSelection();
+            CellFormat();
 
         }
         private void filtrar()
@@ -184,37 +196,53 @@ namespace Avengers.Presentacion.Invoices
         {
             try
             {
-                String id = dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString();
-                if (isLastInvoice(id))
+                bool n = dgvInvoice.CurrentRow.Selected;
+                if (n)
                 {
-                    Dominio.DtoInvoice invoice = new DtoInvoice(
-                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString(),
-                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[1].Value.ToString(),
-                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[2].Value.ToString(),
-                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[4].Value.ToString(),
-                    dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[5].Value.ToString());
-
-
-                    ModInvoice mi = new ModInvoice(invoice, this.idioma, this.u);
-                    mi.ShowDialog();
-                    if (mi.IsDisposed)
+                    if (dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Style.BackColor == Color.Green)
                     {
-                        InitDGV("");
+                        MessageBox.Show((this.idioma == "ESPAÑOL") ? "Esta factura se encuentra contabilizada" : "This invoice is posted");
+                        dgvInvoice.ClearSelection();
                     }
+                    else
+                    {
+                        String id = dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString();
+                        if (isLastInvoice(id))
+                        {
+                            Dominio.DtoInvoice invoice = new DtoInvoice(
+                            dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString(),
+                            dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[1].Value.ToString(),
+                            dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[2].Value.ToString(),
+                            dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[4].Value.ToString(),
+                            dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[5].Value.ToString());
 
+
+                            ModInvoice mi = new ModInvoice(invoice, this.idioma, this.u);
+                            mi.ShowDialog();
+                            if (mi.IsDisposed)
+                            {
+                                InitDGV("");
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show((this.idioma == "ESPAÑOL") ? "Solo se puede Modificar la ultima factura" : "You only can modify the last Invoice");
+                            dgvInvoice.ClearSelection();
+                        }
+                    }
                 }
                 else
                 {
-
-                        MessageBox.Show((this.idioma == "ESPAÑOL")?"Solo se puede Modificar la ultima factura": "You only can modify the last Invoice");
+                    MessageBox.Show((this.idioma == "ESPAÑOL") ? "Debes seleccionar una Factura" : "You must Select a Invoice");
+                    dgvInvoice.ClearSelection();
                 }
-
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show((this.idioma == "ESPAÑOL")?"Debes seleccionar una Factura": "You must Select a Invoice");
-
+                dgvInvoice.ClearSelection();
 
             }
         }
@@ -238,37 +266,53 @@ namespace Avengers.Presentacion.Invoices
         {
             try
             {
-                String id = dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString();
-                if (isLastInvoice(id))
+                bool n = dgvInvoice.CurrentRow.Selected;
+                if (n)
                 {
-                    if (this.idioma == "ESPAÑOL")
+                    if (dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Style.BackColor == Color.Green)
                     {
-                        if (MessageBox.Show("¿Quieres eliminar a esta Factura?", "Eliminar Factura", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                        {
-                            DeleteInvoice(id);
-                        }
+                        MessageBox.Show((this.idioma == "ESPAÑOL") ? "Esta factura se encuentra contabilizada" : "This invoice is posted");
+                        dgvInvoice.ClearSelection();
                     }
                     else
                     {
-                        if (MessageBox.Show("Do you want Delete this Invoice?", "Delete Invoice", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        String id = dgvInvoice.Rows[dgvInvoice.CurrentRow.Index].Cells[0].Value.ToString();
+                        if (isLastInvoice(id))
                         {
-                            DeleteInvoice(id);
+                            if (this.idioma == "ESPAÑOL")
+                            {
+                                if (MessageBox.Show("¿Quieres eliminar a esta Factura?", "Eliminar Factura", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                {
+                                    DeleteInvoice(id);
+                                }
+                            }
+                            else
+                            {
+                                if (MessageBox.Show("Do you want Delete this Invoice?", "Delete Invoice", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                {
+                                    DeleteInvoice(id);
+                                }
+                            }
+                            InitDGV("");
+                        }
+                        else
+                        {
+                            MessageBox.Show((this.idioma == "ESPAÑOL") ? "Solo se puede Eliminar la ultima factura" : "You only can delete the last Invoice");
+                            dgvInvoice.ClearSelection();
                         }
                     }
-                    InitDGV("");
-                }
-                else
+                }else
                 {
-                        MessageBox.Show((this.idioma == "ESPAÑOL")?"Solo se puede Eliminar la ultima factura": "You only can delete the last Invoice");
+                    MessageBox.Show((this.idioma == "ESPAÑOL") ? "Debes seleccionar una Factura" : "You must Select a Invoice");
+                    dgvInvoice.ClearSelection();
                 }
-
-        }
+                
+            }
             catch (Exception ex)
             {
 
                     MessageBox.Show((this.idioma == "ESPAÑOL")?"Debes seleccionar una Factura": "You must Select a Invoice");
-
-
+                dgvInvoice.ClearSelection();
             }
         }
         private bool isLastInvoice(String idInvoice)
@@ -362,6 +406,64 @@ namespace Avengers.Presentacion.Invoices
                 if (this.idioma == "INGLES") { Console.WriteLine("Error, you Must Select a Invoice"); }
                 else { Console.WriteLine("Error, debes seleccionar una factura"); }
             }
+        }
+
+        private void show(object sender, EventArgs e)
+        {
+            dgvInvoice.ClearSelection();
+        }
+        private void CellFormat()
+        {
+            foreach (DataGridViewRow Myrow in dgvInvoice.Rows)
+            {   //Here 2 cell is target value and 1 cell is Volume 
+                if (Convert.ToInt32(Myrow.Cells[6].Value) == 1)// Or your condition 
+                {
+                    Myrow.Cells[0].Style.BackColor = Color.Green;
+                }
+                else
+                {
+                    Myrow.Cells[0].Style.BackColor = Color.White;
+                }
+            }
+        }
+
+        private void dobleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dgvInvoice.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.White)
+            {
+                Order o = new Dominio.Order();
+                int id = int.Parse(dgvInvoice.Rows[e.RowIndex].Cells[0].Value.ToString());
+                int index = dgvInvoice.Rows[e.RowIndex].Cells[e.ColumnIndex].ColumnIndex;
+                if(index == 0)
+                {
+                    if (GestorUsers.searchPermit("CONTABLE", u))
+                    {
+                        String aux = txBoxPassConta.Text;
+                        if (aux == "contable")
+                        {
+                            dgvInvoice.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
+                            dgvInvoice.ClearSelection();
+                            o.getGestor().setData("Update invoices set conta = 1 where idinvoice = '" + id + "'");
+                        }
+                        else
+                        {
+                            if (this.idioma == "INGLES") { MessageBox.Show("Error, password incorrect"); }
+                            else { MessageBox.Show("Error, contraseña incorrecta"); }
+                            dgvInvoice.ClearSelection();
+                        }
+                    }
+                    else
+                    {
+                        if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                        else { MessageBox.Show("Error, el usuario no tiene permisos"); }
+                        dgvInvoice.ClearSelection();
+                    }
+                }              
+            }
+            else
+            {
+                dgvInvoice.ClearSelection();
+            }             
         }
     }
 }

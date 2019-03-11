@@ -371,7 +371,7 @@ namespace Avengers.Presentacion.Invoices
         private void insertProducts()
         {
 
-            string insertInvoice = "Insert into Invoices values ('" + invoice.IdInvoice + "',trunc(SYSDATE),'" + invoice.RefCustomer + "','" + totalNeto + "','" + totalIva + "')";
+            string insertInvoice = "Insert into Invoices values ('" + invoice.IdInvoice + "',trunc(SYSDATE),'" + invoice.RefCustomer + "','" + totalNeto + "','" + totalIva + "',0)";
             GestorInvoices.insertInvoice(insertInvoice);
 
             for (int i = 0; i < dgvInv.RowCount ; i++)

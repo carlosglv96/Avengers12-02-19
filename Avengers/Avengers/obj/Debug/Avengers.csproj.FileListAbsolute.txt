@@ -1168,3 +1168,4 @@ C:\Users\carlos\Source\Repos\Avengers12-02-19\Avengers\Avengers\bin\Debug\Crysta
 C:\Users\carlos\Source\Repos\Avengers12-02-19\Avengers\Avengers\bin\Debug\stdole.dll
 C:\Users\carlos\Source\Repos\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.showContent.resources
 C:\Users\carlos\Source\Repos\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Orders.PrintInvoOrder.PrintInvo.resources
+C:\Users\santi\Source\Repos\carlosglv96\Avengers12-02-19\Avengers\Avengers\obj\Debug\Avengers.Presentacion.Invoices.showContent.resources

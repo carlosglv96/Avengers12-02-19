@@ -363,7 +363,7 @@ namespace Avengers.Presentacion.Invoices
             {
                 int idFactura = Dominio.Invoices.getIdInvoice();
                 //creamos la nueva factura
-                string insertInvoice = "Insert into Invoices values ('" + idFactura + "',trunc(SYSDATE),'" + dtoCustomer.Idcustomer + "','" + acumuladortotalNeto + "','" + acumuladortotalIva + "')";
+                string insertInvoice = "Insert into Invoices values ('" + idFactura + "',trunc(SYSDATE),'" + dtoCustomer.Idcustomer + "','" + acumuladortotalNeto + "','" + acumuladortotalIva + "',0)";
                 GestorInvoices.insertInvoice(insertInvoice);
 
                 foreach (DtoProduct p in listProduct)

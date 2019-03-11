@@ -45,6 +45,8 @@
             this.lblCustomerSurname = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.btnShow = new System.Windows.Forms.Button();
+            this.lblPassConta = new System.Windows.Forms.Label();
+            this.txBoxPassConta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +60,12 @@
             this.dgvInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInvoice.Location = new System.Drawing.Point(26, 96);
             this.dgvInvoice.Name = "dgvInvoice";
+            this.dgvInvoice.ReadOnly = true;
+            this.dgvInvoice.RowHeadersVisible = false;
             this.dgvInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInvoice.Size = new System.Drawing.Size(788, 375);
             this.dgvInvoice.TabIndex = 0;
+            this.dgvInvoice.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dobleClick);
             // 
             // btnNew
             // 
@@ -214,11 +219,31 @@
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
+            // lblPassConta
+            // 
+            this.lblPassConta.AutoSize = true;
+            this.lblPassConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblPassConta.Location = new System.Drawing.Point(424, 64);
+            this.lblPassConta.Name = "lblPassConta";
+            this.lblPassConta.Size = new System.Drawing.Size(80, 16);
+            this.lblPassConta.TabIndex = 17;
+            this.lblPassConta.Text = "Password:";
+            // 
+            // txBoxPassConta
+            // 
+            this.txBoxPassConta.Location = new System.Drawing.Point(529, 64);
+            this.txBoxPassConta.Name = "txBoxPassConta";
+            this.txBoxPassConta.PasswordChar = '*';
+            this.txBoxPassConta.Size = new System.Drawing.Size(191, 20);
+            this.txBoxPassConta.TabIndex = 18;
+            // 
             // viewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 504);
+            this.Controls.Add(this.txBoxPassConta);
+            this.Controls.Add(this.lblPassConta);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.txtCustomerSurname);
@@ -237,6 +262,7 @@
             this.Controls.Add(this.dgvInvoice);
             this.Name = "viewInvoice";
             this.Text = "viewInvoice";
+            this.Shown += new System.EventHandler(this.show);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,5 +288,7 @@
         private System.Windows.Forms.Label lblCustomerSurname;
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Label lblPassConta;
+        private System.Windows.Forms.TextBox txBoxPassConta;
     }
 }

@@ -527,7 +527,7 @@ namespace Avengers.Presentacion.Orders
                             int idFactura = Dominio.Invoices.getIdInvoice();
                             float totalIva = (total * (float) 1.21);
                             totalIva = (float)Math.Round(totalIva, 2);
-                            string insertInvoice = "Insert into Invoices values ('" + idFactura + "',trunc(SYSDATE),'" + refCusto + "','" + total + "','" + totalIva + "')";
+                            string insertInvoice = "Insert into Invoices values ('" + idFactura + "',trunc(SYSDATE),'" + refCusto + "','" + total + "','" + totalIva + "',0)";
                             GestorInvoices.insertInvoice(insertInvoice);
                             string insertOrderInvo = "Insert into ORDERS_INVOICES values ('0','" + id + "','" + idFactura + "')";
                             GestorInvoicesProducts.insertInvoicesProduct(insertOrderInvo);
