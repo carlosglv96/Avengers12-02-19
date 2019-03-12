@@ -194,8 +194,8 @@ namespace Avengers.Presentacion.Invoices
 
         private void btnMod_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 bool n = dgvInvoice.CurrentRow.Selected;
                 if (n)
                 {
@@ -237,14 +237,14 @@ namespace Avengers.Presentacion.Invoices
                     MessageBox.Show((this.idioma == "ESPAÑOL") ? "Debes seleccionar una Factura" : "You must Select a Invoice");
                     dgvInvoice.ClearSelection();
                 }
-            }
-            catch (Exception ex)
-            {
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show((this.idioma == "ESPAÑOL")?"Debes seleccionar una Factura": "You must Select a Invoice");
-                dgvInvoice.ClearSelection();
+            //    MessageBox.Show((this.idioma == "ESPAÑOL")?"Debes seleccionar una Factura": "You must Select a Invoice");
+            //    dgvInvoice.ClearSelection();
 
-            }
+            //}
         }
 
         private void btnClean_Click(object sender, EventArgs e)

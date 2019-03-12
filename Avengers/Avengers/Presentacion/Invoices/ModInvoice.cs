@@ -25,7 +25,7 @@ namespace Avengers.Presentacion.Invoices
         private float priceIva = 0;
         private float totalNeto = 0;
         private float totalIva = 0;
-
+        private String idOrder;
         
 
         public ModInvoice(DtoInvoice invoice, String idioma, User u)
@@ -392,12 +392,19 @@ namespace Avengers.Presentacion.Invoices
                 {
                     sql = "Insert into Lines values (0,'" + invoice.IdInvoice + "','" + name + "','" + amount + "','" + price + "')";
                     GestorLines.insertLine(sql);
+                }else if (tipo.Equals("O"))
+                {
+                    string insertOrderInvo = "Insert into ORDERS_INVOICES values ('0','" + this.idOrder + "','" + invoice.IdInvoice + "')";
+                    GestorInvoicesProducts.insertInvoicesProduct(insertOrderInvo);
                 }
             }
         }
 
         private void DeleteInvoice()
         {
+            Order o = new Dominio.Order();
+            string sql = "select reforder from orders_invoices where refinvoice ='"+invoice.IdInvoice+"'";
+            this.idOrder = o.getGestor().getUnString(sql);
             //borrado en Order Invoices
             GestorInvoices.deleteInvoice("Delete from Orders_Invoices where refinvoice = '" + invoice.IdInvoice + "' ");
             //borrador en Invoices_products
