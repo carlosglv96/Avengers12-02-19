@@ -111,6 +111,8 @@ namespace Avengers.Presentacion.Invoices
             {
                 dgvInv.Rows.Add(row["ID"], row["TYPE"], row["REFINVOICE"], row["PRODUCT"], row["AMOUNT"], row["UNIPRICE"], row["NET_AMOUNT"], row["PRICE"]);
             }
+
+
         }
 
         private void btnOk_Click(object sender, EventArgs e)

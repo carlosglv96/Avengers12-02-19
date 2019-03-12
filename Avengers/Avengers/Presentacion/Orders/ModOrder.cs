@@ -42,6 +42,14 @@ namespace Avengers.Presentacion.Orders
             txtCustomer.Text = dto.Nombre + " " + dto.Apellido;
             nudAmount.Value = 1;
             nudAmount.Minimum = 1;
+            if (this.idioma == "ESPAÑOL")
+            {
+                idioma_es();
+            }
+            else
+            {
+                idioma_en();
+            }
             initTable();
             initPay(" Where deleted=0");
             initOrder();

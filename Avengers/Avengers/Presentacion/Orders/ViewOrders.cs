@@ -55,6 +55,7 @@ namespace Avengers.Presentacion.Orders
             btnNew.Text = Avengers.Recursos.Espanol.btnNewUser;
             btnDelete.Text = Avengers.Recursos.Espanol.btnDeleteUser;
             btnModify.Text = Avengers.Recursos.Espanol.btnModUser;
+            btnShow.Text = "Mostrar";
         }
         public void idioma_en()
         {
@@ -69,6 +70,7 @@ namespace Avengers.Presentacion.Orders
             btnNew.Text = Avengers.Recursos.Ingles.btnNewUser;
             btnDelete.Text = Avengers.Recursos.Ingles.btnDeleteUser;
             btnModify.Text = Avengers.Recursos.Ingles.btnModUser;
+            btnShow.Text = "Show";
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -726,6 +728,23 @@ namespace Avengers.Presentacion.Orders
         {
             PrintInvo i = new PrintInvo(refCusto, idInvoice, refTipo);
             i.Show();
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+                    DtoOrder dto = new DtoOrder(
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[0].Value.ToString(),
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[1].Value.ToString(),
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[2].Value.ToString(),
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[3].Value.ToString(),
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[4].Value.ToString(),
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[5].Value.ToString(),
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[6].Value.ToString(),
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[7].Value.ToString()
+                    );
+
+            ShowOrder so = new ShowOrder(this.idioma, dto);
+            so.Show();
         }
     }
 }

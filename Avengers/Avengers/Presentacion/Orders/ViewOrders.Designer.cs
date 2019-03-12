@@ -42,10 +42,10 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
-            this.btnLog = new System.Windows.Forms.Button();
             this.ckAct = new System.Windows.Forms.CheckBox();
             this.txtPrepaid = new System.Windows.Forms.TextBox();
             this.lblPrepago = new System.Windows.Forms.Label();
+            this.btnShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,16 +195,6 @@
             this.btnModify.UseVisualStyleBackColor = true;
             this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
-            // btnLog
-            // 
-            this.btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLog.Location = new System.Drawing.Point(1024, 380);
-            this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(75, 23);
-            this.btnLog.TabIndex = 15;
-            this.btnLog.Text = "Log";
-            this.btnLog.UseVisualStyleBackColor = true;
-            // 
             // ckAct
             // 
             this.ckAct.AutoSize = true;
@@ -234,15 +224,26 @@
             this.lblPrepago.TabIndex = 18;
             this.lblPrepago.Text = "Prepaid:";
             // 
+            // btnShow
+            // 
+            this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShow.Location = new System.Drawing.Point(1024, 378);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(88, 23);
+            this.btnShow.TabIndex = 19;
+            this.btnShow.Text = "Show";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
             // ViewOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 485);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.lblPrepago);
             this.Controls.Add(this.txtPrepaid);
             this.Controls.Add(this.ckAct);
-            this.Controls.Add(this.btnLog);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNew);
@@ -282,10 +283,10 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnModify;
-        private System.Windows.Forms.Button btnLog;
         private System.Windows.Forms.CheckBox ckAct;
         private System.Windows.Forms.TextBox txtPrepaid;
         private System.Windows.Forms.Label lblPrepago;
         public System.Windows.Forms.DataGridView dgvOrders;
+        private System.Windows.Forms.Button btnShow;
     }
 }

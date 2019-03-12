@@ -746,6 +746,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.cash_panel.ResumeLayout(false);

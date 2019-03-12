@@ -46,7 +46,7 @@ namespace Avengers.Presentacion
             this.u = u;
             lblUser.Text = "                 " +u.getNombre();
             u.setPermits();
-            permits();
+            //permits();
             this.idioma = idioma;
             if (this.idioma == "ESPAÑOL")
             {
@@ -57,62 +57,65 @@ namespace Avengers.Presentacion
                 idioma_en();
             }
             initMenu();
+
         }
 
 
-        public void permits()
-        {
-            if (!GestorUsers.searchPermit("VIEWUSERS", u))
-            {
-                users.DisabledColor = Color.Transparent;
-                users.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWCUSTOMERS", u))
-            {
-                customers.DisabledColor = Color.Transparent;
-                customers.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWPRODUCTS", u))
-            {
-                products.DisabledColor = Color.Transparent;
-                products.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWORDERS", u))
-            {
-                btnOrders.DisabledColor = Color.Transparent;
-                btnOrders.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWINCOMES", u))
-            {
-                inco.DisabledColor = Color.Transparent;
-                inco.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWEXPENSES", u))
-            {
-                expen.DisabledColor = Color.Transparent;
-                expen.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWPPAYMENTS", u))
-            {
-                paym.DisabledColor = Color.Transparent;
-                paym.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWDEBTS", u))
-            {
-                debts.DisabledColor = Color.Transparent;
-                debts.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWVALIDATION", u))
-            {
-                valid.DisabledColor = Color.Transparent;
-                valid.Enabled = false;
-            }
-            if (!GestorUsers.searchPermit("VIEWINVOICED", u))
-            {
-                btnInvoices.DisabledColor = Color.Transparent;
-                btnInvoices.Enabled = false;
-            }
-        }
+        //public void permits()
+        //{
+        //    if (!GestorUsers.searchPermit("VIEWUSERS", u))
+        //    {
+        //        users.DisabledColor = Color.Transparent;
+        //        users.Enabled = false;
+        //        MessageBox.Show(("hola"));
+
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWCUSTOMERS", u))
+        //    {
+        //        customers.DisabledColor = Color.Transparent;
+        //        customers.Enabled = false;
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWPRODUCTS", u))
+        //    {
+        //        products.DisabledColor = Color.Transparent;
+        //        products.Enabled = false;
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWORDERS", u))
+        //    {
+        //        btnOrders.DisabledColor = Color.Transparent;
+        //        btnOrders.Enabled = false;
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWINCOMES", u))
+        //    {
+        //        inco.DisabledColor = Color.Transparent;
+        //        inco.Enabled = false;
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWEXPENSES", u))
+        //    {
+        //        expen.DisabledColor = Color.Transparent;
+        //        expen.Enabled = false;
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWPPAYMENTS", u))
+        //    {
+        //        paym.DisabledColor = Color.Transparent;
+        //        paym.Enabled = false;
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWDEBTS", u))
+        //    {
+        //        debts.DisabledColor = Color.Transparent;
+        //        debts.Enabled = false;
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWVALIDATION", u))
+        //    {
+        //        valid.DisabledColor = Color.Transparent;
+        //        valid.Enabled = false;
+        //    }
+        //    if (!GestorUsers.searchPermit("VIEWINVOICED", u))
+        //    {
+        //        btnInvoices.DisabledColor = Color.Transparent;
+        //        btnInvoices.Enabled = false;
+        //    }
+        //}
 
         public void initMenu()
         {
@@ -259,34 +262,42 @@ namespace Avengers.Presentacion
 
         private void users_Click(object sender, EventArgs e)
         {
-            
-            if (!tabControl.TabPages.ContainsKey("u1"))
+            if(GestorUsers.searchPermit("VIEWUSERS", u))
             {
-                u1 = new ViewUsers(this.idioma);
-                cash_panel.Visible = false;
-                tabControl.Visible = true;
-                u1.MdiParent = this;
-                u1.WindowState = FormWindowState.Normal;
-                u1.FormBorderStyle = FormBorderStyle.None;
-                u1.TopLevel = false;
-                u1.Dock = DockStyle.Fill;
-                u1.Show();
+                if (!tabControl.TabPages.ContainsKey("u1"))
+                {
+                    u1 = new ViewUsers(this.idioma);
+                    cash_panel.Visible = false;
+                    tabControl.Visible = true;
+                    u1.MdiParent = this;
+                    u1.WindowState = FormWindowState.Normal;
+                    u1.FormBorderStyle = FormBorderStyle.None;
+                    u1.TopLevel = false;
+                    u1.Dock = DockStyle.Fill;
+                    u1.Show();
 
-                TabPage tpu = new TabPage(users.Text);
-                tpu.Tag = u1;
-                tpu.Name = "u1";
-                tpu.Parent = tabControl;
-                tabControl.SelectedTab = tpu;
-                u1.Tag = tpu;
+                    TabPage tpu = new TabPage(users.Text);
+                    tpu.Tag = u1;
+                    tpu.Name = "u1";
+                    tpu.Parent = tabControl;
+                    tabControl.SelectedTab = tpu;
+                    u1.Tag = tpu;
+                }
+                else
+                {
+                    int n = tabControl.TabPages.IndexOfKey("u1");
+                    tabControl.SelectTab(n);
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("u1");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
-             
+
+
         }
- 
+           
         private void tabControl_SelectedIndexChanged(object sender,
                                            EventArgs e)
         {
@@ -298,7 +309,7 @@ namespace Avengers.Presentacion
         private void btnSys_Click(object sender, EventArgs e)
         {
             mostrarBtnSys();
-            permits();
+            //permits();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -329,31 +340,40 @@ namespace Avengers.Presentacion
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            if (!tabControl.TabPages.ContainsKey("o1"))
+            if (GestorUsers.searchPermit("VIEWORDERS", u))
             {
-                o1 = new ViewOrders(this.u,this.idioma);
-                cash_panel.Visible = false;
-                ocultarBtnSys();
-                tabControl.Visible = true;
-                o1.MdiParent = this;
-                o1.WindowState = FormWindowState.Normal;
-                o1.FormBorderStyle = FormBorderStyle.None;
-                o1.TopLevel = false;
-                o1.Dock = DockStyle.Fill;
-                o1.Show();
+                if (!tabControl.TabPages.ContainsKey("o1"))
+                {
+                    o1 = new ViewOrders(this.u,this.idioma);
+                    cash_panel.Visible = false;
+                    ocultarBtnSys();
+                    tabControl.Visible = true;
+                    o1.MdiParent = this;
+                    o1.WindowState = FormWindowState.Normal;
+                    o1.FormBorderStyle = FormBorderStyle.None;
+                    o1.TopLevel = false;
+                    o1.Dock = DockStyle.Fill;
+                    o1.Show();
 
-                TabPage tp = new TabPage(btnOrders.Text);
-                tp.Tag = o1;
-                tp.Name = "o1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                o1.Tag = tp;
+                    TabPage tp = new TabPage(btnOrders.Text);
+                    tp.Tag = o1;
+                    tp.Name = "o1";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    o1.Tag = tp;
+                }
+                else
+                {
+                    ocultarBtnSys();
+                    int n = tabControl.TabPages.IndexOfKey("o1");
+                    tabControl.SelectTab(n);
+                }
+
             }
             else
             {
-                ocultarBtnSys();
-                int n = tabControl.TabPages.IndexOfKey("o1");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
         
         }
@@ -381,30 +401,39 @@ namespace Avengers.Presentacion
 
         private void customers_Click(object sender, EventArgs e)
         {
-            if (!tabControl.TabPages.ContainsKey("c1"))
+            if (GestorUsers.searchPermit("VIEWCUSTOMERS", u))
             {
-                c1 = new ViewCustomer(this.idioma);
-                cash_panel.Visible = false;
-                tabControl.Visible = true;
-                c1.MdiParent = this;
-                c1.WindowState = FormWindowState.Normal;
-                c1.FormBorderStyle = FormBorderStyle.None;
-                c1.TopLevel = false;
-                c1.Dock = DockStyle.Fill;
-                c1.Show();
+                if (!tabControl.TabPages.ContainsKey("c1"))
+                {
+                    c1 = new ViewCustomer(this.idioma);
+                    cash_panel.Visible = false;
+                    tabControl.Visible = true;
+                    c1.MdiParent = this;
+                    c1.WindowState = FormWindowState.Normal;
+                    c1.FormBorderStyle = FormBorderStyle.None;
+                    c1.TopLevel = false;
+                    c1.Dock = DockStyle.Fill;
+                    c1.Show();
 
-                TabPage tp = new TabPage(customers.Text);
-                tp.Tag = c1;
-                tp.Name = "c1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                c1.Tag = tp;
+                    TabPage tp = new TabPage(customers.Text);
+                    tp.Tag = c1;
+                    tp.Name = "c1";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    c1.Tag = tp;
+                }
+                else
+                {
+                    int n = tabControl.TabPages.IndexOfKey("c1");
+                    tabControl.SelectTab(n);
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("c1");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
+                
             
         }
 
@@ -474,162 +503,207 @@ namespace Avengers.Presentacion
 
         private void products_Click(object sender, EventArgs e)
         {
-            if (!tabControl.TabPages.ContainsKey("p1"))
+            if (GestorUsers.searchPermit("VIEWPRODUCTS", u))
             {
-                p1 = new ViewProduct(this.idioma);
-                cash_panel.Visible = false;
-                tabControl.Visible = true;
-                p1.MdiParent = this;
-                p1.WindowState = FormWindowState.Normal;
-                p1.FormBorderStyle = FormBorderStyle.None;
-                p1.TopLevel = false;
-                p1.Dock = DockStyle.Fill;
-                p1.Show();
+                if (!tabControl.TabPages.ContainsKey("p1"))
+                {
+                    p1 = new ViewProduct(this.idioma);
+                    cash_panel.Visible = false;
+                    tabControl.Visible = true;
+                    p1.MdiParent = this;
+                    p1.WindowState = FormWindowState.Normal;
+                    p1.FormBorderStyle = FormBorderStyle.None;
+                    p1.TopLevel = false;
+                    p1.Dock = DockStyle.Fill;
+                    p1.Show();
 
-                TabPage tp = new TabPage(products.Text);
-                tp.Tag = p1;
-                tp.Name = "p1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                p1.Tag = tp;
+                    TabPage tp = new TabPage(products.Text);
+                    tp.Tag = p1;
+                    tp.Name = "p1";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    p1.Tag = tp;
+                }
+                else
+                {
+                    int n = tabControl.TabPages.IndexOfKey("p1");
+                    tabControl.SelectTab(n);
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("p1");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
+            
         }
 
         private void btnCash_Click(object sender, EventArgs e)
         {
             initMenu();
             mostrarBtnCas();
-			permits();
+			//permits();
             
         }
 
         private void expen_Click(object sender, EventArgs e)
         {
-            initMenu();
-            if (!tabControl.TabPages.ContainsKey("i2"))
+            if (GestorUsers.searchPermit("VIEWEXPENSES", u))
             {
-                i2 = new ViewIncomes(this.idioma, this.u, 1, this);
-                i2.dgvIncomes.ClearSelection();
-                cash_panel.Visible = true;
+                initMenu();
+                if (!tabControl.TabPages.ContainsKey("i2"))
+                {
+                    i2 = new ViewIncomes(this.idioma, this.u, 1, this);
+                    i2.dgvIncomes.ClearSelection();
+                    cash_panel.Visible = true;
 
-                tabControl.Visible = true;
-                i2.MdiParent = this;
-                i2.WindowState = FormWindowState.Normal;
-                i2.FormBorderStyle = FormBorderStyle.None;
-                i2.TopLevel = false;
-                i2.Dock = DockStyle.Fill;
-                i2.Show();
-                TabPage tp;
-                if (this.idioma == "ESPAÑOL")
-                { tp = new TabPage("Salidas"); }
+                    tabControl.Visible = true;
+                    i2.MdiParent = this;
+                    i2.WindowState = FormWindowState.Normal;
+                    i2.FormBorderStyle = FormBorderStyle.None;
+                    i2.TopLevel = false;
+                    i2.Dock = DockStyle.Fill;
+                    i2.Show();
+                    TabPage tp;
+                    if (this.idioma == "ESPAÑOL")
+                    { tp = new TabPage("Salidas"); }
+                    else
+                    { tp = new TabPage("Expenses"); }
+
+                    tp.Tag = i2;
+                    tp.Name = "i2";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    i2.Tag = tp;
+                }
                 else
-                { tp = new TabPage("Expenses"); }
-                
-                tp.Tag = i2;
-                tp.Name = "i2";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                i2.Tag = tp;
+                {
+                    int n = tabControl.TabPages.IndexOfKey("i2");
+                    tabControl.SelectTab(n);
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("i2");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
+            
         }
 
         private void inco_Click(object sender, EventArgs e)
         {
-            initMenu();
-            if (!tabControl.TabPages.ContainsKey("i1"))
+            if (GestorUsers.searchPermit("VIEWINCOMES", u))
             {
-                i1 = new ViewIncomes(this.idioma, this.u,0, this);
-                cash_panel.Visible = true;
+                initMenu();
+                if (!tabControl.TabPages.ContainsKey("i1"))
+                {
+                    i1 = new ViewIncomes(this.idioma, this.u, 0, this);
+                    cash_panel.Visible = true;
 
-                tabControl.Visible = true;
-                i1.MdiParent = this;
-                i1.WindowState = FormWindowState.Normal;
-                i1.FormBorderStyle = FormBorderStyle.None;
-                i1.TopLevel = false;
-                i1.Dock = DockStyle.Fill;
-                i1.Show();
+                    tabControl.Visible = true;
+                    i1.MdiParent = this;
+                    i1.WindowState = FormWindowState.Normal;
+                    i1.FormBorderStyle = FormBorderStyle.None;
+                    i1.TopLevel = false;
+                    i1.Dock = DockStyle.Fill;
+                    i1.Show();
 
-                TabPage tp = new TabPage(inco.Text);
-                tp.Tag = i1;
-                tp.Name = "i1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                i1.Tag = tp;
+                    TabPage tp = new TabPage(inco.Text);
+                    tp.Tag = i1;
+                    tp.Name = "i1";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    i1.Tag = tp;
+                }
+                else
+                {
+                    int n = tabControl.TabPages.IndexOfKey("i1");
+                    tabControl.SelectTab(n);
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("i1");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
+            
         }
 
         private void paym_Click(object sender, EventArgs e)
         {
-            initMenu();
-            if (!tabControl.TabPages.ContainsKey("pa1"))
+            if (GestorUsers.searchPermit("VIEWPPAYMENTS", u))
             {
-                pa1 = new viewPPayment(this.idioma, this.u);
-                cash_panel.Visible = true;
-                tabControl.Visible = true;
-                pa1.MdiParent = this;
-                pa1.WindowState = FormWindowState.Normal;
-                pa1.FormBorderStyle = FormBorderStyle.None;
-                pa1.TopLevel = false;
-                pa1.Dock = DockStyle.Fill;
-                pa1.Show();
+                initMenu();
+                if (!tabControl.TabPages.ContainsKey("pa1"))
+                {
+                    pa1 = new viewPPayment(this.idioma, this.u);
+                    cash_panel.Visible = true;
+                    tabControl.Visible = true;
+                    pa1.MdiParent = this;
+                    pa1.WindowState = FormWindowState.Normal;
+                    pa1.FormBorderStyle = FormBorderStyle.None;
+                    pa1.TopLevel = false;
+                    pa1.Dock = DockStyle.Fill;
+                    pa1.Show();
 
-                TabPage tp = new TabPage(paym.Text);
-                tp.Tag = pa1;
-                tp.Name = "pa1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                pa1.Tag = tp;
+                    TabPage tp = new TabPage(paym.Text);
+                    tp.Tag = pa1;
+                    tp.Name = "pa1";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    pa1.Tag = tp;
+                }
+                else
+                {
+                    int n = tabControl.TabPages.IndexOfKey("pa1");
+                    tabControl.SelectTab(n);
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("pa1");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
+            
         }
 
         private void Valid_click(object sender, EventArgs e)
         {
-            initMenu();
-            if (!tabControl.TabPages.ContainsKey("v1"))
+            if (GestorUsers.searchPermit("VIEWVALIDATION", u))
             {
-                
-                v1 = new ViewValidation(this.idioma, this.u,this);
-                cash_panel.Visible = true;
-                tabControl.Visible = true;
-                v1.MdiParent = this;
-                v1.WindowState = FormWindowState.Normal;
-                v1.FormBorderStyle = FormBorderStyle.None;
-                v1.TopLevel = false;
-                v1.Dock = DockStyle.Fill;
-                v1.Show();
+                initMenu();
+                if (!tabControl.TabPages.ContainsKey("v1"))
+                {
 
-                TabPage tp = new TabPage(valid.Text);
-                tp.Tag = v1;
-                tp.Name = "v1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                v1.Tag = tp;
+                    v1 = new ViewValidation(this.idioma, this.u, this);
+                    cash_panel.Visible = true;
+                    tabControl.Visible = true;
+                    v1.MdiParent = this;
+                    v1.WindowState = FormWindowState.Normal;
+                    v1.FormBorderStyle = FormBorderStyle.None;
+                    v1.TopLevel = false;
+                    v1.Dock = DockStyle.Fill;
+                    v1.Show();
+
+                    TabPage tp = new TabPage(valid.Text);
+                    tp.Tag = v1;
+                    tp.Name = "v1";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    v1.Tag = tp;
+                }
+                else
+                {
+                    int n = tabControl.TabPages.IndexOfKey("v1");
+                    tabControl.SelectTab(n);
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("v1");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
+            
         }
 
         public static implicit operator System.Windows.Forms.Menu(Menu v)
@@ -688,58 +762,76 @@ namespace Avengers.Presentacion
 
         private void debts_Click_1(object sender, EventArgs e)
         {
-            if (!tabControl.TabPages.ContainsKey("d1"))
+            if (GestorUsers.searchPermit("VIEWDEBS", u))
             {
-                d1 = new ViewDebts(this.idioma, this.u, this);
-                cash_panel.Visible = true;
-                tabControl.Visible = true;
-                d1.MdiParent = this;
-                d1.WindowState = FormWindowState.Normal;
-                d1.FormBorderStyle = FormBorderStyle.None;
-                d1.TopLevel = false;
-                d1.Dock = DockStyle.Fill;
-                d1.Show();
-                TabPage tp = new TabPage(debts.Text);
-                tp.Tag = d1;
-                tp.Name = "d1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                d1.Tag = tp;
+                if (!tabControl.TabPages.ContainsKey("d1"))
+                {
+                    d1 = new ViewDebts(this.idioma, this.u, this);
+                    cash_panel.Visible = true;
+                    tabControl.Visible = true;
+                    d1.MdiParent = this;
+                    d1.WindowState = FormWindowState.Normal;
+                    d1.FormBorderStyle = FormBorderStyle.None;
+                    d1.TopLevel = false;
+                    d1.Dock = DockStyle.Fill;
+                    d1.Show();
+                    TabPage tp = new TabPage(debts.Text);
+                    tp.Tag = d1;
+                    tp.Name = "d1";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    d1.Tag = tp;
+                }
+                else
+                {
+                    int n = tabControl.TabPages.IndexOfKey("d1");
+                    tabControl.SelectTab(n);
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("d1");
-                tabControl.SelectTab(n);
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
+            
         }
 
         private void btnInvoices_Click(object sender, EventArgs e)
         {
-            if (!tabControl.TabPages.ContainsKey("in1"))
+            if (GestorUsers.searchPermit("VIEWINVOICED", u))
             {
-                in1 = new viewInvoice(this.idioma,this.u);
-                cash_panel.Visible = false;
-                tabControl.Visible = true;
-                in1.MdiParent = this;
-                in1.WindowState = FormWindowState.Normal;
-                in1.FormBorderStyle = FormBorderStyle.None;
-                in1.TopLevel = false;
-                in1.Dock = DockStyle.Fill;
-                in1.Show();
-                TabPage tp = new TabPage(btnInvoices.Text);
-                tp.Tag = in1;
-                tp.Name = "in1";
-                tp.Parent = tabControl;
-                tabControl.SelectedTab = tp;
-                in1.Tag = tp;
-                ocultarBtnSys();
+                if (!tabControl.TabPages.ContainsKey("in1"))
+                {
+                    in1 = new viewInvoice(this.idioma, this.u);
+                    cash_panel.Visible = false;
+                    tabControl.Visible = true;
+                    in1.MdiParent = this;
+                    in1.WindowState = FormWindowState.Normal;
+                    in1.FormBorderStyle = FormBorderStyle.None;
+                    in1.TopLevel = false;
+                    in1.Dock = DockStyle.Fill;
+                    in1.Show();
+                    TabPage tp = new TabPage(btnInvoices.Text);
+                    tp.Tag = in1;
+                    tp.Name = "in1";
+                    tp.Parent = tabControl;
+                    tabControl.SelectedTab = tp;
+                    in1.Tag = tp;
+                    ocultarBtnSys();
+                }
+                else
+                {
+                    int n = tabControl.TabPages.IndexOfKey("in1");
+                    tabControl.SelectTab(n);
+                    ocultarBtnSys();
+                }
             }
             else
             {
-                int n = tabControl.TabPages.IndexOfKey("in1");
-                tabControl.SelectTab(n);
-                ocultarBtnSys();
+                if (this.idioma == "INGLES") { MessageBox.Show("Error, this user hasn't got permits"); }
+                else { MessageBox.Show("Error, el usuario no tiene permisos"); }
             }
+            
         }
 
         
